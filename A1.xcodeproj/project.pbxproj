@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A712E09A212304DE0028240A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A712E098212304DE0028240A /* Main.storyboard */; };
+		A712E09C212304E00028240A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A712E09B212304E00028240A /* Assets.xcassets */; };
+		A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A712E09D212304E00028240A /* LaunchScreen.storyboard */; };
+		A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7553BA221238CE700A8CDB6 /* db.sqlite */; };
+		A7553BC92123970A00A8CDB6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7553BC82123970A00A8CDB6 /* Info.plist */; };
+		A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCD212398A000A8CDB6 /* AppDelegate.m */; };
+		A7553BD0212398A000A8CDB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCE212398A000A8CDB6 /* main.m */; };
+		A7553BD6212398E700A8CDB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BD4212398E700A8CDB6 /* ViewController.m */; };
+		A7553BDC2123990F00A8CDB6 /* FMResultSet+data.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */; };
+		A7553BDD2123990F00A8CDB6 /* SQLiteData.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BDB2123990E00A8CDB6 /* SQLiteData.m */; };
+		A7553BF02123991E00A8CDB6 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BDF2123991D00A8CDB6 /* STKQueueEntry.m */; };
+		A7553BF12123991E00A8CDB6 /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BE32123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.m */; };
+		A7553BF22123991E00A8CDB6 /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BE52123991D00A8CDB6 /* STKDataSourceWrapper.m */; };
+		A7553BF32123991E00A8CDB6 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BE62123991D00A8CDB6 /* STKLocalFileDataSource.m */; };
+		A7553BF42123991E00A8CDB6 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BE72123991D00A8CDB6 /* STKHTTPDataSource.m */; };
+		A7553BF52123991E00A8CDB6 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BE82123991D00A8CDB6 /* STKCoreFoundationDataSource.m */; };
+		A7553BF62123991E00A8CDB6 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BEA2123991D00A8CDB6 /* STKDataSource.m */; };
+		A7553BF72123991E00A8CDB6 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BEC2123991D00A8CDB6 /* STKAudioPlayer.m */; };
+		A7553BF82123991E00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BED2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m */; };
+		A7553BFD21239B3800A8CDB6 /* Unit_41_50.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7553BF921239B3800A8CDB6 /* Unit_41_50.mp3 */; };
+		A7553BFE21239B3800A8CDB6 /* Unit_51_55.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7553BFA21239B3800A8CDB6 /* Unit_51_55.mp3 */; };
+		A7553BFF21239B3800A8CDB6 /* Unit_31_40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7553BFB21239B3800A8CDB6 /* Unit_31_40.mp3 */; };
+		A7553C0021239B3800A8CDB6 /* Unit_21_30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7553BFC21239B3800A8CDB6 /* Unit_21_30.mp3 */; };
+		CE3969CAB1EEDC191BB22A13 /* libPods-A1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B55D665291320B2BD4EAA7D /* libPods-A1.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29A34AA149D3CFE177C32412 /* Pods-A1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A1.release.xcconfig"; path = "Pods/Target Support Files/Pods-A1/Pods-A1.release.xcconfig"; sourceTree = "<group>"; };
+		7B55D665291320B2BD4EAA7D /* libPods-A1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-A1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		891A13C0D423E4C0BE7CADBB /* Pods-A1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-A1/Pods-A1.debug.xcconfig"; sourceTree = "<group>"; };
+		A712E08F212304DE0028240A /* A1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A712E099212304DE0028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A712E09B212304E00028240A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A712E09E212304E00028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7553BA221238CE700A8CDB6 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		A7553BC82123970A00A8CDB6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7553BCC212398A000A8CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = A1/Sources/Common/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		A7553BCD212398A000A8CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = A1/Sources/Common/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		A7553BCE212398A000A8CDB6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = A1/Sources/Common/main.m; sourceTree = SOURCE_ROOT; };
+		A7553BD4212398E700A8CDB6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = A1/Sources/ViewControllers/ViewController.m; sourceTree = SOURCE_ROOT; };
+		A7553BD5212398E700A8CDB6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = A1/Sources/ViewControllers/ViewController.h; sourceTree = SOURCE_ROOT; };
+		A7553BD72123990E00A8CDB6 /* DefinedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefinedHeader.h; path = A1/Sources/Common/Base/DefinedHeader.h; sourceTree = SOURCE_ROOT; };
+		A7553BD82123990E00A8CDB6 /* FMResultSet+data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FMResultSet+data.h"; path = "A1/Sources/Common/Base/FMResultSet+data.h"; sourceTree = SOURCE_ROOT; };
+		A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FMResultSet+data.m"; path = "A1/Sources/Common/Base/FMResultSet+data.m"; sourceTree = SOURCE_ROOT; };
+		A7553BDA2123990E00A8CDB6 /* SQLiteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLiteData.h; path = A1/Sources/Common/Base/SQLiteData.h; sourceTree = SOURCE_ROOT; };
+		A7553BDB2123990E00A8CDB6 /* SQLiteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLiteData.m; path = A1/Sources/Common/Base/SQLiteData.m; sourceTree = SOURCE_ROOT; };
+		A7553BDE2123991D00A8CDB6 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKAudioPlayer.h; path = A1/Sources/Common/Opensource/Audio/STKAudioPlayer.h; sourceTree = SOURCE_ROOT; };
+		A7553BDF2123991D00A8CDB6 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKQueueEntry.m; path = A1/Sources/Common/Opensource/Audio/STKQueueEntry.m; sourceTree = SOURCE_ROOT; };
+		A7553BE02123991D00A8CDB6 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKCoreFoundationDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKCoreFoundationDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BE12123991D00A8CDB6 /* STKHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKHTTPDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKHTTPDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BE22123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+STKAudioPlayer.h"; path = "A1/Sources/Common/Opensource/Audio/NSMutableArray+STKAudioPlayer.h"; sourceTree = SOURCE_ROOT; };
+		A7553BE32123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+STKAudioPlayer.m"; path = "A1/Sources/Common/Opensource/Audio/NSMutableArray+STKAudioPlayer.m"; sourceTree = SOURCE_ROOT; };
+		A7553BE42123991D00A8CDB6 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKQueueEntry.h; path = A1/Sources/Common/Opensource/Audio/STKQueueEntry.h; sourceTree = SOURCE_ROOT; };
+		A7553BE52123991D00A8CDB6 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKDataSourceWrapper.m; path = A1/Sources/Common/Opensource/Audio/STKDataSourceWrapper.m; sourceTree = SOURCE_ROOT; };
+		A7553BE62123991D00A8CDB6 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKLocalFileDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKLocalFileDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BE72123991D00A8CDB6 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKHTTPDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKHTTPDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BE82123991D00A8CDB6 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKCoreFoundationDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKCoreFoundationDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BE92123991D00A8CDB6 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKDataSourceWrapper.h; path = A1/Sources/Common/Opensource/Audio/STKDataSourceWrapper.h; sourceTree = SOURCE_ROOT; };
+		A7553BEA2123991D00A8CDB6 /* STKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BEB2123991D00A8CDB6 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKLocalFileDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKLocalFileDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BEC2123991D00A8CDB6 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKAudioPlayer.m; path = A1/Sources/Common/Opensource/Audio/STKAudioPlayer.m; sourceTree = SOURCE_ROOT; };
+		A7553BED2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKAutoRecoveringHTTPDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKAutoRecoveringHTTPDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BEE2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKAutoRecoveringHTTPDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKAutoRecoveringHTTPDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BEF2123991E00A8CDB6 /* STKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BF921239B3800A8CDB6 /* Unit_41_50.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unit_41_50.mp3; sourceTree = "<group>"; };
+		A7553BFA21239B3800A8CDB6 /* Unit_51_55.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unit_51_55.mp3; sourceTree = "<group>"; };
+		A7553BFB21239B3800A8CDB6 /* Unit_31_40.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unit_31_40.mp3; sourceTree = "<group>"; };
+		A7553BFC21239B3800A8CDB6 /* Unit_21_30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unit_21_30.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A712E08C212304DE0028240A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3969CAB1EEDC191BB22A13 /* libPods-A1.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FDC43A4D0B62FB1508C6EC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B55D665291320B2BD4EAA7D /* libPods-A1.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A712E086212304DE0028240A = {
+			isa = PBXGroup;
+			children = (
+				A712E091212304DE0028240A /* A1 */,
+				A712E090212304DE0028240A /* Products */,
+				E5720ECC74D50662204F9BCC /* Pods */,
+				6FDC43A4D0B62FB1508C6EC6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A712E090212304DE0028240A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A712E08F212304DE0028240A /* A1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A712E091212304DE0028240A /* A1 */ = {
+			isa = PBXGroup;
+			children = (
+				A7553BC82123970A00A8CDB6 /* Info.plist */,
+				A7553BCB2123988700A8CDB6 /* Sources */,
+				A7553B9D212387E300A8CDB6 /* Resource */,
+				A7553B90212316A200A8CDB6 /* Common */,
+			);
+			path = A1;
+			sourceTree = "<group>";
+		};
+		A7553B90212316A200A8CDB6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A7553BCA2123987100A8CDB6 /* Opensource */,
+				A7553BAC212396CA00A8CDB6 /* Audio */,
+				A7553BA42123969100A8CDB6 /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A7553B9D212387E300A8CDB6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A7553BFC21239B3800A8CDB6 /* Unit_21_30.mp3 */,
+				A7553BFB21239B3800A8CDB6 /* Unit_31_40.mp3 */,
+				A7553BF921239B3800A8CDB6 /* Unit_41_50.mp3 */,
+				A7553BFA21239B3800A8CDB6 /* Unit_51_55.mp3 */,
+				A712E098212304DE0028240A /* Main.storyboard */,
+				A712E09B212304E00028240A /* Assets.xcassets */,
+				A712E09D212304E00028240A /* LaunchScreen.storyboard */,
+				A7553BA221238CE700A8CDB6 /* db.sqlite */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A7553BA42123969100A8CDB6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A7553BD72123990E00A8CDB6 /* DefinedHeader.h */,
+				A7553BD82123990E00A8CDB6 /* FMResultSet+data.h */,
+				A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */,
+				A7553BDA2123990E00A8CDB6 /* SQLiteData.h */,
+				A7553BDB2123990E00A8CDB6 /* SQLiteData.m */,
+			);
+			name = Base;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A7553BAC212396CA00A8CDB6 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A7553BE22123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.h */,
+				A7553BE32123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.m */,
+				A7553BDE2123991D00A8CDB6 /* STKAudioPlayer.h */,
+				A7553BEC2123991D00A8CDB6 /* STKAudioPlayer.m */,
+				A7553BEE2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.h */,
+				A7553BED2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m */,
+				A7553BE02123991D00A8CDB6 /* STKCoreFoundationDataSource.h */,
+				A7553BE82123991D00A8CDB6 /* STKCoreFoundationDataSource.m */,
+				A7553BEF2123991E00A8CDB6 /* STKDataSource.h */,
+				A7553BEA2123991D00A8CDB6 /* STKDataSource.m */,
+				A7553BE92123991D00A8CDB6 /* STKDataSourceWrapper.h */,
+				A7553BE52123991D00A8CDB6 /* STKDataSourceWrapper.m */,
+				A7553BE12123991D00A8CDB6 /* STKHTTPDataSource.h */,
+				A7553BE72123991D00A8CDB6 /* STKHTTPDataSource.m */,
+				A7553BEB2123991D00A8CDB6 /* STKLocalFileDataSource.h */,
+				A7553BE62123991D00A8CDB6 /* STKLocalFileDataSource.m */,
+				A7553BE42123991D00A8CDB6 /* STKQueueEntry.h */,
+				A7553BDF2123991D00A8CDB6 /* STKQueueEntry.m */,
+			);
+			name = Audio;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A7553BCA2123987100A8CDB6 /* Opensource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Opensource;
+			sourceTree = "<group>";
+		};
+		A7553BCB2123988700A8CDB6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A7553BD3212398BB00A8CDB6 /* Common */,
+				A7553BD2212398AC00A8CDB6 /* Views */,
+				A7553BD1212398A400A8CDB6 /* ViewControllers */,
+				A7553BCC212398A000A8CDB6 /* AppDelegate.h */,
+				A7553BCD212398A000A8CDB6 /* AppDelegate.m */,
+				A7553BCE212398A000A8CDB6 /* main.m */,
+			);
+			name = Sources;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A7553BD1212398A400A8CDB6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7553BD5212398E700A8CDB6 /* ViewController.h */,
+				A7553BD4212398E700A8CDB6 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A7553BD2212398AC00A8CDB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7553BD3212398BB00A8CDB6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E5720ECC74D50662204F9BCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				891A13C0D423E4C0BE7CADBB /* Pods-A1.debug.xcconfig */,
+				29A34AA149D3CFE177C32412 /* Pods-A1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A712E08E212304DE0028240A /* A1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A712E0A5212304E00028240A /* Build configuration list for PBXNativeTarget "A1" */;
+			buildPhases = (
+				38E237B059B459584936A311 /* [CP] Check Pods Manifest.lock */,
+				A712E08B212304DE0028240A /* Sources */,
+				A712E08C212304DE0028240A /* Frameworks */,
+				A712E08D212304DE0028240A /* Resources */,
+				97AF0FC9D708D86C9C7844C8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = A1;
+			productName = A1;
+			productReference = A712E08F212304DE0028240A /* A1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A712E087212304DE0028240A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = nicejames;
+				TargetAttributes = {
+					A712E08E212304DE0028240A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = A712E08A212304DE0028240A /* Build configuration list for PBXProject "A1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A712E086212304DE0028240A;
+			productRefGroup = A712E090212304DE0028240A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A712E08E212304DE0028240A /* A1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A712E08D212304DE0028240A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */,
+				A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */,
+				A7553BFF21239B3800A8CDB6 /* Unit_31_40.mp3 in Resources */,
+				A7553BC92123970A00A8CDB6 /* Info.plist in Resources */,
+				A712E09C212304E00028240A /* Assets.xcassets in Resources */,
+				A7553BFD21239B3800A8CDB6 /* Unit_41_50.mp3 in Resources */,
+				A712E09A212304DE0028240A /* Main.storyboard in Resources */,
+				A7553C0021239B3800A8CDB6 /* Unit_21_30.mp3 in Resources */,
+				A7553BFE21239B3800A8CDB6 /* Unit_51_55.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38E237B059B459584936A311 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-A1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97AF0FC9D708D86C9C7844C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-A1/Pods-A1-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-A1/Pods-A1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A712E08B212304DE0028240A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7553BDC2123990F00A8CDB6 /* FMResultSet+data.m in Sources */,
+				A7553BDD2123990F00A8CDB6 /* SQLiteData.m in Sources */,
+				A7553BF32123991E00A8CDB6 /* STKLocalFileDataSource.m in Sources */,
+				A7553BD6212398E700A8CDB6 /* ViewController.m in Sources */,
+				A7553BD0212398A000A8CDB6 /* main.m in Sources */,
+				A7553BF42123991E00A8CDB6 /* STKHTTPDataSource.m in Sources */,
+				A7553BF72123991E00A8CDB6 /* STKAudioPlayer.m in Sources */,
+				A7553BF12123991E00A8CDB6 /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				A7553BF62123991E00A8CDB6 /* STKDataSource.m in Sources */,
+				A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */,
+				A7553BF52123991E00A8CDB6 /* STKCoreFoundationDataSource.m in Sources */,
+				A7553BF02123991E00A8CDB6 /* STKQueueEntry.m in Sources */,
+				A7553BF82123991E00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				A7553BF22123991E00A8CDB6 /* STKDataSourceWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A712E098212304DE0028240A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A712E099212304DE0028240A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A712E09D212304E00028240A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A712E09E212304E00028240A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A712E0A3212304E00028240A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A712E0A4212304E00028240A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A712E0A6212304E00028240A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 891A13C0D423E4C0BE7CADBB /* Pods-A1.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82P8339342;
+				INFOPLIST_FILE = A1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.A1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A712E0A7212304E00028240A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A34AA149D3CFE177C32412 /* Pods-A1.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82P8339342;
+				INFOPLIST_FILE = A1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.A1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A712E08A212304DE0028240A /* Build configuration list for PBXProject "A1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A712E0A3212304E00028240A /* Debug */,
+				A712E0A4212304E00028240A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A712E0A5212304E00028240A /* Build configuration list for PBXNativeTarget "A1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A712E0A6212304E00028240A /* Debug */,
+				A712E0A7212304E00028240A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A712E087212304DE0028240A /* Project object */;
+}

@@ -1,0 +1,106 @@
+//
+//  AppDelegate.m
+//  A1
+//
+//  Created by 이승주 on 14/08/2018.
+//  Copyright © 2018 nicejames. All rights reserved.
+//
+
+#import "AppDelegate.h"
+#import "SQLiteData.h"
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    
+    [[SQLiteData sharedSQLiteData] checkAndCreateDatabase];
+//    [self copyDatabase];
+    
+//    NSString* docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    NSString* dbPath = [docPath stringByAppendingPathComponent:@"db.sqlite"];
+//    NSFileManager *fm = [NSFileManager defaultManager];
+//
+//    NSLog(@"dbPath : %@", dbPath);
+//
+//    // Check if the database is existed.
+//    if(![fm fileExistsAtPath:dbPath])
+//    {
+//        // If database is not existed, copy from the database template in the bundle
+//        //NSString* dbTemplatePath = [[NSBundle mainBundle] pathForResource:@"db" ofType:@"sqlite"];
+//        NSString* dbTemplatePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"db.sqlite"];
+//        NSLog(@"dbTemplatePath : %@", dbTemplatePath);
+//        NSError* error = nil;
+//        [fm copyItemAtPath:dbTemplatePath toPath:dbPath error:&error];
+//        if(error){
+//            NSLog(@"can't copy db template.");
+//
+//        }
+//    }
+    
+    
+    
+    
+    
+//    NSError *err;
+//    //NSString *docs = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    
+//    //NSString *sourcePath = [docs stringByAppendingPathComponent: @"db.sqlite"];
+//    
+//    NSString* sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"db.sqlite"];
+//    
+//    NSString* docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    //NSString* sourcePath = [docPath stringByAppendingPathComponent:@"db.sqlite"];
+//    NSString* destPath = [docPath stringByAppendingPathComponent:@"db1.sqlite"];
+//    //NSString *destPath = [docs stringByAppendingPathComponent: @"db1.sqlite"];
+//    
+//    NSLog(@"sourcePath : %@", sourcePath);
+//    NSLog(@"destPath : %@", destPath);
+//    
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    BOOL result = [fileManager copyItemAtPath: sourcePath toPath:destPath error:&err];
+//    if (!result)
+//    {
+//        NSLog(@"Error = %@", [err localizedDescription]);
+//    }
+    
+    
+
+    
+    return YES;
+}
+
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+}
+
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+}
+
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+}
+
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+}
+
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+@end
