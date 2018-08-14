@@ -161,7 +161,7 @@
 				A7553BDB2123990E00A8CDB6 /* SQLiteData.m */,
 			);
 			name = Base;
-			path = "New Group";
+			path = ../Sources/Common/Base;
 			sourceTree = "<group>";
 		};
 		A7553BAC212396CA00A8CDB6 /* Audio */ = {
@@ -187,7 +187,7 @@
 				A7553BDF2123991D00A8CDB6 /* STKQueueEntry.m */,
 			);
 			name = Audio;
-			path = "New Group";
+			path = ../Sources/Common/Opensource/Audio;
 			sourceTree = "<group>";
 		};
 		A7553BCA2123987100A8CDB6 /* Opensource */ = {
@@ -207,8 +207,7 @@
 				A7553BCD212398A000A8CDB6 /* AppDelegate.m */,
 				A7553BCE212398A000A8CDB6 /* main.m */,
 			);
-			name = Sources;
-			path = "New Group";
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		A7553BD1212398A400A8CDB6 /* ViewControllers */ = {
