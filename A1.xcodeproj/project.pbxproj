@@ -40,6 +40,30 @@
 		A7553C1B2123A23300A8CDB6 /* T4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7553C192123A23300A8CDB6 /* T4ViewController.xib */; };
 		A7553C1F2123A24300A8CDB6 /* T5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C1D2123A24300A8CDB6 /* T5ViewController.m */; };
 		A7553C202123A24300A8CDB6 /* T5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7553C1E2123A24300A8CDB6 /* T5ViewController.xib */; };
+		A7553C3A2123A6FB00A8CDB6 /* btn_tap5.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C282123A6FB00A8CDB6 /* btn_tap5.png */; };
+		A7553C3B2123A6FB00A8CDB6 /* btn_tap4.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C292123A6FB00A8CDB6 /* btn_tap4.png */; };
+		A7553C3C2123A6FB00A8CDB6 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C2A2123A6FB00A8CDB6 /* TabBarController.m */; };
+		A7553C3D2123A6FB00A8CDB6 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C2C2123A6FB00A8CDB6 /* RootNavigationController.m */; };
+		A7553C3E2123A6FB00A8CDB6 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C2D2123A6FB00A8CDB6 /* TabBar.m */; };
+		A7553C3F2123A6FB00A8CDB6 /* btn_tap1.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C2E2123A6FB00A8CDB6 /* btn_tap1.png */; };
+		A7553C402123A6FB00A8CDB6 /* btn_tap3.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C2F2123A6FB00A8CDB6 /* btn_tap3.png */; };
+		A7553C412123A6FB00A8CDB6 /* btn_tap2.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C302123A6FB00A8CDB6 /* btn_tap2.png */; };
+		A7553C422123A6FB00A8CDB6 /* btn_tap2_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C322123A6FB00A8CDB6 /* btn_tap2_s.png */; };
+		A7553C432123A6FB00A8CDB6 /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C332123A6FB00A8CDB6 /* TabBarView.m */; };
+		A7553C442123A6FB00A8CDB6 /* btn_tap4_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C342123A6FB00A8CDB6 /* btn_tap4_s.png */; };
+		A7553C452123A6FB00A8CDB6 /* btn_tap1_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C372123A6FB00A8CDB6 /* btn_tap1_s.png */; };
+		A7553C462123A6FB00A8CDB6 /* btn_tap3_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C382123A6FB00A8CDB6 /* btn_tap3_s.png */; };
+		A7553C472123A6FB00A8CDB6 /* btn_tap5_s.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C392123A6FB00A8CDB6 /* btn_tap5_s.png */; };
+		A7553C532123A94F00A8CDB6 /* tab_btn3_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C492123A94E00A8CDB6 /* tab_btn3_pre@2x.png */; };
+		A7553C542123A94F00A8CDB6 /* tab_btn3_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C4A2123A94E00A8CDB6 /* tab_btn3_nor@2x.png */; };
+		A7553C552123A94F00A8CDB6 /* tab_btn1_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C4B2123A94E00A8CDB6 /* tab_btn1_nor@2x.png */; };
+		A7553C562123A94F00A8CDB6 /* tab_btn2_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C4C2123A94E00A8CDB6 /* tab_btn2_nor@2x.png */; };
+		A7553C572123A94F00A8CDB6 /* tab_btn5_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C4D2123A94F00A8CDB6 /* tab_btn5_nor@2x.png */; };
+		A7553C582123A94F00A8CDB6 /* tab_btn5_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C4E2123A94F00A8CDB6 /* tab_btn5_pre@2x.png */; };
+		A7553C592123A94F00A8CDB6 /* tab_btn1_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C4F2123A94F00A8CDB6 /* tab_btn1_pre@2x.png */; };
+		A7553C5A2123A94F00A8CDB6 /* tab_btn4_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C502123A94F00A8CDB6 /* tab_btn4_nor@2x.png */; };
+		A7553C5B2123A94F00A8CDB6 /* tab_btn2_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C512123A94F00A8CDB6 /* tab_btn2_pre@2x.png */; };
+		A7553C5C2123A94F00A8CDB6 /* tab_btn4_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C522123A94F00A8CDB6 /* tab_btn4_pre@2x.png */; };
 		CE3969CAB1EEDC191BB22A13 /* libPods-A1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B55D665291320B2BD4EAA7D /* libPods-A1.a */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +71,7 @@
 		29A34AA149D3CFE177C32412 /* Pods-A1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A1.release.xcconfig"; path = "Pods/Target Support Files/Pods-A1/Pods-A1.release.xcconfig"; sourceTree = "<group>"; };
 		7B55D665291320B2BD4EAA7D /* libPods-A1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-A1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		891A13C0D423E4C0BE7CADBB /* Pods-A1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-A1/Pods-A1.debug.xcconfig"; sourceTree = "<group>"; };
-		A712E08F212304DE0028240A /* A1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A712E08F212304DE0028240A /* AudiBud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudiBud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A712E099212304DE0028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A712E09B212304E00028240A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A712E09E212304E00028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +124,34 @@
 		A7553C1C2123A24300A8CDB6 /* T5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T5ViewController.h; sourceTree = "<group>"; };
 		A7553C1D2123A24300A8CDB6 /* T5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T5ViewController.m; sourceTree = "<group>"; };
 		A7553C1E2123A24300A8CDB6 /* T5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = T5ViewController.xib; sourceTree = "<group>"; };
+		A7553C282123A6FB00A8CDB6 /* btn_tap5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap5.png; sourceTree = "<group>"; };
+		A7553C292123A6FB00A8CDB6 /* btn_tap4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap4.png; sourceTree = "<group>"; };
+		A7553C2A2123A6FB00A8CDB6 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		A7553C2B2123A6FB00A8CDB6 /* TabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarView.h; sourceTree = "<group>"; };
+		A7553C2C2123A6FB00A8CDB6 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
+		A7553C2D2123A6FB00A8CDB6 /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
+		A7553C2E2123A6FB00A8CDB6 /* btn_tap1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap1.png; sourceTree = "<group>"; };
+		A7553C2F2123A6FB00A8CDB6 /* btn_tap3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap3.png; sourceTree = "<group>"; };
+		A7553C302123A6FB00A8CDB6 /* btn_tap2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap2.png; sourceTree = "<group>"; };
+		A7553C312123A6FB00A8CDB6 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		A7553C322123A6FB00A8CDB6 /* btn_tap2_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap2_s.png; sourceTree = "<group>"; };
+		A7553C332123A6FB00A8CDB6 /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
+		A7553C342123A6FB00A8CDB6 /* btn_tap4_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap4_s.png; sourceTree = "<group>"; };
+		A7553C352123A6FB00A8CDB6 /* TabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
+		A7553C362123A6FB00A8CDB6 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		A7553C372123A6FB00A8CDB6 /* btn_tap1_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap1_s.png; sourceTree = "<group>"; };
+		A7553C382123A6FB00A8CDB6 /* btn_tap3_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap3_s.png; sourceTree = "<group>"; };
+		A7553C392123A6FB00A8CDB6 /* btn_tap5_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_tap5_s.png; sourceTree = "<group>"; };
+		A7553C492123A94E00A8CDB6 /* tab_btn3_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn3_pre@2x.png"; sourceTree = "<group>"; };
+		A7553C4A2123A94E00A8CDB6 /* tab_btn3_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn3_nor@2x.png"; sourceTree = "<group>"; };
+		A7553C4B2123A94E00A8CDB6 /* tab_btn1_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn1_nor@2x.png"; sourceTree = "<group>"; };
+		A7553C4C2123A94E00A8CDB6 /* tab_btn2_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn2_nor@2x.png"; sourceTree = "<group>"; };
+		A7553C4D2123A94F00A8CDB6 /* tab_btn5_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn5_nor@2x.png"; sourceTree = "<group>"; };
+		A7553C4E2123A94F00A8CDB6 /* tab_btn5_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn5_pre@2x.png"; sourceTree = "<group>"; };
+		A7553C4F2123A94F00A8CDB6 /* tab_btn1_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn1_pre@2x.png"; sourceTree = "<group>"; };
+		A7553C502123A94F00A8CDB6 /* tab_btn4_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn4_nor@2x.png"; sourceTree = "<group>"; };
+		A7553C512123A94F00A8CDB6 /* tab_btn2_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn2_pre@2x.png"; sourceTree = "<group>"; };
+		A7553C522123A94F00A8CDB6 /* tab_btn4_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn4_pre@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +187,7 @@
 		A712E090212304DE0028240A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A712E08F212304DE0028240A /* A1.app */,
+				A712E08F212304DE0028240A /* AudiBud.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +312,7 @@
 		A7553BD2212398AC00A8CDB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7553C272123A6FB00A8CDB6 /* Tabs */,
 				A7553C262123A38F00A8CDB6 /* Cells */,
 				A7553C252123A38900A8CDB6 /* Base */,
 			);
@@ -278,6 +331,50 @@
 			children = (
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A7553C272123A6FB00A8CDB6 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				A7553C482123A72E00A8CDB6 /* images */,
+				A7553C352123A6FB00A8CDB6 /* TabBar.h */,
+				A7553C2D2123A6FB00A8CDB6 /* TabBar.m */,
+				A7553C2B2123A6FB00A8CDB6 /* TabBarView.h */,
+				A7553C332123A6FB00A8CDB6 /* TabBarView.m */,
+				A7553C312123A6FB00A8CDB6 /* TabBarController.h */,
+				A7553C2A2123A6FB00A8CDB6 /* TabBarController.m */,
+				A7553C362123A6FB00A8CDB6 /* RootNavigationController.h */,
+				A7553C2C2123A6FB00A8CDB6 /* RootNavigationController.m */,
+			);
+			name = Tabs;
+			path = Base/Tabs;
+			sourceTree = "<group>";
+		};
+		A7553C482123A72E00A8CDB6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A7553C4B2123A94E00A8CDB6 /* tab_btn1_nor@2x.png */,
+				A7553C4F2123A94F00A8CDB6 /* tab_btn1_pre@2x.png */,
+				A7553C4C2123A94E00A8CDB6 /* tab_btn2_nor@2x.png */,
+				A7553C512123A94F00A8CDB6 /* tab_btn2_pre@2x.png */,
+				A7553C4A2123A94E00A8CDB6 /* tab_btn3_nor@2x.png */,
+				A7553C492123A94E00A8CDB6 /* tab_btn3_pre@2x.png */,
+				A7553C502123A94F00A8CDB6 /* tab_btn4_nor@2x.png */,
+				A7553C522123A94F00A8CDB6 /* tab_btn4_pre@2x.png */,
+				A7553C4D2123A94F00A8CDB6 /* tab_btn5_nor@2x.png */,
+				A7553C4E2123A94F00A8CDB6 /* tab_btn5_pre@2x.png */,
+				A7553C2E2123A6FB00A8CDB6 /* btn_tap1.png */,
+				A7553C372123A6FB00A8CDB6 /* btn_tap1_s.png */,
+				A7553C302123A6FB00A8CDB6 /* btn_tap2.png */,
+				A7553C322123A6FB00A8CDB6 /* btn_tap2_s.png */,
+				A7553C2F2123A6FB00A8CDB6 /* btn_tap3.png */,
+				A7553C382123A6FB00A8CDB6 /* btn_tap3_s.png */,
+				A7553C292123A6FB00A8CDB6 /* btn_tap4.png */,
+				A7553C342123A6FB00A8CDB6 /* btn_tap4_s.png */,
+				A7553C282123A6FB00A8CDB6 /* btn_tap5.png */,
+				A7553C392123A6FB00A8CDB6 /* btn_tap5_s.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		E5720ECC74D50662204F9BCC /* Pods */ = {
@@ -308,7 +405,7 @@
 			);
 			name = A1;
 			productName = A1;
-			productReference = A712E08F212304DE0028240A /* A1.app */;
+			productReference = A712E08F212304DE0028240A /* AudiBud.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -348,19 +445,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7553C572123A94F00A8CDB6 /* tab_btn5_nor@2x.png in Resources */,
+				A7553C402123A6FB00A8CDB6 /* btn_tap3.png in Resources */,
+				A7553C5B2123A94F00A8CDB6 /* tab_btn2_pre@2x.png in Resources */,
 				A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */,
 				A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */,
 				A7553BFF21239B3800A8CDB6 /* Unit_31_40.mp3 in Resources */,
+				A7553C452123A6FB00A8CDB6 /* btn_tap1_s.png in Resources */,
 				A7553C162123A21800A8CDB6 /* T3ViewController.xib in Resources */,
+				A7553C582123A94F00A8CDB6 /* tab_btn5_pre@2x.png in Resources */,
 				A7553BC92123970A00A8CDB6 /* Info.plist in Resources */,
+				A7553C542123A94F00A8CDB6 /* tab_btn3_nor@2x.png in Resources */,
 				A712E09C212304E00028240A /* Assets.xcassets in Resources */,
+				A7553C472123A6FB00A8CDB6 /* btn_tap5_s.png in Resources */,
+				A7553C5A2123A94F00A8CDB6 /* tab_btn4_nor@2x.png in Resources */,
 				A7553BFD21239B3800A8CDB6 /* Unit_41_50.mp3 in Resources */,
 				A712E09A212304DE0028240A /* Main.storyboard in Resources */,
+				A7553C422123A6FB00A8CDB6 /* btn_tap2_s.png in Resources */,
 				A7553C0021239B3800A8CDB6 /* Unit_21_30.mp3 in Resources */,
+				A7553C3A2123A6FB00A8CDB6 /* btn_tap5.png in Resources */,
+				A7553C592123A94F00A8CDB6 /* tab_btn1_pre@2x.png in Resources */,
+				A7553C532123A94F00A8CDB6 /* tab_btn3_pre@2x.png in Resources */,
+				A7553C552123A94F00A8CDB6 /* tab_btn1_nor@2x.png in Resources */,
 				A7553C112123A20500A8CDB6 /* T2ViewController.xib in Resources */,
+				A7553C3B2123A6FB00A8CDB6 /* btn_tap4.png in Resources */,
+				A7553C5C2123A94F00A8CDB6 /* tab_btn4_pre@2x.png in Resources */,
 				A7553C1B2123A23300A8CDB6 /* T4ViewController.xib in Resources */,
+				A7553C3F2123A6FB00A8CDB6 /* btn_tap1.png in Resources */,
+				A7553C412123A6FB00A8CDB6 /* btn_tap2.png in Resources */,
+				A7553C462123A6FB00A8CDB6 /* btn_tap3_s.png in Resources */,
+				A7553C442123A6FB00A8CDB6 /* btn_tap4_s.png in Resources */,
 				A7553C202123A24300A8CDB6 /* T5ViewController.xib in Resources */,
 				A7553BFE21239B3800A8CDB6 /* Unit_51_55.mp3 in Resources */,
+				A7553C562123A94F00A8CDB6 /* tab_btn2_nor@2x.png in Resources */,
 				A7553C0C2123A1A800A8CDB6 /* T1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,9 +544,13 @@
 				A7553C1A2123A23300A8CDB6 /* T4ViewController.m in Sources */,
 				A7553BF52123991E00A8CDB6 /* STKCoreFoundationDataSource.m in Sources */,
 				A7553BF02123991E00A8CDB6 /* STKQueueEntry.m in Sources */,
+				A7553C432123A6FB00A8CDB6 /* TabBarView.m in Sources */,
+				A7553C3D2123A6FB00A8CDB6 /* RootNavigationController.m in Sources */,
 				A7553BF82123991E00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				A7553C3C2123A6FB00A8CDB6 /* TabBarController.m in Sources */,
 				A7553BF22123991E00A8CDB6 /* STKDataSourceWrapper.m in Sources */,
 				A7553C152123A21800A8CDB6 /* T3ViewController.m in Sources */,
+				A7553C3E2123A6FB00A8CDB6 /* TabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +699,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.A1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AudiBud;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -596,7 +717,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.A1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AudiBud;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
