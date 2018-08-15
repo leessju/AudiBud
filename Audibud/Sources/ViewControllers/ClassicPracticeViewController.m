@@ -73,6 +73,12 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *dic = self.data[indexPath.row];
+    NSLog(@"dic : %@", dic);
+}
+
 - (void)leftMenuPressed:(UIButton *)sender
 {
     [self.navigationController popViewControllerAnimated:YES];

@@ -7,6 +7,7 @@
 //
 
 #import "PracticeItemTableViewCell.h"
+#import "DefinedHeader.h"
 
 @interface PracticeItemTableViewCell()
 
@@ -21,6 +22,8 @@
     [super awakeFromNib];
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    [self.lblTxt1 sizeToWidth:SCREEN_WIDTH - 20];
+    [self.lblTxt2 sizeToWidth:SCREEN_WIDTH - 20];
 }
 
 - (void)setData:(NSDictionary *)dicData

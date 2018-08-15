@@ -113,8 +113,7 @@
 - (void)didView:(NSUInteger)f_idx
 {
     NSLog(@"view : f_idx : %lu", (unsigned long)f_idx);
-    NSLog(@"practice : %@", [SQLITE practiceFileIdx:f_idx] );
-
+    //NSLog(@"practice : %@", [SQLITE practiceFileIdx:f_idx] );
     NSDictionary *d = [SQLITE fileDataByFileIdx:f_idx];
     
     if(d)
