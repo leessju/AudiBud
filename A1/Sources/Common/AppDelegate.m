@@ -9,98 +9,85 @@
 #import "AppDelegate.h"
 #import "SQLiteData.h"
 
+#import "DefinedHeader.h"
+#import "RootNavigationController.h"
+#import "TabBarController.h"
+
+#import "T1ViewController.h"
+#import "T2ViewController.h"
+#import "T3ViewController.h"
+#import "T4ViewController.h"
+#import "T5ViewController.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.tab_height = 49;
+    
+    if (IS_IPHONE_X)
+        self.tab_height = 75;
+    else
+        self.tab_height = 49;
+    
+    T1ViewController *v1Controller  = [[T1ViewController alloc] initWithNibName:@"T1ViewController" bundle:nil];
+    self.t1navigationController     = [[UINavigationController alloc] initWithRootViewController:v1Controller];
+    T2ViewController *v2Controller  = [[T2ViewController alloc] initWithNibName:@"T2ViewController" bundle:nil];
+    self.t2navigationController     = [[UINavigationController alloc] initWithRootViewController:v2Controller];
+    T3ViewController *v3Controller  = [[T3ViewController alloc] initWithNibName:@"T3ViewController" bundle:nil];
+    self.t3navigationController     = [[UINavigationController alloc] initWithRootViewController:v3Controller];
+    T4ViewController *v4Controller  = [[T4ViewController alloc] initWithNibName:@"T4ViewController" bundle:nil];
+    self.t4navigationController     = [[UINavigationController alloc] initWithRootViewController:v4Controller];
+    T5ViewController *v5Controller  = [[T5ViewController alloc] initWithNibName:@"T5ViewController" bundle:nil];
+    self.t5navigationController     = [[UINavigationController alloc] initWithRootViewController:v5Controller];
+    
+    self.tabBarController = [[TabBarController alloc] init];
+    [self.tabBarController setviewCons:
+     [NSArray arrayWithObjects:
+      [NSArray arrayWithObjects:
+       self.t1navigationController,
+       self.t2navigationController,
+       self.t3navigationController,
+       self.t4navigationController,
+       self.t5navigationController,
+       nil],
+      nil] ];
+    
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
     
     [[SQLiteData sharedSQLiteData] checkAndCreateDatabase];
-//    [self copyDatabase];
-    
-//    NSString* docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-//    NSString* dbPath = [docPath stringByAppendingPathComponent:@"db.sqlite"];
-//    NSFileManager *fm = [NSFileManager defaultManager];
-//
-//    NSLog(@"dbPath : %@", dbPath);
-//
-//    // Check if the database is existed.
-//    if(![fm fileExistsAtPath:dbPath])
-//    {
-//        // If database is not existed, copy from the database template in the bundle
-//        //NSString* dbTemplatePath = [[NSBundle mainBundle] pathForResource:@"db" ofType:@"sqlite"];
-//        NSString* dbTemplatePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"db.sqlite"];
-//        NSLog(@"dbTemplatePath : %@", dbTemplatePath);
-//        NSError* error = nil;
-//        [fm copyItemAtPath:dbTemplatePath toPath:dbPath error:&error];
-//        if(error){
-//            NSLog(@"can't copy db template.");
-//
-//        }
-//    }
-    
-    
-    
-    
-    
-//    NSError *err;
-//    //NSString *docs = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-//    
-//    //NSString *sourcePath = [docs stringByAppendingPathComponent: @"db.sqlite"];
-//    
-//    NSString* sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"db.sqlite"];
-//    
-//    NSString* docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-//    //NSString* sourcePath = [docPath stringByAppendingPathComponent:@"db.sqlite"];
-//    NSString* destPath = [docPath stringByAppendingPathComponent:@"db1.sqlite"];
-//    //NSString *destPath = [docs stringByAppendingPathComponent: @"db1.sqlite"];
-//    
-//    NSLog(@"sourcePath : %@", sourcePath);
-//    NSLog(@"destPath : %@", destPath);
-//    
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    BOOL result = [fileManager copyItemAtPath: sourcePath toPath:destPath error:&err];
-//    if (!result)
-//    {
-//        NSLog(@"Error = %@", [err localizedDescription]);
-//    }
-    
-    
-
     
     return YES;
 }
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
-
 
 @end
