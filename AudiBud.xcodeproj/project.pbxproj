@@ -11,6 +11,8 @@
 		A712E09C212304E00028240A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A712E09B212304E00028240A /* Assets.xcassets */; };
 		A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A712E09D212304E00028240A /* LaunchScreen.storyboard */; };
 		A713D73C2123B70700227445 /* T3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A713D73B2123B70600227445 /* T3ViewController.xib */; };
+		A713D7402123B90100227445 /* FileItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A713D73E2123B90100227445 /* FileItemTableViewCell.m */; };
+		A713D7412123B90100227445 /* FileItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A713D73F2123B90100227445 /* FileItemTableViewCell.xib */; };
 		A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7553BA221238CE700A8CDB6 /* db.sqlite */; };
 		A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCD212398A000A8CDB6 /* AppDelegate.m */; };
 		A7553BD0212398A000A8CDB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCE212398A000A8CDB6 /* main.m */; };
@@ -75,6 +77,9 @@
 		A712E09B212304E00028240A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A712E09E212304E00028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A713D73B2123B70600227445 /* T3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = T3ViewController.xib; sourceTree = "<group>"; };
+		A713D73D2123B90100227445 /* FileItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileItemTableViewCell.h; sourceTree = "<group>"; };
+		A713D73E2123B90100227445 /* FileItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileItemTableViewCell.m; sourceTree = "<group>"; };
+		A713D73F2123B90100227445 /* FileItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileItemTableViewCell.xib; sourceTree = "<group>"; };
 		A7553BA221238CE700A8CDB6 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		A7553BCC212398A000A8CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Audibud/Sources/Common/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A7553BCD212398A000A8CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Audibud/Sources/Common/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -324,6 +329,9 @@
 		A7553C262123A38F00A8CDB6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A713D73D2123B90100227445 /* FileItemTableViewCell.h */,
+				A713D73E2123B90100227445 /* FileItemTableViewCell.m */,
+				A713D73F2123B90100227445 /* FileItemTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -464,6 +472,7 @@
 				A7553C0021239B3800A8CDB6 /* Unit_21_30.mp3 in Resources */,
 				A7553C3A2123A6FB00A8CDB6 /* btn_tap5.png in Resources */,
 				A7553C592123A94F00A8CDB6 /* tab_btn1_pre@2x.png in Resources */,
+				A713D7412123B90100227445 /* FileItemTableViewCell.xib in Resources */,
 				A7553C532123A94F00A8CDB6 /* tab_btn3_pre@2x.png in Resources */,
 				A7553C552123A94F00A8CDB6 /* tab_btn1_nor@2x.png in Resources */,
 				A7553C112123A20500A8CDB6 /* T2ViewController.xib in Resources */,
@@ -549,6 +558,7 @@
 				A7553BF22123991E00A8CDB6 /* STKDataSourceWrapper.m in Sources */,
 				A7553C152123A21800A8CDB6 /* T3ViewController.m in Sources */,
 				A7553C3E2123A6FB00A8CDB6 /* TabBar.m in Sources */,
+				A713D7402123B90100227445 /* FileItemTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -79,100 +79,214 @@ static SQLiteData *obj = nil;
 }
 
 
-- (NSMutableArray *)testData
+- (void)dropAndcreateTable
 {
+    NSString *a = @"PRAGMA foreign_keys = false;DROP TABLE IF EXISTS 'tbl_file_data'; CREATE TABLE 'tbl_file_data' ( 'f_idx' integer NOT NULL, 'f_a' TEXT, 'download_yn' TEXT, 'download_date' DATE, PRIMARY KEY ('f_idx'));PRAGMA foreign_keys = true;";
+    
+    NSString *b = @"PRAGMA foreign_keys = false; DROP TABLE IF EXISTS 'tbl_practice'; CREATE TABLE 'tbl_practice' ( 'p_idx' integer NOT NULL, 'f_idx' integer, 'seq' integer, 'start_time' real, 'end_time' real, 'txt_kor' TEXT, 'txt_eng' TEXT, PRIMARY KEY ('p_idx')); PRAGMA foreign_keys = true;";
+    
+    NSString *c = @"PRAGMA foreign_keys = false; DROP TABLE IF EXISTS 'tbl_user_log'; CREATE TABLE 'tbl_user_log' ( 'p_idx' integer, 'view_date' DATE); PRAGMA foreign_keys = true;";
+    
     FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
     [db open];
     
-    NSMutableArray *data1 = [[db executeQuery:@"SELECT name FROM sqlite_master WHERE type='table' AND name= ?", @"tbl_test"] data];
+    BOOL isOK;
     
-    BOOL isOK = NO;
+    isOK = [db executeUpdate:a];
+    NSLog(@"create table %@ => %d", @"tbl_file_data", isOK);
+    isOK = NO;
     
-    if ([data1 count] == 0)
+    isOK = [db executeUpdate:b];
+    NSLog(@"create table %@ => %d", @"tbl_practice", isOK);
+    isOK = NO;
+    
+    isOK = [db executeUpdate:c];
+    NSLog(@"create table %@ => %d", @"tbl_user_log", isOK);
+    isOK = NO;
+    
+    [db close];
+}
+
+- (BOOL)addFileData:(NSDictionary *)dic
+{
+    if(dic)
     {
-        isOK = [db executeUpdate:@"CREATE TABLE 'tbl_test' ('idx' INTEGER PRIMARY KEY  NOT NULL, 'search_text' TEXT, 'date' DATETIME)"];
+        FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+        [db open];
         
-        if (!isOK)
-        {
-            NSLog(@"create table");
-            [db close];
-            return nil;
-        }
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
+        
+        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_file_data (f_idx, f_a, download_yn, download_date) VALUES (?,?,?,?)", [dic[@"f_dx"] intValue], [dic[@"f_a"] intValue], @"N", [dateString UTF8String]];
+        
+        [db close];
+        return isOK;
     }
     
-    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_test"] data];
+    return NO;
+}
+
+- (BOOL)addPractice:(NSDictionary *)dic
+{
+    if(dic)
+    {
+        FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+        [db open];
+        
+        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_practice (p_idx,f_idx,seq,start_time,end_time,txt_kor,txt_eng) VALUES (?,?,?,?,?,?,?)", [dic[@"p_idx"] intValue], [dic[@"f_idx"] intValue], [dic[@"seq"] intValue], [dic[@"start_time"] floatValue], [dic[@"end_time"] floatValue], dic[@"txt_kor"], dic[@"txt_eng"] ];
+        
+        [db close];
+        return isOK;
+    }
     
+    return NO;
+}
+
+- (BOOL)addUesrLog:(NSDictionary *)dic
+{
+    if(dic)
+    {
+        FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+        [db open];
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
+        
+        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_user_log (p_idx,view_date) VALUES (?,?)", [dic[@"p_idx"] intValue], [dateString UTF8String] ];
+        
+        [db close];
+        return isOK;
+    }
+    
+    return NO;
+}
+
+- (NSMutableArray *)fileData
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
+    [db open];
+    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_file_data"] data];
     [db close];
     
     return data;
 }
 
-- (NSMutableArray *)searchData
+- (NSMutableArray *)practice
 {
     FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
     [db open];
-    
-    NSMutableArray *data1 = [[db executeQuery:@"SELECT name FROM sqlite_master WHERE type='table' AND name= ?", @"tbl_search"] data];
-    
-    BOOL isOK = NO;
-    
-    if ([data1 count] == 0)
-    {
-        isOK = [db executeUpdate:@"CREATE TABLE 'tbl_search' ('idx' INTEGER PRIMARY KEY  NOT NULL, 'search_text' TEXT, 'date' DATETIME)"];
-        
-        if (!isOK)
-        {
-            [db close];
-            return nil;
-        }
-    }
-    
-    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_search ORDER BY date DESC"] data];
-    
+    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_practice"] data];
     [db close];
     
     return data;
 }
 
-- (BOOL)deleteSearchText:(NSUInteger)idx
+- (NSMutableArray *)userLog
 {
-    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
     [db open];
-    
-    BOOL isOK = [db executeUpdate:@"DELETE FROM tbl_search where idx = ?", [NSString stringWithFormat:@"%d", (int)idx]];
-    
+    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_user_log"] data];
     [db close];
     
-    return isOK;
+    return data;
 }
 
-- (BOOL)deleteAllSearchText
-{
-    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
-    [db open];
-    
-    BOOL isOK = [db executeUpdate:@"DELETE FROM tbl_search"];
-    
-    [db close];
-    
-    return isOK;
-}
+//- (NSMutableArray *)testData
+//{
+//    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
+//    [db open];
+//    
+//    NSMutableArray *data1 = [[db executeQuery:@"SELECT name FROM sqlite_master WHERE type='table' AND name= ?", @"tbl_test"] data];
+//    
+//    BOOL isOK = NO;
+//    
+//    if ([data1 count] == 0)
+//    {
+//        isOK = [db executeUpdate:@"CREATE TABLE 'tbl_test' ('idx' INTEGER PRIMARY KEY  NOT NULL, 'search_text' TEXT, 'date' DATETIME)"];
+//        
+//        if (!isOK)
+//        {
+//            NSLog(@"create table");
+//            [db close];
+//            return nil;
+//        }
+//    }
+//    
+//    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_test"] data];
+//    
+//    [db close];
+//    
+//    return data;
+//}
 
-- (void)addSearchText:(NSString *)search_text
-{
-    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
-    [db open];
-    
-    [db beginTransaction];
-    
-    [db executeUpdate:@"DELETE FROM tbl_search where search_text = ?", search_text];
-    [db executeUpdate:@"INSERT into tbl_search (search_text,date) values (?,?)" ,
-                         search_text,
-                         [NSDate date]
-                         ];
-    [db commit];
-    [db close];
-}
+//- (NSMutableArray *)searchData
+//{
+//    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
+//    [db open];
+//
+//    NSMutableArray *data1 = [[db executeQuery:@"SELECT name FROM sqlite_master WHERE type='table' AND name= ?", @"tbl_search"] data];
+//
+//    BOOL isOK = NO;
+//
+//    if ([data1 count] == 0)
+//    {
+//        isOK = [db executeUpdate:@"CREATE TABLE 'tbl_search' ('idx' INTEGER PRIMARY KEY  NOT NULL, 'search_text' TEXT, 'date' DATETIME)"];
+//
+//        if (!isOK)
+//        {
+//            [db close];
+//            return nil;
+//        }
+//    }
+//
+//    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_search ORDER BY date DESC"] data];
+//
+//    [db close];
+//
+//    return data;
+//}
+
+//- (BOOL)deleteSearchText:(NSUInteger)idx
+//{
+//    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+//    [db open];
+//
+//    BOOL isOK = [db executeUpdate:@"DELETE FROM tbl_search where idx = ?", [NSString stringWithFormat:@"%d", (int)idx]];
+//
+//    [db close];
+//
+//    return isOK;
+//}
+//
+//- (BOOL)deleteAllSearchText
+//{
+//    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+//    [db open];
+//
+//    BOOL isOK = [db executeUpdate:@"DELETE FROM tbl_search"];
+//
+//    [db close];
+//
+//    return isOK;
+//}
+//
+//- (void)addSearchText:(NSString *)search_text
+//{
+//    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+//    [db open];
+//
+//    [db beginTransaction];
+//
+//    [db executeUpdate:@"DELETE FROM tbl_search where search_text = ?", search_text];
+//    [db executeUpdate:@"INSERT into tbl_search (search_text,date) values (?,?)" ,
+//                         search_text,
+//                         [NSDate date]
+//                         ];
+//    [db commit];
+//    [db close];
+//}
 
 @end
 

@@ -8,41 +8,92 @@
 
 #import "T1ViewController.h"
 #import "DefinedHeader.h"
+#import "FileItemTableViewCell.h"
 
 @interface T1ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSMutableArray *data;
+@property (strong, nonatomic) NSMutableArray *dataP;
 
 @end
 
 
 @implementation T1ViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.data  = [[NSMutableArray alloc] init];
+    self.dataP = [[NSMutableArray alloc] init];
 
+    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - APP_DEL.tab_height);
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"FileItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"FileItemTableViewCell"];
     
+    [self loadData];
+}
+
+- (void)loadData
+{
+    NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetFileItems";
     
-    
-    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:URLString
+       parameters:nil
+         progress:nil
+          success:^(NSURLSessionTask *task, id responseObject) {
+              self.data = responseObject[@"response_data"];
+              NSLog(@"JSON: %@", self.data);
+              [self.tableView reloadData];
+              
+          } failure:^(NSURLSessionTask *operation, NSError *error) {
+              NSLog(@"Error: %@", error);
+          }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    return nil;
+    static NSString *CellIdentifier = @"FileItemTableViewCell";
+    FileItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    [cell setData:self.data[indexPath.row]];
+
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetPractice";
+    NSUInteger f_idx = [self.data[indexPath.row][@"f_idx"] intValue];
     
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:URLString
+       parameters:@{@"f_idx":@(f_idx).stringValue}
+         progress:nil
+          success:^(NSURLSessionTask *task, id responseObject) {
+              self.dataP = responseObject[@"response_data"];
+              NSLog(@"JSON: %@", self.dataP);
+              //[self.tableView reloadData];
+              
+          } failure:^(NSURLSessionTask *operation, NSError *error) {
+              NSLog(@"Error: %@", error);
+          }];
 }
 
 - (void)didReceiveMemoryWarning {

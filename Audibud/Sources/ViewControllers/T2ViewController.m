@@ -58,8 +58,8 @@
               NSLog(@"Error: %@", error);
           }];
     
-    NSMutableArray *a = [[SQLiteData sharedSQLiteData] testData];
-    NSLog(@"aaaaaaa : %@", a);
+//    NSMutableArray *a = [[SQLiteData sharedSQLiteData] testData];
+//    NSLog(@"aaaaaaa : %@", a);
 }
 
 - (void)didReceiveMemoryWarning {

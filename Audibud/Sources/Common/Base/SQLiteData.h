@@ -16,12 +16,19 @@
 + (SQLiteData *)sharedSQLiteData;
 - (void)clearDatabaseFile;
 - (void)checkAndCreateDatabase;
+- (void)dropAndcreateTable;
 
+- (BOOL)addFileData:(NSDictionary *)dic;
+- (BOOL)addPractice:(NSDictionary *)dic;
+- (BOOL)addUesrLog:(NSDictionary *)dic;
+- (NSMutableArray *)fileData;
+- (NSMutableArray *)practice;
+- (NSMutableArray *)userLog;
 
-- (NSMutableArray *)searchData;
-- (NSMutableArray *)testData;
-- (BOOL)deleteSearchText:(NSUInteger)idx;
-- (BOOL)deleteAllSearchText;
-- (void)addSearchText:(NSString *)search_text;
+//- (NSMutableArray *)searchData;
+//- (NSMutableArray *)testData;
+//- (BOOL)deleteSearchText:(NSUInteger)idx;
+//- (BOOL)deleteAllSearchText;
+//- (void)addSearchText:(NSString *)search_text;
 
 @end

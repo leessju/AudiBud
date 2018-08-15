@@ -27,6 +27,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+//    [[SQLiteData sharedSQLiteData] clearDatabaseFile];
+//    [[SQLiteData sharedSQLiteData] checkAndCreateDatabase];
+//    [[SQLiteData sharedSQLiteData] dropAndcreateTable];
+    
+    
+    
     self.tab_height = 49;
     
     if (IS_IPHONE_X)
@@ -64,9 +70,7 @@
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
-    
-    [[SQLiteData sharedSQLiteData] checkAndCreateDatabase];
-    
+
     return YES;
 }
 
