@@ -207,11 +207,26 @@ static SQLiteData *obj = nil;
     return data;
 }
 
-- (NSMutableArray *)practice
+- (NSDictionary *)fileDataByFileIdx:(NSUInteger)f_idx
 {
     FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
     [db open];
-    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_practice"] data];
+    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_file_data WHERE f_idx = ?", @(f_idx).stringValue ] data];
+    [db close];
+    
+    if(data.count > 0)
+    {
+        return data[0];
+    }
+    
+    return nil;
+}
+
+- (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
+    [db open];
+    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_practice WHERE f_idx = ?", @(f_idx).stringValue ] data];
     [db close];
     
     return data;

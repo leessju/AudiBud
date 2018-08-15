@@ -7,10 +7,16 @@
 //
 
 #import "FileItemTableViewCell.h"
+#import "DefinedHeader.h"
 
 @interface FileItemTableViewCell()
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UIButton *btnView;
+@property (weak, nonatomic) IBOutlet UIButton *btnDownload;
+@property (weak, nonatomic) IBOutlet UIView *vBack;
+
+
 @property (strong, nonatomic) NSDictionary *dicData;
 
 @end
@@ -21,6 +27,11 @@
     [super awakeFromNib];
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    [self.btnDownload moveToX:SCREEN_WIDTH - 60];
+    [self.btnView sizeToWidth:SCREEN_WIDTH - 60];
+    [self.vBack sizeToWidth:SCREEN_WIDTH];
+    
+    self.vBack.backgroundColor = [UIColor colorWithHexString:@"#fcf6f4"];
 }
 
 - (void)setData:(NSDictionary *)dicData
@@ -29,8 +40,51 @@
     
     if (dicData)
     {
-        self.lblTitle.text = dicData[@"f_name"];
+        NSDictionary *d = [SQLITE fileDataByFileIdx:[dicData[@"f_idx"] intValue]];
         
+        if(d)
+        {
+            if([d[@"download_yn"] isEqualToString:@"Y"])
+            {
+                self.btnDownload.hidden = YES;
+                [self.btnView sizeToWidth:SCREEN_WIDTH];
+                self.vBack.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+            }
+            else
+            {
+                [self.btnDownload moveToX:SCREEN_WIDTH - 60];
+                [self.btnView sizeToWidth:SCREEN_WIDTH - 60];
+                self.vBack.backgroundColor = [UIColor colorWithHexString:@"#fcf6f4"];
+            }
+        }
+        
+        self.lblTitle.text = dicData[@"f_name"];
+    }
+}
+
+- (IBAction)onTouch_btnView:(id)sender
+{
+    if(self.delegate)
+    {
+        [self.delegate didView:[self.dicData[@"f_idx"] intValue]];
+    }
+}
+
+- (IBAction)onTouch_btnDownload:(id)sender
+{
+    if(self.delegate)
+    {
+        [self.delegate didDownload:[self.dicData[@"f_idx"] intValue]];
+    }
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+
 //        if ([self.dicData[@"brand_image_count"] intValue] > 0)
 //        {
 //            [self.ivBrand sd_setImageWithURL:[DATA_HELPER imageUrl:self.dicData[@"brand_images"] key:@"brand" size:CGSizeZero]
@@ -43,15 +97,6 @@
 //
 //                                   }];
 //        }
-        
-        
-    }
-}
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

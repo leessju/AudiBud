@@ -13,6 +13,13 @@
 		A713D7402123B90100227445 /* FileItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A713D73E2123B90100227445 /* FileItemTableViewCell.m */; };
 		A713D7412123B90100227445 /* FileItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A713D73F2123B90100227445 /* FileItemTableViewCell.xib */; };
 		A713D74421245B2D00227445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A713D74221245B2D00227445 /* Main.storyboard */; };
+		A713D74721246BB600227445 /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A713D74621246BB600227445 /* down@2x.png */; };
+		A713D74A21246D7600227445 /* UIView+Move.m in Sources */ = {isa = PBXBuildFile; fileRef = A713D74921246D7500227445 /* UIView+Move.m */; };
+		A713D74F21247A7C00227445 /* ClassicPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A713D74D21247A7C00227445 /* ClassicPracticeViewController.m */; };
+		A713D75021247A7C00227445 /* ClassicPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A713D74E21247A7C00227445 /* ClassicPracticeViewController.xib */; };
+		A713D75421247F1000227445 /* PracticeItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A713D75221247F1000227445 /* PracticeItemTableViewCell.m */; };
+		A713D75521247F1000227445 /* PracticeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A713D75321247F1000227445 /* PracticeItemTableViewCell.xib */; };
+		A713D7572124855A00227445 /* title_btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A713D7562124855A00227445 /* title_btn_back@2x.png */; };
 		A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7553BA221238CE700A8CDB6 /* db.sqlite */; };
 		A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCD212398A000A8CDB6 /* AppDelegate.m */; };
 		A7553BD0212398A000A8CDB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCE212398A000A8CDB6 /* main.m */; };
@@ -80,6 +87,17 @@
 		A713D73E2123B90100227445 /* FileItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileItemTableViewCell.m; sourceTree = "<group>"; };
 		A713D73F2123B90100227445 /* FileItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileItemTableViewCell.xib; sourceTree = "<group>"; };
 		A713D74321245B2D00227445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A713D74621246BB600227445 /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "down@2x.png"; path = "Audibud/Resource/Images/down@2x.png"; sourceTree = SOURCE_ROOT; };
+		A713D74821246D7500227445 /* UIView+Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Move.h"; sourceTree = "<group>"; };
+		A713D74921246D7500227445 /* UIView+Move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Move.m"; sourceTree = "<group>"; };
+		A713D74B2124772800227445 /* UIColor+UIColor_Hexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColor_Hexadecimal.h"; sourceTree = "<group>"; };
+		A713D74C21247A7C00227445 /* ClassicPracticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassicPracticeViewController.h; sourceTree = "<group>"; };
+		A713D74D21247A7C00227445 /* ClassicPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassicPracticeViewController.m; sourceTree = "<group>"; };
+		A713D74E21247A7C00227445 /* ClassicPracticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassicPracticeViewController.xib; sourceTree = "<group>"; };
+		A713D75121247F1000227445 /* PracticeItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PracticeItemTableViewCell.h; sourceTree = "<group>"; };
+		A713D75221247F1000227445 /* PracticeItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticeItemTableViewCell.m; sourceTree = "<group>"; };
+		A713D75321247F1000227445 /* PracticeItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeItemTableViewCell.xib; sourceTree = "<group>"; };
+		A713D7562124855A00227445 /* title_btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title_btn_back@2x.png"; path = "Audibud/Resource/Images/title_btn_back@2x.png"; sourceTree = SOURCE_ROOT; };
 		A7553BA221238CE700A8CDB6 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		A7553BCC212398A000A8CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Audibud/Sources/Common/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A7553BCD212398A000A8CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Audibud/Sources/Common/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -204,6 +222,16 @@
 			path = Audibud;
 			sourceTree = "<group>";
 		};
+		A713D74521246BA700227445 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A713D7562124855A00227445 /* title_btn_back@2x.png */,
+				A713D74621246BB600227445 /* down@2x.png */,
+			);
+			name = images;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		A7553B90212316A200A8CDB6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +245,7 @@
 		A7553B9D212387E300A8CDB6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A713D74521246BA700227445 /* images */,
 				A7553BFC21239B3800A8CDB6 /* Unit_21_30.mp3 */,
 				A7553BFB21239B3800A8CDB6 /* Unit_31_40.mp3 */,
 				A7553BF921239B3800A8CDB6 /* Unit_41_50.mp3 */,
@@ -237,6 +266,9 @@
 				A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */,
 				A7553BDA2123990E00A8CDB6 /* SQLiteData.h */,
 				A7553BDB2123990E00A8CDB6 /* SQLiteData.m */,
+				A713D74821246D7500227445 /* UIView+Move.h */,
+				A713D74921246D7500227445 /* UIView+Move.m */,
+				A713D74B2124772800227445 /* UIColor+UIColor_Hexadecimal.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -305,6 +337,9 @@
 				A7553C1C2123A24300A8CDB6 /* T5ViewController.h */,
 				A7553C1D2123A24300A8CDB6 /* T5ViewController.m */,
 				A7553C1E2123A24300A8CDB6 /* T5ViewController.xib */,
+				A713D74C21247A7C00227445 /* ClassicPracticeViewController.h */,
+				A713D74D21247A7C00227445 /* ClassicPracticeViewController.m */,
+				A713D74E21247A7C00227445 /* ClassicPracticeViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -332,6 +367,9 @@
 				A713D73D2123B90100227445 /* FileItemTableViewCell.h */,
 				A713D73E2123B90100227445 /* FileItemTableViewCell.m */,
 				A713D73F2123B90100227445 /* FileItemTableViewCell.xib */,
+				A713D75121247F1000227445 /* PracticeItemTableViewCell.h */,
+				A713D75221247F1000227445 /* PracticeItemTableViewCell.m */,
+				A713D75321247F1000227445 /* PracticeItemTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -477,6 +515,7 @@
 				A7553C552123A94F00A8CDB6 /* tab_btn1_nor@2x.png in Resources */,
 				A7553C112123A20500A8CDB6 /* T2ViewController.xib in Resources */,
 				A7553C3B2123A6FB00A8CDB6 /* btn_tap4.png in Resources */,
+				A713D7572124855A00227445 /* title_btn_back@2x.png in Resources */,
 				A7553C5C2123A94F00A8CDB6 /* tab_btn4_pre@2x.png in Resources */,
 				A7553C1B2123A23300A8CDB6 /* T4ViewController.xib in Resources */,
 				A7553C3F2123A6FB00A8CDB6 /* btn_tap1.png in Resources */,
@@ -484,6 +523,9 @@
 				A7553C462123A6FB00A8CDB6 /* btn_tap3_s.png in Resources */,
 				A7553C442123A6FB00A8CDB6 /* btn_tap4_s.png in Resources */,
 				A7553C202123A24300A8CDB6 /* T5ViewController.xib in Resources */,
+				A713D74721246BB600227445 /* down@2x.png in Resources */,
+				A713D75521247F1000227445 /* PracticeItemTableViewCell.xib in Resources */,
+				A713D75021247A7C00227445 /* ClassicPracticeViewController.xib in Resources */,
 				A7553BFE21239B3800A8CDB6 /* Unit_51_55.mp3 in Resources */,
 				A7553C562123A94F00A8CDB6 /* tab_btn2_nor@2x.png in Resources */,
 				A7553C0C2123A1A800A8CDB6 /* T1ViewController.xib in Resources */,
@@ -539,6 +581,7 @@
 				A7553BDC2123990F00A8CDB6 /* FMResultSet+data.m in Sources */,
 				A7553BDD2123990F00A8CDB6 /* SQLiteData.m in Sources */,
 				A7553C102123A20500A8CDB6 /* T2ViewController.m in Sources */,
+				A713D74A21246D7600227445 /* UIView+Move.m in Sources */,
 				A7553BF32123991E00A8CDB6 /* STKLocalFileDataSource.m in Sources */,
 				A7553BD0212398A000A8CDB6 /* main.m in Sources */,
 				A7553BF42123991E00A8CDB6 /* STKHTTPDataSource.m in Sources */,
@@ -548,6 +591,8 @@
 				A7553C1F2123A24300A8CDB6 /* T5ViewController.m in Sources */,
 				A7553BF62123991E00A8CDB6 /* STKDataSource.m in Sources */,
 				A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */,
+				A713D75421247F1000227445 /* PracticeItemTableViewCell.m in Sources */,
+				A713D74F21247A7C00227445 /* ClassicPracticeViewController.m in Sources */,
 				A7553C1A2123A23300A8CDB6 /* T4ViewController.m in Sources */,
 				A7553BF52123991E00A8CDB6 /* STKCoreFoundationDataSource.m in Sources */,
 				A7553BF02123991E00A8CDB6 /* STKQueueEntry.m in Sources */,

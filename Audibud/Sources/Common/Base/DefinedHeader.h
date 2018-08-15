@@ -15,6 +15,8 @@
 #import "SQLiteData.h"
 #import "STKAudioPlayer.h"
 #import "SQLiteData.h"
+#import "UIView+Move.h"
+#import "UIColor+UIColor_Hexadecimal.h"
 #import <AFNetworking.h>
 
 //#import "UIColor+Extension.h"

@@ -24,7 +24,9 @@
 - (BOOL)removePracticeByFileIdx:(NSUInteger)f_idx;
 - (BOOL)addUesrLog:(NSDictionary *)dic;
 - (NSMutableArray *)fileData;
+- (NSDictionary *)fileDataByFileIdx:(NSUInteger)f_idx;
 - (NSMutableArray *)practice;
+- (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx;
 - (NSMutableArray *)userLog;
 
 //- (NSMutableArray *)searchData;

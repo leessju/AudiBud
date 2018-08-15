@@ -39,7 +39,7 @@
         self.tab_height = 49;
     
     T1ViewController *v1Controller  = [[T1ViewController alloc] initWithNibName:@"T1ViewController" bundle:nil];
-    v1Controller.title = @"T1";
+    v1Controller.title = @"Learning Items List";
     self.t1navigationController     = [[UINavigationController alloc] initWithRootViewController:v1Controller];
     T2ViewController *v2Controller  = [[T2ViewController alloc] initWithNibName:@"T2ViewController" bundle:nil];
     v2Controller.title = @"T2";

@@ -19,6 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6o-VO-0Dy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEW-mT-Nz3">
                         <rect key="frame" x="34" y="12" width="259" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -26,12 +31,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwn-9D-1iB">
+                        <rect key="frame" x="269" y="0.0" width="52" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="down.png"/>
+                        <connections>
+                            <action selector="onTouch_btnDownload:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YQM-NV-s4C"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhC-ul-3Md">
+                        <rect key="frame" x="0.0" y="0.0" width="261" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="onTouch_btnView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qbc-yZ-f2y"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="btnDownload" destination="Rwn-9D-1iB" id="Dzs-PJ-dnt"/>
+                <outlet property="btnView" destination="WhC-ul-3Md" id="lY8-Zl-erj"/>
                 <outlet property="lblTitle" destination="OEW-mT-Nz3" id="fTb-CD-rTr"/>
+                <outlet property="vBack" destination="C6o-VO-0Dy" id="O4p-Hw-WKQ"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="down.png" width="25" height="25"/>
+    </resources>
 </document>

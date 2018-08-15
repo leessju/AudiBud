@@ -11,7 +11,7 @@
 @protocol FileItemTableViewCellDelegate <NSObject>
 
 - (void)didDownload:(NSUInteger)f_idx;
-- (void)didView:(NSUInteger)f_idx;;
+- (void)didView:(NSUInteger)f_idx;
 
 @end
 

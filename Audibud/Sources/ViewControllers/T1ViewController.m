@@ -9,12 +9,12 @@
 #import "T1ViewController.h"
 #import "DefinedHeader.h"
 #import "FileItemTableViewCell.h"
+#import "ClassicPracticeViewController.h"
 
-@interface T1ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface T1ViewController () <UITableViewDelegate, UITableViewDataSource, FileItemTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *data;
-@property (strong, nonatomic) NSMutableArray *dataP;
 
 @end
 
@@ -35,7 +35,6 @@
     [super viewDidLoad];
     
     self.data  = [[NSMutableArray alloc] init];
-    self.dataP = [[NSMutableArray alloc] init];
 
     self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - APP_DEL.tab_height);
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -56,12 +55,13 @@
           success:^(NSURLSessionTask *task, id responseObject) {
               self.data = responseObject[@"response_data"];
               NSLog(@"JSON: %@", self.data);
-              [self.tableView reloadData];
               
               for (NSDictionary *dic in self.data)
               {
                   [SQLITE addFileData:dic];
               }
+              
+              [self.tableView reloadData];
               
           } failure:^(NSURLSessionTask *operation, NSError *error) {
               NSLog(@"Error: %@", error);
@@ -77,33 +77,56 @@
 {
     static NSString *CellIdentifier = @"FileItemTableViewCell";
     FileItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.delegate = self;
     [cell setData:self.data[indexPath.row]];
 
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)didDownload:(NSUInteger)f_idx
 {
-    NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetPractice";
-    NSUInteger f_idx = [self.data[indexPath.row][@"f_idx"] intValue];
+    NSDictionary *d = [SQLITE fileDataByFileIdx:f_idx];
     
+    if(d)
+        if([d[@"download_yn"] isEqualToString:@"Y"])
+            return;
+    
+    NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetPractice";
+
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager POST:URLString
        parameters:@{@"f_idx":@(f_idx).stringValue}
          progress:nil
           success:^(NSURLSessionTask *task, id responseObject) {
-              self.dataP = responseObject[@"response_data"];
-              NSLog(@"JSON: %@", self.dataP);
-              //[self.tableView reloadData];
               
               [SQLITE removePracticeByFileIdx:f_idx];
-              for (NSDictionary *dic in self.dataP)
+              for (NSDictionary *dic in responseObject[@"response_data"])
                   [SQLITE addPractice:dic];
               [SQLITE updateFileDataAtDownloadYN:f_idx];
-              
+              [self.tableView reloadData];
+
           } failure:^(NSURLSessionTask *operation, NSError *error) {
               NSLog(@"Error: %@", error);
           }];
+}
+
+- (void)didView:(NSUInteger)f_idx
+{
+    NSLog(@"view : f_idx : %lu", (unsigned long)f_idx);
+    NSLog(@"practice : %@", [SQLITE practiceFileIdx:f_idx] );
+
+    NSDictionary *d = [SQLITE fileDataByFileIdx:f_idx];
+    
+    if(d)
+    {
+        if([d[@"download_yn"] isEqualToString:@"Y"])
+        {
+            ClassicPracticeViewController *viewController = [[ClassicPracticeViewController alloc] initWithNibName:@"ClassicPracticeViewController" bundle:nil];
+            viewController.f_idx = f_idx;
+            viewController.title = @"Course";
+            [self.navigationController pushViewController:viewController animated:YES];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
