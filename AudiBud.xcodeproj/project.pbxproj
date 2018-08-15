@@ -11,7 +11,6 @@
 		A712E09C212304E00028240A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A712E09B212304E00028240A /* Assets.xcassets */; };
 		A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A712E09D212304E00028240A /* LaunchScreen.storyboard */; };
 		A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7553BA221238CE700A8CDB6 /* db.sqlite */; };
-		A7553BC92123970A00A8CDB6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7553BC82123970A00A8CDB6 /* Info.plist */; };
 		A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCD212398A000A8CDB6 /* AppDelegate.m */; };
 		A7553BD0212398A000A8CDB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCE212398A000A8CDB6 /* main.m */; };
 		A7553BDC2123990F00A8CDB6 /* FMResultSet+data.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */; };
@@ -63,6 +62,7 @@
 		A7553C5A2123A94F00A8CDB6 /* tab_btn4_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C502123A94F00A8CDB6 /* tab_btn4_nor@2x.png */; };
 		A7553C5B2123A94F00A8CDB6 /* tab_btn2_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C512123A94F00A8CDB6 /* tab_btn2_pre@2x.png */; };
 		A7553C5C2123A94F00A8CDB6 /* tab_btn4_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C522123A94F00A8CDB6 /* tab_btn4_pre@2x.png */; };
+		A7EEC3352123B3E700C654F3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7EEC3342123B3E700C654F3 /* Info.plist */; };
 		CE3969CAB1EEDC191BB22A13 /* libPods-A1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B55D665291320B2BD4EAA7D /* libPods-A1.a */; };
 /* End PBXBuildFile section */
 
@@ -75,33 +75,32 @@
 		A712E09B212304E00028240A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A712E09E212304E00028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7553BA221238CE700A8CDB6 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
-		A7553BC82123970A00A8CDB6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7553BCC212398A000A8CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = A1/Sources/Common/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		A7553BCD212398A000A8CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = A1/Sources/Common/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		A7553BCE212398A000A8CDB6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = A1/Sources/Common/main.m; sourceTree = SOURCE_ROOT; };
-		A7553BD72123990E00A8CDB6 /* DefinedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefinedHeader.h; path = A1/Sources/Common/Base/DefinedHeader.h; sourceTree = SOURCE_ROOT; };
-		A7553BD82123990E00A8CDB6 /* FMResultSet+data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FMResultSet+data.h"; path = "A1/Sources/Common/Base/FMResultSet+data.h"; sourceTree = SOURCE_ROOT; };
-		A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FMResultSet+data.m"; path = "A1/Sources/Common/Base/FMResultSet+data.m"; sourceTree = SOURCE_ROOT; };
-		A7553BDA2123990E00A8CDB6 /* SQLiteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLiteData.h; path = A1/Sources/Common/Base/SQLiteData.h; sourceTree = SOURCE_ROOT; };
-		A7553BDB2123990E00A8CDB6 /* SQLiteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLiteData.m; path = A1/Sources/Common/Base/SQLiteData.m; sourceTree = SOURCE_ROOT; };
-		A7553BDE2123991D00A8CDB6 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKAudioPlayer.h; path = A1/Sources/Common/Opensource/Audio/STKAudioPlayer.h; sourceTree = SOURCE_ROOT; };
-		A7553BDF2123991D00A8CDB6 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKQueueEntry.m; path = A1/Sources/Common/Opensource/Audio/STKQueueEntry.m; sourceTree = SOURCE_ROOT; };
-		A7553BE02123991D00A8CDB6 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKCoreFoundationDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKCoreFoundationDataSource.h; sourceTree = SOURCE_ROOT; };
-		A7553BE12123991D00A8CDB6 /* STKHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKHTTPDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKHTTPDataSource.h; sourceTree = SOURCE_ROOT; };
-		A7553BE22123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+STKAudioPlayer.h"; path = "A1/Sources/Common/Opensource/Audio/NSMutableArray+STKAudioPlayer.h"; sourceTree = SOURCE_ROOT; };
-		A7553BE32123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+STKAudioPlayer.m"; path = "A1/Sources/Common/Opensource/Audio/NSMutableArray+STKAudioPlayer.m"; sourceTree = SOURCE_ROOT; };
-		A7553BE42123991D00A8CDB6 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKQueueEntry.h; path = A1/Sources/Common/Opensource/Audio/STKQueueEntry.h; sourceTree = SOURCE_ROOT; };
-		A7553BE52123991D00A8CDB6 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKDataSourceWrapper.m; path = A1/Sources/Common/Opensource/Audio/STKDataSourceWrapper.m; sourceTree = SOURCE_ROOT; };
-		A7553BE62123991D00A8CDB6 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKLocalFileDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKLocalFileDataSource.m; sourceTree = SOURCE_ROOT; };
-		A7553BE72123991D00A8CDB6 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKHTTPDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKHTTPDataSource.m; sourceTree = SOURCE_ROOT; };
-		A7553BE82123991D00A8CDB6 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKCoreFoundationDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKCoreFoundationDataSource.m; sourceTree = SOURCE_ROOT; };
-		A7553BE92123991D00A8CDB6 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKDataSourceWrapper.h; path = A1/Sources/Common/Opensource/Audio/STKDataSourceWrapper.h; sourceTree = SOURCE_ROOT; };
-		A7553BEA2123991D00A8CDB6 /* STKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKDataSource.m; sourceTree = SOURCE_ROOT; };
-		A7553BEB2123991D00A8CDB6 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKLocalFileDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKLocalFileDataSource.h; sourceTree = SOURCE_ROOT; };
-		A7553BEC2123991D00A8CDB6 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKAudioPlayer.m; path = A1/Sources/Common/Opensource/Audio/STKAudioPlayer.m; sourceTree = SOURCE_ROOT; };
-		A7553BED2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKAutoRecoveringHTTPDataSource.m; path = A1/Sources/Common/Opensource/Audio/STKAutoRecoveringHTTPDataSource.m; sourceTree = SOURCE_ROOT; };
-		A7553BEE2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKAutoRecoveringHTTPDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKAutoRecoveringHTTPDataSource.h; sourceTree = SOURCE_ROOT; };
-		A7553BEF2123991E00A8CDB6 /* STKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKDataSource.h; path = A1/Sources/Common/Opensource/Audio/STKDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BCC212398A000A8CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Audibud/Sources/Common/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		A7553BCD212398A000A8CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Audibud/Sources/Common/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		A7553BCE212398A000A8CDB6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Audibud/Sources/Common/main.m; sourceTree = SOURCE_ROOT; };
+		A7553BD72123990E00A8CDB6 /* DefinedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefinedHeader.h; path = Audibud/Sources/Common/Base/DefinedHeader.h; sourceTree = SOURCE_ROOT; };
+		A7553BD82123990E00A8CDB6 /* FMResultSet+data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FMResultSet+data.h"; path = "Audibud/Sources/Common/Base/FMResultSet+data.h"; sourceTree = SOURCE_ROOT; };
+		A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FMResultSet+data.m"; path = "Audibud/Sources/Common/Base/FMResultSet+data.m"; sourceTree = SOURCE_ROOT; };
+		A7553BDA2123990E00A8CDB6 /* SQLiteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLiteData.h; path = Audibud/Sources/Common/Base/SQLiteData.h; sourceTree = SOURCE_ROOT; };
+		A7553BDB2123990E00A8CDB6 /* SQLiteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLiteData.m; path = Audibud/Sources/Common/Base/SQLiteData.m; sourceTree = SOURCE_ROOT; };
+		A7553BDE2123991D00A8CDB6 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKAudioPlayer.h; path = Audibud/Sources/Common/Opensource/Audio/STKAudioPlayer.h; sourceTree = SOURCE_ROOT; };
+		A7553BDF2123991D00A8CDB6 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKQueueEntry.m; path = Audibud/Sources/Common/Opensource/Audio/STKQueueEntry.m; sourceTree = SOURCE_ROOT; };
+		A7553BE02123991D00A8CDB6 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKCoreFoundationDataSource.h; path = Audibud/Sources/Common/Opensource/Audio/STKCoreFoundationDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BE12123991D00A8CDB6 /* STKHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKHTTPDataSource.h; path = Audibud/Sources/Common/Opensource/Audio/STKHTTPDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BE22123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+STKAudioPlayer.h"; path = "Audibud/Sources/Common/Opensource/Audio/NSMutableArray+STKAudioPlayer.h"; sourceTree = SOURCE_ROOT; };
+		A7553BE32123991D00A8CDB6 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+STKAudioPlayer.m"; path = "Audibud/Sources/Common/Opensource/Audio/NSMutableArray+STKAudioPlayer.m"; sourceTree = SOURCE_ROOT; };
+		A7553BE42123991D00A8CDB6 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKQueueEntry.h; path = Audibud/Sources/Common/Opensource/Audio/STKQueueEntry.h; sourceTree = SOURCE_ROOT; };
+		A7553BE52123991D00A8CDB6 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKDataSourceWrapper.m; path = Audibud/Sources/Common/Opensource/Audio/STKDataSourceWrapper.m; sourceTree = SOURCE_ROOT; };
+		A7553BE62123991D00A8CDB6 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKLocalFileDataSource.m; path = Audibud/Sources/Common/Opensource/Audio/STKLocalFileDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BE72123991D00A8CDB6 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKHTTPDataSource.m; path = Audibud/Sources/Common/Opensource/Audio/STKHTTPDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BE82123991D00A8CDB6 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKCoreFoundationDataSource.m; path = Audibud/Sources/Common/Opensource/Audio/STKCoreFoundationDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BE92123991D00A8CDB6 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKDataSourceWrapper.h; path = Audibud/Sources/Common/Opensource/Audio/STKDataSourceWrapper.h; sourceTree = SOURCE_ROOT; };
+		A7553BEA2123991D00A8CDB6 /* STKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKDataSource.m; path = Audibud/Sources/Common/Opensource/Audio/STKDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BEB2123991D00A8CDB6 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKLocalFileDataSource.h; path = Audibud/Sources/Common/Opensource/Audio/STKLocalFileDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BEC2123991D00A8CDB6 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKAudioPlayer.m; path = Audibud/Sources/Common/Opensource/Audio/STKAudioPlayer.m; sourceTree = SOURCE_ROOT; };
+		A7553BED2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKAutoRecoveringHTTPDataSource.m; path = Audibud/Sources/Common/Opensource/Audio/STKAutoRecoveringHTTPDataSource.m; sourceTree = SOURCE_ROOT; };
+		A7553BEE2123991D00A8CDB6 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKAutoRecoveringHTTPDataSource.h; path = Audibud/Sources/Common/Opensource/Audio/STKAutoRecoveringHTTPDataSource.h; sourceTree = SOURCE_ROOT; };
+		A7553BEF2123991E00A8CDB6 /* STKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKDataSource.h; path = Audibud/Sources/Common/Opensource/Audio/STKDataSource.h; sourceTree = SOURCE_ROOT; };
 		A7553BF921239B3800A8CDB6 /* Unit_41_50.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unit_41_50.mp3; sourceTree = "<group>"; };
 		A7553BFA21239B3800A8CDB6 /* Unit_51_55.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unit_51_55.mp3; sourceTree = "<group>"; };
 		A7553BFB21239B3800A8CDB6 /* Unit_31_40.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unit_31_40.mp3; sourceTree = "<group>"; };
@@ -149,6 +148,7 @@
 		A7553C502123A94F00A8CDB6 /* tab_btn4_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn4_nor@2x.png"; sourceTree = "<group>"; };
 		A7553C512123A94F00A8CDB6 /* tab_btn2_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn2_pre@2x.png"; sourceTree = "<group>"; };
 		A7553C522123A94F00A8CDB6 /* tab_btn4_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn4_pre@2x.png"; sourceTree = "<group>"; };
+		A7EEC3342123B3E700C654F3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +174,7 @@
 		A712E086212304DE0028240A = {
 			isa = PBXGroup;
 			children = (
-				A712E091212304DE0028240A /* A1 */,
+				A712E091212304DE0028240A /* Audibud */,
 				A712E090212304DE0028240A /* Products */,
 				E5720ECC74D50662204F9BCC /* Pods */,
 				6FDC43A4D0B62FB1508C6EC6 /* Frameworks */,
@@ -189,14 +189,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A712E091212304DE0028240A /* A1 */ = {
+		A712E091212304DE0028240A /* Audibud */ = {
 			isa = PBXGroup;
 			children = (
-				A7553BC82123970A00A8CDB6 /* Info.plist */,
+				A7EEC3342123B3E700C654F3 /* Info.plist */,
 				A7553BCB2123988700A8CDB6 /* Sources */,
 				A7553B9D212387E300A8CDB6 /* Resource */,
 			);
-			path = A1;
+			path = Audibud;
 			sourceTree = "<group>";
 		};
 		A7553B90212316A200A8CDB6 /* Common */ = {
@@ -383,9 +383,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A712E08E212304DE0028240A /* A1 */ = {
+		A712E08E212304DE0028240A /* AudiBud */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A712E0A5212304E00028240A /* Build configuration list for PBXNativeTarget "A1" */;
+			buildConfigurationList = A712E0A5212304E00028240A /* Build configuration list for PBXNativeTarget "AudiBud" */;
 			buildPhases = (
 				38E237B059B459584936A311 /* [CP] Check Pods Manifest.lock */,
 				A712E08B212304DE0028240A /* Sources */,
@@ -397,7 +397,7 @@
 			);
 			dependencies = (
 			);
-			name = A1;
+			name = AudiBud;
 			productName = A1;
 			productReference = A712E08F212304DE0028240A /* AudiBud.app */;
 			productType = "com.apple.product-type.application";
@@ -421,7 +421,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A712E08A212304DE0028240A /* Build configuration list for PBXProject "A1" */;
+			buildConfigurationList = A712E08A212304DE0028240A /* Build configuration list for PBXProject "AudiBud" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -434,7 +434,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A712E08E212304DE0028240A /* A1 */,
+				A712E08E212304DE0028240A /* AudiBud */,
 			);
 		};
 /* End PBXProject section */
@@ -453,8 +453,8 @@
 				A7553C452123A6FB00A8CDB6 /* btn_tap1_s.png in Resources */,
 				A7553C162123A21800A8CDB6 /* T3ViewController.xib in Resources */,
 				A7553C582123A94F00A8CDB6 /* tab_btn5_pre@2x.png in Resources */,
-				A7553BC92123970A00A8CDB6 /* Info.plist in Resources */,
 				A7553C542123A94F00A8CDB6 /* tab_btn3_nor@2x.png in Resources */,
+				A7EEC3352123B3E700C654F3 /* Info.plist in Resources */,
 				A712E09C212304E00028240A /* Assets.xcassets in Resources */,
 				A7553C472123A6FB00A8CDB6 /* btn_tap5_s.png in Resources */,
 				A7553C5A2123A94F00A8CDB6 /* tab_btn4_nor@2x.png in Resources */,
@@ -691,12 +691,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82P8339342;
-				INFOPLIST_FILE = A1/Info.plist;
+				INFOPLIST_FILE = AudiBud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.A1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.AudiBud;
 				PRODUCT_NAME = AudiBud;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -709,12 +709,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82P8339342;
-				INFOPLIST_FILE = A1/Info.plist;
+				INFOPLIST_FILE = AudiBud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.A1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.AudiBud;
 				PRODUCT_NAME = AudiBud;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -723,7 +723,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A712E08A212304DE0028240A /* Build configuration list for PBXProject "A1" */ = {
+		A712E08A212304DE0028240A /* Build configuration list for PBXProject "AudiBud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A712E0A3212304E00028240A /* Debug */,
@@ -732,7 +732,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A712E0A5212304E00028240A /* Build configuration list for PBXNativeTarget "A1" */ = {
+		A712E0A5212304E00028240A /* Build configuration list for PBXNativeTarget "AudiBud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A712E0A6212304E00028240A /* Debug */,
