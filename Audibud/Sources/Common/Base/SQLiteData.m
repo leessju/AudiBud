@@ -114,17 +114,40 @@ static SQLiteData *obj = nil;
         FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
         [db open];
         
+        NSMutableArray *data1 = [[db executeQuery:@"SELECT f_idx FROM tbl_file_data WHERE f_idx = ?", dic[@"f_idx"] ] data];
+        
+        if ([data1 count] > 0)
+        {
+            [db close];
+            return NO;
+        }
+        
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
         
-        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_file_data (f_idx, f_a, download_yn, download_date) VALUES (?,?,?,?)", [dic[@"f_dx"] intValue], [dic[@"f_a"] intValue], @"N", [dateString UTF8String]];
+        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_file_data (f_idx, f_a, download_yn, download_date) VALUES (?,?,?,?)", dic[@"f_idx"], dic[@"f_a"], @"N", dateString ];
         
         [db close];
         return isOK;
     }
     
     return NO;
+}
+
+- (BOOL)updateFileDataAtDownloadYN:(NSUInteger)f_idx
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+    [db open];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
+    
+    BOOL isOK = [db executeUpdate:@"UPDATE tbl_file_data SET download_yn = ?, download_date = ? WHERE f_idx = ?", @"Y", dateString, @(f_idx).stringValue ];
+    
+    [db close];
+    return isOK;
 }
 
 - (BOOL)addPractice:(NSDictionary *)dic
@@ -134,13 +157,24 @@ static SQLiteData *obj = nil;
         FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
         [db open];
         
-        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_practice (p_idx,f_idx,seq,start_time,end_time,txt_kor,txt_eng) VALUES (?,?,?,?,?,?,?)", [dic[@"p_idx"] intValue], [dic[@"f_idx"] intValue], [dic[@"seq"] intValue], [dic[@"start_time"] floatValue], [dic[@"end_time"] floatValue], dic[@"txt_kor"], dic[@"txt_eng"] ];
+        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_practice (p_idx,f_idx,seq,start_time,end_time,txt_kor,txt_eng) VALUES (?,?,?,?,?,?,?)", dic[@"p_idx"], dic[@"f_idx"], dic[@"seq"], dic[@"start_time"], dic[@"end_time"], dic[@"txt_kor"], dic[@"txt_eng"] ];
         
         [db close];
         return isOK;
     }
     
     return NO;
+}
+
+- (BOOL)removePracticeByFileIdx:(NSUInteger)f_idx
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:self.databasePath];
+    [db open];
+    
+    BOOL isOK = [db executeUpdate:@"DELETE FROM tbl_practice WHERE f_idx = ?", @(f_idx).stringValue];
+    
+    [db close];
+    return isOK;
 }
 
 - (BOOL)addUesrLog:(NSDictionary *)dic
@@ -154,7 +188,7 @@ static SQLiteData *obj = nil;
         [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
         
-        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_user_log (p_idx,view_date) VALUES (?,?)", [dic[@"p_idx"] intValue], [dateString UTF8String] ];
+        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_user_log (p_idx,view_date) VALUES (?,?)", dic[@"p_idx"], dateString ];
         
         [db close];
         return isOK;

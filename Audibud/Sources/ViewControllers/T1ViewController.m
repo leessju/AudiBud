@@ -58,6 +58,11 @@
               NSLog(@"JSON: %@", self.data);
               [self.tableView reloadData];
               
+              for (NSDictionary *dic in self.data)
+              {
+                  [SQLITE addFileData:dic];
+              }
+              
           } failure:^(NSURLSessionTask *operation, NSError *error) {
               NSLog(@"Error: %@", error);
           }];
@@ -90,6 +95,11 @@
               self.dataP = responseObject[@"response_data"];
               NSLog(@"JSON: %@", self.dataP);
               //[self.tableView reloadData];
+              
+              [SQLITE removePracticeByFileIdx:f_idx];
+              for (NSDictionary *dic in self.dataP)
+                  [SQLITE addPractice:dic];
+              [SQLITE updateFileDataAtDownloadYN:f_idx];
               
           } failure:^(NSURLSessionTask *operation, NSError *error) {
               NSLog(@"Error: %@", error);

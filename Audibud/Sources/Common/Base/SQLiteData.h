@@ -19,7 +19,9 @@
 - (void)dropAndcreateTable;
 
 - (BOOL)addFileData:(NSDictionary *)dic;
+- (BOOL)updateFileDataAtDownloadYN:(NSUInteger)f_idx;
 - (BOOL)addPractice:(NSDictionary *)dic;
+- (BOOL)removePracticeByFileIdx:(NSUInteger)f_idx;
 - (BOOL)addUesrLog:(NSDictionary *)dic;
 - (NSMutableArray *)fileData;
 - (NSMutableArray *)practice;
