@@ -10,6 +10,7 @@
 		A712E09A212304DE0028240A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A712E098212304DE0028240A /* Main.storyboard */; };
 		A712E09C212304E00028240A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A712E09B212304E00028240A /* Assets.xcassets */; };
 		A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A712E09D212304E00028240A /* LaunchScreen.storyboard */; };
+		A713D73C2123B70700227445 /* T3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A713D73B2123B70600227445 /* T3ViewController.xib */; };
 		A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A7553BA221238CE700A8CDB6 /* db.sqlite */; };
 		A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCD212398A000A8CDB6 /* AppDelegate.m */; };
 		A7553BD0212398A000A8CDB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCE212398A000A8CDB6 /* main.m */; };
@@ -33,7 +34,6 @@
 		A7553C102123A20500A8CDB6 /* T2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C0E2123A20500A8CDB6 /* T2ViewController.m */; };
 		A7553C112123A20500A8CDB6 /* T2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7553C0F2123A20500A8CDB6 /* T2ViewController.xib */; };
 		A7553C152123A21800A8CDB6 /* T3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C132123A21800A8CDB6 /* T3ViewController.m */; };
-		A7553C162123A21800A8CDB6 /* T3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7553C142123A21800A8CDB6 /* T3ViewController.xib */; };
 		A7553C1A2123A23300A8CDB6 /* T4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C182123A23300A8CDB6 /* T4ViewController.m */; };
 		A7553C1B2123A23300A8CDB6 /* T4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7553C192123A23300A8CDB6 /* T4ViewController.xib */; };
 		A7553C1F2123A24300A8CDB6 /* T5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553C1D2123A24300A8CDB6 /* T5ViewController.m */; };
@@ -74,6 +74,7 @@
 		A712E099212304DE0028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A712E09B212304E00028240A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A712E09E212304E00028240A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A713D73B2123B70600227445 /* T3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = T3ViewController.xib; sourceTree = "<group>"; };
 		A7553BA221238CE700A8CDB6 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		A7553BCC212398A000A8CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Audibud/Sources/Common/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A7553BCD212398A000A8CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Audibud/Sources/Common/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -113,7 +114,6 @@
 		A7553C0F2123A20500A8CDB6 /* T2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = T2ViewController.xib; sourceTree = "<group>"; };
 		A7553C122123A21800A8CDB6 /* T3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T3ViewController.h; sourceTree = "<group>"; };
 		A7553C132123A21800A8CDB6 /* T3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T3ViewController.m; sourceTree = "<group>"; };
-		A7553C142123A21800A8CDB6 /* T3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = T3ViewController.xib; sourceTree = "<group>"; };
 		A7553C172123A23300A8CDB6 /* T4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T4ViewController.h; sourceTree = "<group>"; };
 		A7553C182123A23300A8CDB6 /* T4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T4ViewController.m; sourceTree = "<group>"; };
 		A7553C192123A23300A8CDB6 /* T4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = T4ViewController.xib; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 				A7553C0F2123A20500A8CDB6 /* T2ViewController.xib */,
 				A7553C122123A21800A8CDB6 /* T3ViewController.h */,
 				A7553C132123A21800A8CDB6 /* T3ViewController.m */,
-				A7553C142123A21800A8CDB6 /* T3ViewController.xib */,
+				A713D73B2123B70600227445 /* T3ViewController.xib */,
 				A7553C172123A23300A8CDB6 /* T4ViewController.h */,
 				A7553C182123A23300A8CDB6 /* T4ViewController.m */,
 				A7553C192123A23300A8CDB6 /* T4ViewController.xib */,
@@ -451,11 +451,11 @@
 				A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */,
 				A7553BFF21239B3800A8CDB6 /* Unit_31_40.mp3 in Resources */,
 				A7553C452123A6FB00A8CDB6 /* btn_tap1_s.png in Resources */,
-				A7553C162123A21800A8CDB6 /* T3ViewController.xib in Resources */,
 				A7553C582123A94F00A8CDB6 /* tab_btn5_pre@2x.png in Resources */,
 				A7553C542123A94F00A8CDB6 /* tab_btn3_nor@2x.png in Resources */,
 				A7EEC3352123B3E700C654F3 /* Info.plist in Resources */,
 				A712E09C212304E00028240A /* Assets.xcassets in Resources */,
+				A713D73C2123B70700227445 /* T3ViewController.xib in Resources */,
 				A7553C472123A6FB00A8CDB6 /* btn_tap5_s.png in Resources */,
 				A7553C5A2123A94F00A8CDB6 /* tab_btn4_nor@2x.png in Resources */,
 				A7553BFD21239B3800A8CDB6 /* Unit_41_50.mp3 in Resources */,
