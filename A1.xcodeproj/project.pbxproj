@@ -14,7 +14,6 @@
 		A7553BC92123970A00A8CDB6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7553BC82123970A00A8CDB6 /* Info.plist */; };
 		A7553BCF212398A000A8CDB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCD212398A000A8CDB6 /* AppDelegate.m */; };
 		A7553BD0212398A000A8CDB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BCE212398A000A8CDB6 /* main.m */; };
-		A7553BD6212398E700A8CDB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BD4212398E700A8CDB6 /* ViewController.m */; };
 		A7553BDC2123990F00A8CDB6 /* FMResultSet+data.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */; };
 		A7553BDD2123990F00A8CDB6 /* SQLiteData.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BDB2123990E00A8CDB6 /* SQLiteData.m */; };
 		A7553BF02123991E00A8CDB6 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A7553BDF2123991D00A8CDB6 /* STKQueueEntry.m */; };
@@ -80,8 +79,6 @@
 		A7553BCC212398A000A8CDB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = A1/Sources/Common/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A7553BCD212398A000A8CDB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = A1/Sources/Common/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		A7553BCE212398A000A8CDB6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = A1/Sources/Common/main.m; sourceTree = SOURCE_ROOT; };
-		A7553BD4212398E700A8CDB6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = A1/Sources/ViewControllers/ViewController.m; sourceTree = SOURCE_ROOT; };
-		A7553BD5212398E700A8CDB6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = A1/Sources/ViewControllers/ViewController.h; sourceTree = SOURCE_ROOT; };
 		A7553BD72123990E00A8CDB6 /* DefinedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefinedHeader.h; path = A1/Sources/Common/Base/DefinedHeader.h; sourceTree = SOURCE_ROOT; };
 		A7553BD82123990E00A8CDB6 /* FMResultSet+data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FMResultSet+data.h"; path = "A1/Sources/Common/Base/FMResultSet+data.h"; sourceTree = SOURCE_ROOT; };
 		A7553BD92123990E00A8CDB6 /* FMResultSet+data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FMResultSet+data.m"; path = "A1/Sources/Common/Base/FMResultSet+data.m"; sourceTree = SOURCE_ROOT; };
@@ -288,8 +285,6 @@
 		A7553BD1212398A400A8CDB6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A7553BD5212398E700A8CDB6 /* ViewController.h */,
-				A7553BD4212398E700A8CDB6 /* ViewController.m */,
 				A7553C082123A1A800A8CDB6 /* T1ViewController.h */,
 				A7553C092123A1A800A8CDB6 /* T1ViewController.m */,
 				A7553C0A2123A1A800A8CDB6 /* T1ViewController.xib */,
@@ -314,16 +309,16 @@
 			children = (
 				A7553C272123A6FB00A8CDB6 /* Tabs */,
 				A7553C262123A38F00A8CDB6 /* Cells */,
-				A7553C252123A38900A8CDB6 /* Base */,
+				A7553C252123A38900A8CDB6 /* ETC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A7553C252123A38900A8CDB6 /* Base */ = {
+		A7553C252123A38900A8CDB6 /* ETC */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Base;
+			path = ETC;
 			sourceTree = "<group>";
 		};
 		A7553C262123A38F00A8CDB6 /* Cells */ = {
@@ -346,8 +341,7 @@
 				A7553C362123A6FB00A8CDB6 /* RootNavigationController.h */,
 				A7553C2C2123A6FB00A8CDB6 /* RootNavigationController.m */,
 			);
-			name = Tabs;
-			path = Base/Tabs;
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		A7553C482123A72E00A8CDB6 /* images */ = {
@@ -419,6 +413,11 @@
 				TargetAttributes = {
 					A712E08E212304DE0028240A = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -532,7 +531,6 @@
 				A7553BDD2123990F00A8CDB6 /* SQLiteData.m in Sources */,
 				A7553C102123A20500A8CDB6 /* T2ViewController.m in Sources */,
 				A7553BF32123991E00A8CDB6 /* STKLocalFileDataSource.m in Sources */,
-				A7553BD6212398E700A8CDB6 /* ViewController.m in Sources */,
 				A7553BD0212398A000A8CDB6 /* main.m in Sources */,
 				A7553BF42123991E00A8CDB6 /* STKHTTPDataSource.m in Sources */,
 				A7553C0B2123A1A800A8CDB6 /* T1ViewController.m in Sources */,

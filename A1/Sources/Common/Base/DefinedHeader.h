@@ -9,15 +9,19 @@
 #ifndef mbk_DefinedHeader_h
 #define mbk_DefinedHeader_h
 #import "AppDelegate.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <EGOCache/EGOCache.h>
+#import "SQLiteData.h"
+#import "STKAudioPlayer.h"
+#import "SQLiteData.h"
+#import <AFNetworking.h>
+
 //#import "UIColor+Extension.h"
 //#import "UINavigationItem+iOS7Spacing.h"
 //#import "UIButton+WebCache.h"
-#import <EGOCache/EGOCache.h>
 //#import <PureLayout/PureLayout.h>
-#import <SVProgressHUD/SVProgressHUD.h>
-#import <SDWebImage/UIImageView+WebCache.h>
 //#import "Addtions.h"
-#import "SQLiteData.h"
 //#import "UIDevice+IdentifierAddition.h"
 //#import "UIActionSheet+Blocks.h"
 //#import "NSString+MD5Addition.h"
