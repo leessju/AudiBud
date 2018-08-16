@@ -66,6 +66,14 @@
           } failure:^(NSURLSessionTask *operation, NSError *error) {
               NSLog(@"Error: %@", error);
           }];
+    
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    [arr addObject:@"1"];
+    [arr addObject:@"2"];
+    [arr addObject:@"3"];
+    
+    [GCache setString:@"_______________" forKey:@"a"];
+    NSLog(@"______________cache : %@", [GCache stringForKey:@"a"]);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -91,23 +99,50 @@
         if([d[@"download_yn"] isEqualToString:@"Y"])
             return;
     
-    NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetPractice";
+    [SVProgressHUD show];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    // time-consuming task
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        
+        
+            NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetPractice";
 
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:URLString
-       parameters:@{@"f_idx":@(f_idx).stringValue}
-         progress:nil
-          success:^(NSURLSessionTask *task, id responseObject) {
-              
-              [SQLITE removePracticeByFileIdx:f_idx];
-              for (NSDictionary *dic in responseObject[@"response_data"])
-                  [SQLITE addPractice:dic];
-              [SQLITE updateFileDataAtDownloadYN:f_idx];
-              [self.tableView reloadData];
+            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+            [manager POST:URLString
+               parameters:@{@"f_idx":@(f_idx).stringValue}
+                 progress:nil
+                  success:^(NSURLSessionTask *task, id responseObject) {
+                      
+                      
+                      
+                      [SVProgressHUD showProgress:0];
 
-          } failure:^(NSURLSessionTask *operation, NSError *error) {
-              NSLog(@"Error: %@", error);
-          }];
+                      [SQLITE removePracticeByFileIdx:f_idx];
+                      int i = 0;
+                      for (NSDictionary *dic in responseObject[@"response_data"])
+                      {
+                          [SQLITE addPractice:dic];
+                          i++;
+                          
+                          [SVProgressHUD showProgress: (float)i / (float)[responseObject[@"response_data_count"] intValue] * 100.0f ];
+                      }
+                      
+                      [SQLITE updateFileDataAtDownloadYN:f_idx];
+                      [self.tableView reloadData];
+                      
+                      [SVProgressHUD dismiss];
+                      
+
+                  } failure:^(NSURLSessionTask *operation, NSError *error) {
+                      NSLog(@"Error: %@", error);
+             }];
+
+            
+            
+            
+        });
+    });
 }
 
 - (void)didView:(NSUInteger)f_idx

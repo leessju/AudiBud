@@ -18,6 +18,7 @@
 #import "UIView+Move.h"
 #import "UIColor+UIColor_Hexadecimal.h"
 #import <AFNetworking.h>
+#import <EGOCache/EGOCache.h>
 
 //#import "UIColor+Extension.h"
 //#import "UINavigationItem+iOS7Spacing.h"
@@ -57,6 +58,7 @@
 #define IS_IPHONE_X  (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)
 
 #define SQLITE [SQLiteData sharedSQLiteData]
+#define GCache [EGOCache globalCache]
 //#define STORY_BOARD ((AppDelegate *)[UIApplication sharedApplication].delegate).storyboard
 
 //#define BRAND_NAME              @"beautytalk"

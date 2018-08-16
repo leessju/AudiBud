@@ -229,7 +229,7 @@
 				A713D74621246BB600227445 /* down@2x.png */,
 			);
 			name = images;
-			path = "New Group";
+			path = ../../../AudiBud/Audibud/Resource/Images;
 			sourceTree = "<group>";
 		};
 		A7553B90212316A200A8CDB6 /* Common */ = {
@@ -358,7 +358,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = ETC;
+			name = ETC;
+			path = ../../../../AudiBud/Audibud/Sources/Views/ETC;
 			sourceTree = "<group>";
 		};
 		A7553C262123A38F00A8CDB6 /* Cells */ = {

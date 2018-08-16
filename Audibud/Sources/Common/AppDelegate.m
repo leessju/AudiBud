@@ -12,6 +12,7 @@
 #import "DefinedHeader.h"
 #import "RootNavigationController.h"
 #import "TabBarController.h"
+#import <AVFoundation/AVFoundation.h>
 
 #import "T1ViewController.h"
 #import "T2ViewController.h"
@@ -30,6 +31,12 @@
 //    [[SQLiteData sharedSQLiteData] clearDatabaseFile];
     [[SQLiteData sharedSQLiteData] checkAndCreateDatabase];
 //    [[SQLiteData sharedSQLiteData] dropAndcreateTable];
+    
+    NSError *error;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+    [[AVAudioSession sharedInstance] setActive:YES error:&error];
+    Float32 bufferLength = 0.1;
+    [[AVAudioSession sharedInstance] setPreferredIOBufferDuration:bufferLength error:&error];
     
     self.tab_height = 49;
     
