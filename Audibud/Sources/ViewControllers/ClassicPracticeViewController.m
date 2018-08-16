@@ -89,7 +89,12 @@
 
 - (void)play:(NSUInteger)idx
 {
-    NSLog(@"_________________________  play");
+    //    세팅전 0
+    //    재생시작 5
+    //    재생중 3
+    //    일시정지 9
+    //    중지 16
+    
     self.currentIdx         = idx;
     NSDictionary *dic       = self.data[self.currentIdx];
     self.currentStartTime   = [dic[@"start_time"] floatValue];
@@ -97,30 +102,15 @@
     
     NSLog(@"currentIdx : %ld, start_time : %f, end_time : %f", (long)self.currentIdx, self.currentStartTime, self.currentEndTime);
     
-    [self.audioPlayer playURL:self.url];
+    if (self.audioPlayer.state == 0 || self.audioPlayer.state == 9 || self.audioPlayer.state == 16 )
+    {
+        NSLog(@"==================> play");
+        [self.audioPlayer playURL:self.url];
+    }
+    
     CGFloat delay_time = 0.01;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.audioPlayer seekToTime:self.currentStartTime];
-    });
-}
-
-//- (void)play
-//{
-//    [self play:self.currentIdx];
-//}
-
-- (void)jump:(NSInteger)idx
-{
-    NSLog(@"_________________________  jump");
-    self.currentIdx         = idx;
-    NSDictionary *dic       = self.data[self.currentIdx];
-    self.currentStartTime   = [dic[@"start_time"] floatValue];
-    self.currentEndTime     = [dic[@"end_time"] floatValue];
-    
-    NSLog(@"currentIdx : %ld, start_time : %f, end_time : %f", (long)self.currentIdx, self.currentStartTime, self.currentEndTime);
-    
-    CGFloat delay_time = 0.3;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"==================> jump");
         [self.audioPlayer seekToTime:self.currentStartTime];
     });
 }
@@ -140,7 +130,6 @@
 {
     static NSString *CellIdentifier = @"PracticeItemTableViewCell";
     PracticeItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    //cell.delegate = self;
     [cell setData:self.data[indexPath.row]];
 
     return cell;
@@ -148,26 +137,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.audioPlayer pause];
+    NSLog(@"indexPath.row : %ld", indexPath.row);
     [self play:indexPath.row];
-    
-    if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
-    {
-        [self jump:indexPath.row];
-        NSLog(@"seek without play");
-    }
-    else
-    {
-        [self play:indexPath.row];
-        NSLog(@"seek with play");
-    }
-    
-    //NSLog(@"dic : %@", dic);
-}
-
-- (void)leftMenuPressed:(UIButton *)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)onTouch_btnBack:(id)sender
@@ -180,19 +151,8 @@
         return;
     }
     
-    // 재생 중이면
-    if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
-    {
-        self.currentIdx--;
-        [self jump:self.currentIdx];
-        NSLog(@"seek without play");
-    }
-    else
-    {
-        self.currentIdx--;
-        [self play:self.currentIdx];
-        NSLog(@"seek with play");
-    }
+    self.currentIdx--;
+    [self play:self.currentIdx];
 }
 
 - (IBAction)onTouch_btnPlay:(id)sender
@@ -225,18 +185,8 @@
         return;
     }
     
-    if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
-    {
-        self.currentIdx++;
-        [self jump:self.currentIdx];
-        NSLog(@"seek without play");
-    }
-    else
-    {
-        self.currentIdx++;
-        [self play:self.currentIdx];
-        NSLog(@"seek with play");
-    }
+    self.currentIdx++;
+    [self play:self.currentIdx];
 }
 
 - (void)setupTimer
@@ -259,38 +209,79 @@
         {
             if(self.currentIdx == self.data.count - 1)
             {
-                [self.audioPlayer stop];
+                [self.audioPlayer pause];
                 return;
             }
             
             self.currentIdx++;
-            [self jump:self.currentIdx];
+            [self play:self.currentIdx];
         }
         // 재생 중에 만료 시간이 오면 다음 라인으로 이동한다.
     }
 }
 
-//- (void)updateControls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- (void)autoPlay:(NSInteger)idx
 //{
-//    if (self.audioPlayer == nil)
+//    if (self.audioPlayer.state == 0 || self.audioPlayer.state == 5)
 //    {
-//        //[playButton setTitle:@"" forState:UIControlStateNormal];
-//    }
-//    else if (self.audioPlayer.state == STKAudioPlayerStatePaused)
-//    {
-//        //[playButton setTitle:@"Resume" forState:UIControlStateNormal];
-//    }
-//    else if (self.audioPlayer.state & STKAudioPlayerStatePlaying)
-//    {
-//        //[playButton setTitle:@"Pause" forState:UIControlStateNormal];
+//        [self jump:idx];
+//        NSLog(@"========> jump : %ld", idx);
 //    }
 //    else
 //    {
-//        //[playButton setTitle:@"" forState:UIControlStateNormal];
+//        [self play:idx];
+//        NSLog(@"========> play : %ld", idx);
 //    }
-//
-//    [self tick];
 //}
+
+
+//- (void)jump:(NSInteger)idx
+//{
+//    self.currentIdx         = idx;
+//    NSDictionary *dic       = self.data[self.currentIdx];
+//    self.currentStartTime   = [dic[@"start_time"] floatValue];
+//    self.currentEndTime     = [dic[@"end_time"] floatValue];
+//
+//    NSLog(@"currentIdx : %ld, start_time : %f, end_time : %f", (long)self.currentIdx, self.currentStartTime, self.currentEndTime);
+//
+//    CGFloat delay_time = 0.3;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.audioPlayer seekToTime:self.currentStartTime];
+//    });
+//}
+
+
+
+
+
+
+
+
+
+
+
+- (void)leftMenuPressed:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+
+
 
 /// Raised when an item has started playing
 - (void)audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId
