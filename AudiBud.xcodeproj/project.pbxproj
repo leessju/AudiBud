@@ -349,17 +349,8 @@
 			children = (
 				A7553C272123A6FB00A8CDB6 /* Tabs */,
 				A7553C262123A38F00A8CDB6 /* Cells */,
-				A7553C252123A38900A8CDB6 /* ETC */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A7553C252123A38900A8CDB6 /* ETC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ETC;
-			path = ../../../../AudiBud/Audibud/Sources/Views/ETC;
 			sourceTree = "<group>";
 		};
 		A7553C262123A38F00A8CDB6 /* Cells */ = {

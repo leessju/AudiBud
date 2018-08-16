@@ -12,4 +12,7 @@
 
 - (void)setData:(NSDictionary *)dicData;
 
+@property (assign, nonatomic) NSInteger index;
+@property (assign, nonatomic) NSInteger curindex;
+
 @end

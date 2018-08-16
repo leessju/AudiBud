@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClassicPracticeViewController">
             <connections>
+                <outlet property="btnBack" destination="pAa-sa-ohd" id="H1P-OW-540"/>
+                <outlet property="btnLang" destination="q6s-CT-nSO" id="k0P-8H-Ywk"/>
+                <outlet property="btnNext" destination="bxE-iR-S3k" id="Fxh-pX-dwl"/>
+                <outlet property="btnPlay" destination="niM-Rn-2KN" id="9GT-0z-mbd"/>
                 <outlet property="tableView" destination="Rl5-la-vZy" id="C4r-yu-soi"/>
                 <outlet property="vPlayBar" destination="kfN-XG-c2I" id="itN-iV-cwz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -35,7 +39,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pAa-sa-ohd">
-                            <rect key="frame" x="60" y="-9" width="65" height="72"/>
+                            <rect key="frame" x="29" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="&lt;&lt;"/>
                             <connections>
@@ -43,7 +47,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="niM-Rn-2KN">
-                            <rect key="frame" x="152" y="-9" width="70" height="72"/>
+                            <rect key="frame" x="102" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="►"/>
@@ -52,11 +56,19 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bxE-iR-S3k">
-                            <rect key="frame" x="243" y="-10" width="65" height="72"/>
+                            <rect key="frame" x="180" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="&gt;&gt;"/>
                             <connections>
                                 <action selector="onTouch_btnNext:" destination="-1" eventType="touchUpInside" id="CCu-Fb-czO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q6s-CT-nSO">
+                            <rect key="frame" x="297" y="0.0" width="60" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="한/영"/>
+                            <connections>
+                                <action selector="onTouch_btnLangChange:" destination="-1" eventType="touchUpInside" id="Mmj-cq-ahO"/>
                             </connections>
                         </button>
                     </subviews>

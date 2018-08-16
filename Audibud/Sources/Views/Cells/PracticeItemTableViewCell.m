@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTxt1;
 @property (weak, nonatomic) IBOutlet UILabel *lblTxt2;
+@property (weak, nonatomic) IBOutlet UIView *vBack;
 
 @end
 
@@ -24,6 +25,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.lblTxt1 sizeToWidth:SCREEN_WIDTH - 20];
     [self.lblTxt2 sizeToWidth:SCREEN_WIDTH - 20];
+    //[self.vBack sizeToWidth:SCREEN_WIDTH];
 }
 
 - (void)setData:(NSDictionary *)dicData
@@ -32,6 +34,15 @@
     {
         self.lblTxt1.text = dicData[@"txt_kor"];
         self.lblTxt2.text = dicData[@"txt_eng"];
+        
+        if(self.curindex == self.index)
+        {
+            self.backgroundColor = [UIColor colorWithHexString:@"#DADADA"];
+        }
+        else
+        {
+            self.backgroundColor = [UIColor whiteColor];
+        }
     }
 }
 
