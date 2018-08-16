@@ -28,7 +28,7 @@
     self.audioPlayer.volume = 0.1;
     self.audioPlayer.delegate = self;
     
-    [self setupTimer];
+    //[self setupTimer];
 }
 
 - (IBAction)play:(UIButton *)sender

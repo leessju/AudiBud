@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClassicPracticeViewController">
             <connections>
                 <outlet property="tableView" destination="Rl5-la-vZy" id="C4r-yu-soi"/>
+                <outlet property="vPlayBar" destination="kfN-XG-c2I" id="itN-iV-cwz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,9 +30,41 @@
                         <outlet property="delegate" destination="-1" id="97a-fd-wch"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" misplaced="YES" id="kfN-XG-c2I">
+                    <rect key="frame" x="0.0" y="539" width="375" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pAa-sa-ohd">
+                            <rect key="frame" x="60" y="-9" width="65" height="72"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="&lt;&lt;"/>
+                            <connections>
+                                <action selector="onTouch_btnBack:" destination="-1" eventType="touchUpInside" id="dcw-RL-S5Y"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="niM-Rn-2KN">
+                            <rect key="frame" x="152" y="-9" width="70" height="72"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="►"/>
+                            <connections>
+                                <action selector="onTouch_btnPlay:" destination="-1" eventType="touchUpInside" id="t1i-yz-7LD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bxE-iR-S3k">
+                            <rect key="frame" x="243" y="-10" width="65" height="72"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="&gt;&gt;"/>
+                            <connections>
+                                <action selector="onTouch_btnNext:" destination="-1" eventType="touchUpInside" id="CCu-Fb-czO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="34" y="54"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

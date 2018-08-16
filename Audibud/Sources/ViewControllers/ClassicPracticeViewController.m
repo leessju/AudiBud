@@ -14,9 +14,14 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *data;
-@property (strong, nonatomic) NSString *audio_file_name;
 @property (strong, nonatomic) STKAudioPlayer *audioPlayer;
+@property (strong, nonatomic) NSString *audio_file_name;
+@property (strong, nonatomic) NSURL *url;
 @property (strong, nonatomic) NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UIView *vPlayBar;
+@property (assign, nonatomic) NSInteger currentIdx;
+@property (assign, nonatomic) CGFloat currentStartTime;
+@property (assign, nonatomic) CGFloat currentEndTime;
 
 @end
 
@@ -60,8 +65,11 @@
     }
     
     self.audio_file_name = fileInfo[@"f_a"];
+    self.currentIdx = -1;
     
     [self loadData];
+    [self initPlayer];
+    [self setupTimer];
 }
 
 - (void)initPlayer
@@ -70,44 +78,51 @@
     self.audioPlayer.meteringEnabled    = YES;
     self.audioPlayer.volume             = 1.0;
     self.audioPlayer.delegate           = self;
-}
-
-- (void)playSetting
-{
+    
     NSArray *fArray = [self.audio_file_name componentsSeparatedByString: @"."];
     NSString *fName = fArray[0];
     NSString *fExt  = fArray[1];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:fName ofType:fExt];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    
-    NSLog(@"url : %@", url);
-    
-    CGFloat delay_time = 2.0;
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        NSLog(@"____ delay execute ");
-    });
-    
-//  [audioPlayer play:@"http://www.abstractpath.com/files/audiosamples/sample.mp3"];
-//  [self.audioPlayer playURL:url];
+    self.url = [NSURL fileURLWithPath:path];
 }
 
 - (void)play:(NSUInteger)idx
 {
-    if (self.audioPlayer.state == STKAudioPlayerStatePaused)
-    {
-        
-    }
-    else if (self.audioPlayer.state & STKAudioPlayerStatePlaying)
-    {
-        
-    }
-    else
-    {
-        
-    }
+    NSLog(@"_________________________  play");
+    self.currentIdx         = idx;
+    NSDictionary *dic       = self.data[self.currentIdx];
+    self.currentStartTime   = [dic[@"start_time"] floatValue];
+    self.currentEndTime     = [dic[@"end_time"] floatValue];
+    
+    NSLog(@"currentIdx : %ld, start_time : %f, end_time : %f", (long)self.currentIdx, self.currentStartTime, self.currentEndTime);
+    
+    [self.audioPlayer playURL:self.url];
+    CGFloat delay_time = 0.01;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.audioPlayer seekToTime:self.currentStartTime];
+    });
+}
+
+//- (void)play
+//{
+//    [self play:self.currentIdx];
+//}
+
+- (void)jump:(NSInteger)idx
+{
+    NSLog(@"_________________________  jump");
+    self.currentIdx         = idx;
+    NSDictionary *dic       = self.data[self.currentIdx];
+    self.currentStartTime   = [dic[@"start_time"] floatValue];
+    self.currentEndTime     = [dic[@"end_time"] floatValue];
+    
+    NSLog(@"currentIdx : %ld, start_time : %f, end_time : %f", (long)self.currentIdx, self.currentStartTime, self.currentEndTime);
+    
+    CGFloat delay_time = 0.3;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.audioPlayer seekToTime:self.currentStartTime];
+    });
 }
 
 - (void)loadData
@@ -133,8 +148,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *dic = self.data[indexPath.row];
-    NSLog(@"dic : %@", dic);
+    [self.audioPlayer pause];
+    [self play:indexPath.row];
+    
+    if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
+    {
+        [self jump:indexPath.row];
+        NSLog(@"seek without play");
+    }
+    else
+    {
+        [self play:indexPath.row];
+        NSLog(@"seek with play");
+    }
+    
+    //NSLog(@"dic : %@", dic);
 }
 
 - (void)leftMenuPressed:(UIButton *)sender
@@ -142,16 +170,74 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)onTouch_btnBack:(id)sender
+{
+    NSLog(@"back");
+    
+    if(self.currentIdx == 0)
+    {
+        [self.audioPlayer stop];
+        return;
+    }
+    
+    // 재생 중이면
+    if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
+    {
+        self.currentIdx--;
+        [self jump:self.currentIdx];
+        NSLog(@"seek without play");
+    }
+    else
+    {
+        self.currentIdx--;
+        [self play:self.currentIdx];
+        NSLog(@"seek with play");
+    }
+}
 
+- (IBAction)onTouch_btnPlay:(id)sender
+{
+    if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
+    {
+        NSLog(@"pause");
+        [self.audioPlayer pause];
+    }
+    else if (self.audioPlayer.state == 9)
+    {
+        NSLog(@"play or pause");
+        [self.audioPlayer resume];
+    }
+    else if (self.audioPlayer.state == 16)
+    {
+        if(self.currentIdx < 0)
+            self.currentIdx = 0;
+        
+        [self play:self.currentIdx];
+    }
+}
 
-
-
-
-
-
-
-
-
+- (IBAction)onTouch_btnNext:(id)sender
+{
+    NSLog(@"next");
+    if(self.currentIdx == self.data.count - 1)
+    {
+        [self.audioPlayer stop];
+        return;
+    }
+    
+    if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
+    {
+        self.currentIdx++;
+        [self jump:self.currentIdx];
+        NSLog(@"seek without play");
+    }
+    else
+    {
+        self.currentIdx++;
+        [self play:self.currentIdx];
+        NSLog(@"seek with play");
+    }
+}
 
 - (void)setupTimer
 {
@@ -167,62 +253,44 @@
 //    일시정지 9
 //    중지 16
     
-    if (!self.audioPlayer)
+    if ((self.audioPlayer.state == 3 || self.audioPlayer.state == 5) && self.currentIdx >= 0)
     {
-        // 초기화
-        return;
+        if(self.audioPlayer.progress >= self.currentEndTime)
+        {
+            if(self.currentIdx == self.data.count - 1)
+            {
+                [self.audioPlayer stop];
+                return;
+            }
+            
+            self.currentIdx++;
+            [self jump:self.currentIdx];
+        }
+        // 재생 중에 만료 시간이 오면 다음 라인으로 이동한다.
     }
-    
-    if (self.audioPlayer.currentlyPlayingQueueItemId == nil)
-    {
-        // 초기화
-        return;
-    }
-    
-    // 로컬파일 경우
-    if (self.audioPlayer.duration != 0)
-    {
-//        slider.minimumValue = 0;
-//        slider.maximumValue = audioPlayer.duration;
-//        slider.value        = audioPlayer.progress;
-//        label.text          = [NSString stringWithFormat:@"%@ - %@", [self formatTimeFromSeconds:audioPlayer.progress], [self formatTimeFromSeconds:audioPlayer.duration]];
-    }
-    else
-    {
-        // 스트리밍 일때
-//        slider.value        = 0;
-//        slider.minimumValue = 0;
-//        slider.maximumValue = 0;
-//        label.text          = [NSString stringWithFormat:@"Live stream %@", [self formatTimeFromSeconds:audioPlayer.progress]];
-    }
-    
-    NSString *bufferingYN   = self.audioPlayer.state == STKAudioPlayerStateBuffering ? @"buffering" : @"";
-    NSLog(@"bufferingYN : %@", bufferingYN);
 }
 
-- (void)updateControls
-{
-    if (self.audioPlayer == nil)
-    {
-        //[playButton setTitle:@"" forState:UIControlStateNormal];
-    }
-    else if (self.audioPlayer.state == STKAudioPlayerStatePaused)
-    {
-        //[playButton setTitle:@"Resume" forState:UIControlStateNormal];
-    }
-    else if (self.audioPlayer.state & STKAudioPlayerStatePlaying)
-    {
-        //[playButton setTitle:@"Pause" forState:UIControlStateNormal];
-    }
-    else
-    {
-        //[playButton setTitle:@"" forState:UIControlStateNormal];
-    }
-    
-    [self tick];
-}
-
-
+//- (void)updateControls
+//{
+//    if (self.audioPlayer == nil)
+//    {
+//        //[playButton setTitle:@"" forState:UIControlStateNormal];
+//    }
+//    else if (self.audioPlayer.state == STKAudioPlayerStatePaused)
+//    {
+//        //[playButton setTitle:@"Resume" forState:UIControlStateNormal];
+//    }
+//    else if (self.audioPlayer.state & STKAudioPlayerStatePlaying)
+//    {
+//        //[playButton setTitle:@"Pause" forState:UIControlStateNormal];
+//    }
+//    else
+//    {
+//        //[playButton setTitle:@"" forState:UIControlStateNormal];
+//    }
+//
+//    [self tick];
+//}
 
 /// Raised when an item has started playing
 - (void)audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId
