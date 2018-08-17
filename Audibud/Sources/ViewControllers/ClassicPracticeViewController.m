@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPlay;
 @property (weak, nonatomic) IBOutlet UIButton *btnBack;
 @property (weak, nonatomic) IBOutlet UIButton *btnNext;
+@property (weak, nonatomic) IBOutlet UIButton *btnSwitch;
 
 
 @property (strong, nonatomic) NSMutableArray *data;
@@ -30,6 +31,8 @@
 @property (assign, nonatomic) CGFloat currentStartTime;
 @property (assign, nonatomic) CGFloat currentEndTime;
 @property (assign, nonatomic) NSInteger language_type_idx;
+@property (assign, nonatomic) NSInteger repeat_count;
+@property (assign, nonatomic) NSInteger repeat_buffer;
 
 @end
 
@@ -70,9 +73,14 @@
     [self.btnPlay moveToX:(SCREEN_WIDTH - self.btnPlay.frame.size.width)/2];
     [self.btnBack moveToX:self.btnPlay.frame.origin.x - self.btnBack.frame.size.width - 40];
     [self.btnNext moveToX:(self.btnPlay.frame.origin.x + self.btnPlay.frame.size.width) + 40];
-    [self.btnLang moveToX:SCREEN_WIDTH - self.btnLang.frame.size.width];
+//    [self.btnLang moveToX:SCREEN_WIDTH - (self.btnLang.frame.size.width)*2];
+    [self.btnLang moveToX:SCREEN_WIDTH - (self.btnLang.frame.size.width)];
+    [self.btnSwitch moveToX:0];
     
-    self.language_type_idx = 0; //0 한/영, 1 한글 2 영어 3 무
+    self.language_type_idx  = [GCGet(@"language_type_idx") intValue];    //0 한/영, 1 한글 2 영어 3 무 // cache
+    [self langButton:self.language_type_idx];
+    self.repeat_count       = [GCGet(@"repeat_count") intValue];         // cache
+    self.repeat_buffer      = 0;                                                        // cache
     
     NSDictionary *fileInfo = [SQLITE fileDataByFileIdx:self.f_idx];
     
@@ -83,7 +91,12 @@
     }
     
     self.audio_file_name = fileInfo[@"f_a"];
-    self.currentIdx = -1;
+    
+    NSString *a = [NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx];
+    if(GCIsNull(a))
+        GCSet(a, @"-1");
+    
+    self.currentIdx = [[GCache stringForKey:[NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx]] intValue];
     
     [self loadData];
     [self initPlayer];
@@ -119,6 +132,9 @@
     }
     
     self.currentIdx = idx;
+    //[GCache setString:@(self.currentIdx).stringValue forKey:[NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx]];
+    NSString *k = [NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx];
+    GCSet(k, @(self.currentIdx).stringValue);
     [self.tableView reloadData];
     
     NSDictionary *dic       = self.data[self.currentIdx];
@@ -158,6 +174,10 @@
 {
     self.data = [SQLITE practiceFileIdx:self.f_idx];
     [self.tableView reloadData];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+    });
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -179,6 +199,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.repeat_buffer = 0;
     [self play:indexPath.row];
     [self uiSetting];
 }
@@ -193,6 +214,7 @@
         return;
     }
     
+    self.repeat_buffer = 0;
     self.currentIdx--;
     [self play:self.currentIdx];
     [self uiSetting];
@@ -200,6 +222,7 @@
 
 - (IBAction)onTouch_btnPlay:(id)sender
 {
+    self.repeat_buffer = 0;
     NSLog(@"onTouch_btnPlay");
     if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
     {
@@ -232,6 +255,7 @@
         return;
     }
     
+    self.repeat_buffer = 0;
     self.currentIdx++;
     [self play:self.currentIdx];
     [self uiSetting];
@@ -240,21 +264,27 @@
 - (IBAction)onTouch_btnLangChange:(id)sender
 {
     self.language_type_idx++;
-    self.language_type_idx = self.language_type_idx % 4;
-    
-    if(self.language_type_idx == 0)
-    {
-        [self.btnLang setTitle:@"한/영" forState:UIControlStateNormal];
-    }
-    else if(self.language_type_idx == 1)
+    self.language_type_idx = self.language_type_idx % 2;
+    [GCache setString:@(self.language_type_idx).stringValue forKey:@"language_type_idx"];
+    [self langButton:self.language_type_idx];
+    [self.tableView reloadData];
+}
+
+- (void)langButton:(NSUInteger)language_type_idx
+{
+    if(language_type_idx == 0)
     {
         [self.btnLang setTitle:@"한글" forState:UIControlStateNormal];
     }
-    else if(self.language_type_idx == 2)
+    else if(language_type_idx == 1)
     {
         [self.btnLang setTitle:@"영어" forState:UIControlStateNormal];
     }
-    else if(self.language_type_idx == 3)
+    else if(language_type_idx == 2)
+    {
+        [self.btnLang setTitle:@"한/영" forState:UIControlStateNormal];
+    }
+    else if(language_type_idx == 3)
     {
         [self.btnLang setTitle:@"무" forState:UIControlStateNormal];
     }
@@ -262,9 +292,20 @@
     {
         [self.btnLang setTitle:@"XX" forState:UIControlStateNormal];
     }
-    
-    [self.tableView reloadData];
 }
+
+- (IBAction)onTouch_btnSwitch:(id)sender
+{
+    if(self.language_type_idx == 0)
+    {
+        [self.btnLang setTitle:@"순서" forState:UIControlStateNormal];
+    }
+    else if(self.language_type_idx == 1)
+    {
+        [self.btnLang setTitle:@"램덤" forState:UIControlStateNormal];
+    }
+}
+
 
 - (void)setupTimer:(NSInteger)idx
 {
@@ -280,31 +321,44 @@
 //    일시정지 9
 //    중지 16
     
-    NSString *idxStr = [timer userInfo];
-    
-    if([idxStr intValue] != self.currentIdx)
-    {
-        [timer invalidate];
-        timer = nil;
-    }
+//    NSString *idxStr = [timer userInfo];
+//
+//    if([idxStr intValue] != self.currentIdx)
+//    {
+//        [timer invalidate];
+//        timer = nil;
+//    }
     
     if (self.audioPlayer.state == 3 || self.audioPlayer.state == 5)
     {
         if(self.audioPlayer.progress >= self.currentEndTime)
         {
-            [timer invalidate];
-            timer = nil;
-            
-            [self.audioPlayer pause];
-            
-            if(self.currentIdx < self.data.count - 1)
+            self.repeat_buffer++;
+            if(self.repeat_buffer < self.repeat_count)
             {
+                [self.audioPlayer pause];
+                
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    self.currentIdx++;
-                    [self play:self.currentIdx];
+                    [self.audioPlayer resume];
+                    [self.audioPlayer seekToTime:self.currentStartTime];
                 });
             }
-            
+            else
+            {
+                [timer invalidate];
+                timer = nil;
+                
+                [self.audioPlayer pause];
+                self.repeat_buffer = 0;
+                
+                if(self.currentIdx < self.data.count - 1)
+                {
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        self.currentIdx++;
+                        [self play:self.currentIdx];
+                    });
+                }
+            }
         }
     }
 }
@@ -312,15 +366,6 @@
 
 - (void)uiSetting
 {
-//    STKAudioPlayerStateReady,
-//    STKAudioPlayerStateRunning = 1,
-//    STKAudioPlayerStatePlaying = (1 << 1) | STKAudioPlayerStateRunning,
-//    STKAudioPlayerStateBuffering = (1 << 2) | STKAudioPlayerStateRunning,
-//    STKAudioPlayerStatePaused = (1 << 3) | STKAudioPlayerStateRunning,
-//    STKAudioPlayerStateStopped = (1 << 4),
-//    STKAudioPlayerStateError = (1 << 5),
-//    STKAudioPlayerStateDisposed = (1 << 6)
-    
     if(self.audioPlayer.state == STKAudioPlayerStateReady ||
        self.audioPlayer.state == STKAudioPlayerStateDisposed ||
        self.audioPlayer.state == STKAudioPlayerStateError ||

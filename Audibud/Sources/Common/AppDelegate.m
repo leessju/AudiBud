@@ -32,6 +32,21 @@
     [[SQLiteData sharedSQLiteData] checkAndCreateDatabase];
 //    [[SQLiteData sharedSQLiteData] dropAndcreateTable];
     
+    //[GCache setString:@"" forKey:@"_version_"];
+    if([[GCache stringForKey:@"_version_"] isEqualToString:@""])
+    {
+        GCSet(@"_version_", @"2018");
+        GCSet(@"language_type_idx", @"0");
+        GCSet(@"repeat_count", @"2");
+        GCSet(@"random_yn", @"0");
+        
+//        [GCache setString:@"2018" forKey:@"_version_"];
+//        [GCache setString:@"0" forKey:@"language_type_idx"];
+//        [GCache setString:@"2" forKey:@"repeat_count"];
+//        [GCache setString:@"0" forKey:@"random_yn"];
+        NSLog(@"************** cache init ************");
+    }
+    
     NSError *error;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
     [[AVAudioSession sharedInstance] setActive:YES error:&error];

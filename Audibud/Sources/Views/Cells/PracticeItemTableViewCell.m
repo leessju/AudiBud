@@ -47,30 +47,30 @@
         if (self.language_type_idx == 0)
         {
             self.lblTxt1.hidden = NO;
-            self.lblTxt2.hidden = NO;
-            
-            [self.lblTxt1 moveToY:10];
-            [self.lblTxt1 sizeToHeight:38];
-            [self.lblTxt2 moveToY:51];
-            [self.lblTxt2 sizeToHeight:38];
-//            9, 10, 38
-//            0, 51, 30
-        }
-        else if (self.language_type_idx == 1)
-        {
-            self.lblTxt1.hidden = NO;
             self.lblTxt2.hidden = YES;
             
             [self.lblTxt1 moveToY:10];
             [self.lblTxt1 sizeToHeight:80];
         }
-        else if (self.language_type_idx == 2)
+        else if (self.language_type_idx == 1)
         {
             self.lblTxt1.hidden = YES;
             self.lblTxt2.hidden = NO;
             
             [self.lblTxt2 moveToY:10];
             [self.lblTxt2 sizeToHeight:80];
+        }
+        else if (self.language_type_idx == 2)
+        {
+            self.lblTxt1.hidden = NO;
+            self.lblTxt2.hidden = NO;
+            
+            [self.lblTxt1 moveToY:10];
+            [self.lblTxt1 sizeToHeight:38];
+            [self.lblTxt2 moveToY:51];
+            [self.lblTxt2 sizeToHeight:38];
+            //            9, 10, 38
+            //            0, 51, 30
         }
         else if (self.language_type_idx == 3)
         {

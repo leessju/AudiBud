@@ -15,6 +15,7 @@
                 <outlet property="btnLang" destination="q6s-CT-nSO" id="k0P-8H-Ywk"/>
                 <outlet property="btnNext" destination="bxE-iR-S3k" id="Fxh-pX-dwl"/>
                 <outlet property="btnPlay" destination="niM-Rn-2KN" id="9GT-0z-mbd"/>
+                <outlet property="btnSwitch" destination="JIE-AF-LbE" id="gu6-FC-eoq"/>
                 <outlet property="tableView" destination="Rl5-la-vZy" id="C4r-yu-soi"/>
                 <outlet property="vPlayBar" destination="kfN-XG-c2I" id="itN-iV-cwz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -64,11 +65,19 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q6s-CT-nSO">
-                            <rect key="frame" x="297" y="0.0" width="60" height="60"/>
+                            <rect key="frame" x="248" y="-4" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="한/영"/>
                             <connections>
                                 <action selector="onTouch_btnLangChange:" destination="-1" eventType="touchUpInside" id="Mmj-cq-ahO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JIE-AF-LbE">
+                            <rect key="frame" x="315" y="-4" width="60" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="&lt;-&gt;"/>
+                            <connections>
+                                <action selector="onTouch_btnSwitch:" destination="-1" eventType="touchUpInside" id="PZh-8t-9tT"/>
                             </connections>
                         </button>
                     </subviews>

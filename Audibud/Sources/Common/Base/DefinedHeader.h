@@ -59,7 +59,9 @@
 
 #define SQLITE [SQLiteData sharedSQLiteData]
 #define GCache [EGOCache globalCache]
-//#define STORY_BOARD ((AppDelegate *)[UIApplication sharedApplication].delegate).storyboard
+#define GCIsNull(a) [[GCache stringForKey:a] isEqualToString:@""]
+#define GCSet(a,b)  [GCache setString:a forKey:b]
+#define GCGet(a)    [GCache stringForKey:a]
 
 //#define BRAND_NAME              @"beautytalk"
 #define BRAND_NAME              @"beautytalk1"
