@@ -29,6 +29,7 @@
 @property (assign, nonatomic) NSInteger currentIdx;
 @property (assign, nonatomic) CGFloat currentStartTime;
 @property (assign, nonatomic) CGFloat currentEndTime;
+@property (assign, nonatomic) NSInteger language_type_idx;
 
 @end
 
@@ -68,7 +69,10 @@
     [self.btnLang moveToX:SCREEN_WIDTH - 40 - self.btnLang.frame.size.width];
     [self.btnPlay moveToX:(SCREEN_WIDTH - self.btnPlay.frame.size.width)/2];
     [self.btnBack moveToX:self.btnPlay.frame.origin.x - self.btnBack.frame.size.width - 40];
-    [self.btnNext moveToX:(self.btnPlay.frame.origin.x + self.btnPlay.frame.size.width) + self.btnNext.frame.size.width + 40];
+    [self.btnNext moveToX:(self.btnPlay.frame.origin.x + self.btnPlay.frame.size.width) + 40];
+    [self.btnLang moveToX:SCREEN_WIDTH - self.btnLang.frame.size.width];
+    
+    self.language_type_idx = 0; //0 한/영, 1 한글 2 영어 3 무
     
     NSDictionary *fileInfo = [SQLITE fileDataByFileIdx:self.f_idx];
     
@@ -165,8 +169,9 @@
 {
     static NSString *CellIdentifier = @"PracticeItemTableViewCell";
     PracticeItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.index = indexPath.row;
-    cell.curindex = self.currentIdx;
+    cell.index              = indexPath.row;
+    cell.curindex           = self.currentIdx;
+    cell.language_type_idx  = self.language_type_idx;
     [cell setData:self.data[indexPath.row]];
 
     return cell;
@@ -234,7 +239,31 @@
 
 - (IBAction)onTouch_btnLangChange:(id)sender
 {
+    self.language_type_idx++;
+    self.language_type_idx = self.language_type_idx % 4;
     
+    if(self.language_type_idx == 0)
+    {
+        [self.btnLang setTitle:@"한/영" forState:UIControlStateNormal];
+    }
+    else if(self.language_type_idx == 1)
+    {
+        [self.btnLang setTitle:@"한글" forState:UIControlStateNormal];
+    }
+    else if(self.language_type_idx == 2)
+    {
+        [self.btnLang setTitle:@"영어" forState:UIControlStateNormal];
+    }
+    else if(self.language_type_idx == 3)
+    {
+        [self.btnLang setTitle:@"무" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.btnLang setTitle:@"XX" forState:UIControlStateNormal];
+    }
+    
+    [self.tableView reloadData];
 }
 
 - (void)setupTimer:(NSInteger)idx

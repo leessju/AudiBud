@@ -14,5 +14,6 @@
 
 @property (assign, nonatomic) NSInteger index;
 @property (assign, nonatomic) NSInteger curindex;
+@property (assign, nonatomic) NSInteger language_type_idx;
 
 @end
