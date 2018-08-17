@@ -224,9 +224,26 @@ static SQLiteData *obj = nil;
 
 - (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx
 {
+    return [self practiceFileIdx:f_idx withRandomYN:@"N"];
+}
+
+- (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx withRandomYN:(NSString *)random_yn
+{
     FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
     [db open];
-    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_practice WHERE f_idx = ?", @(f_idx).stringValue ] data];
+    
+    NSString *q = @"";
+    
+    if([random_yn isEqualToString:@"Y"])
+    {
+        q = [NSString stringWithFormat:@"SELECT * FROM tbl_practice WHERE f_idx = %@ ORDER BY RANDOM()", @(f_idx).stringValue];
+    }
+    else
+    {
+        q = [NSString stringWithFormat:@"SELECT * FROM tbl_practice WHERE f_idx = %@", @(f_idx).stringValue];
+    }
+    
+    NSMutableArray *data = [[db executeQuery:q] data];
     [db close];
     
     return data;

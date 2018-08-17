@@ -60,7 +60,7 @@
 #define SQLITE [SQLiteData sharedSQLiteData]
 #define GCache [EGOCache globalCache]
 #define GCIsNull(a) [[GCache stringForKey:a] isEqualToString:@""]
-#define GCSet(a,b)  [GCache setString:a forKey:b]
+#define GCSet(a,b)  [GCache setString:b forKey:a]
 #define GCGet(a)    [GCache stringForKey:a]
 
 //#define BRAND_NAME              @"beautytalk"

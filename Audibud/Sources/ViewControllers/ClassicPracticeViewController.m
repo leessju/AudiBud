@@ -33,6 +33,7 @@
 @property (assign, nonatomic) NSInteger language_type_idx;
 @property (assign, nonatomic) NSInteger repeat_count;
 @property (assign, nonatomic) NSInteger repeat_buffer;
+@property (assign, nonatomic) NSInteger random_yn;
 
 @end
 
@@ -77,10 +78,12 @@
     [self.btnLang moveToX:SCREEN_WIDTH - (self.btnLang.frame.size.width)];
     [self.btnSwitch moveToX:0];
     
-    self.language_type_idx  = [GCGet(@"language_type_idx") intValue];    //0 한/영, 1 한글 2 영어 3 무 // cache
+    self.language_type_idx  = [GCGet(@"language_type_idx") intValue]; // 0 한글 1 영어 2 한/영  3 무
     [self langButton:self.language_type_idx];
-    self.repeat_count       = [GCGet(@"repeat_count") intValue];         // cache
-    self.repeat_buffer      = 0;                                                        // cache
+    self.repeat_count       = [GCGet(@"repeat_count") intValue];
+    self.repeat_buffer      = 0;
+    self.random_yn          = [GCGet(@"random_yn") intValue];
+    [self switchButton:self.random_yn];
     
     NSDictionary *fileInfo = [SQLITE fileDataByFileIdx:self.f_idx];
     
@@ -132,7 +135,6 @@
     }
     
     self.currentIdx = idx;
-    //[GCache setString:@(self.currentIdx).stringValue forKey:[NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx]];
     NSString *k = [NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx];
     GCSet(k, @(self.currentIdx).stringValue);
     [self.tableView reloadData];
@@ -140,6 +142,8 @@
     NSDictionary *dic       = self.data[self.currentIdx];
     self.currentStartTime   = [dic[@"start_time"] floatValue];
     self.currentEndTime     = [dic[@"end_time"] floatValue];
+    
+    NSLog(@"::::::::::::::::::: dic =============> %@", dic);
     
     [self setupTimer:self.currentIdx];
     
@@ -167,12 +171,27 @@
         NSLog(@"==================> jump");
         [self.audioPlayer seekToTime:self.currentStartTime];
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+        [SQLITE addUesrLog:@{@"p_idx":dic[@"p_idx"]}];
+        
+        NSString *URLString = @"http://lang.nicejames.com/api/Lang/AddUserLog";
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        [manager POST:URLString
+           parameters:@{@"p_idx":dic[@"p_idx"]}
+             progress:nil
+              success:^(NSURLSessionTask *task, id responseObject) {
+              } failure:^(NSURLSessionTask *operation, NSError *error) {
+                  NSLog(@"Error: %@", error);
+              }];
     });
 }
 
 - (void)loadData
 {
-    self.data = [SQLITE practiceFileIdx:self.f_idx];
+    if(self.random_yn == 0)
+        self.data = [SQLITE practiceFileIdx:self.f_idx];
+    else
+        self.data = [SQLITE practiceFileIdx:self.f_idx withRandomYN:@"Y"];
+        
     [self.tableView reloadData];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -296,16 +315,25 @@
 
 - (IBAction)onTouch_btnSwitch:(id)sender
 {
-    if(self.language_type_idx == 0)
-    {
-        [self.btnLang setTitle:@"순서" forState:UIControlStateNormal];
-    }
-    else if(self.language_type_idx == 1)
-    {
-        [self.btnLang setTitle:@"램덤" forState:UIControlStateNormal];
-    }
+    self.random_yn++;
+    self.random_yn = self.random_yn % 2;
+    GCSet(@"random_yn", @(self.random_yn).stringValue);
+    [self switchButton:self.random_yn];
 }
 
+- (void)switchButton:(NSUInteger)random_yn
+{
+    if(random_yn == 0)
+    {
+        [self.btnSwitch setTitle:@"순서" forState:UIControlStateNormal];
+    }
+    else if(random_yn == 1)
+    {
+        [self.btnSwitch setTitle:@"램덤" forState:UIControlStateNormal];
+    }
+    
+    [self loadData];
+}
 
 - (void)setupTimer:(NSInteger)idx
 {
