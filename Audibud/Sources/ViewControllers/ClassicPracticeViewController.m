@@ -276,7 +276,7 @@
         [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = songInfo;
     });
     
-    [self setupTimer:self.currentIdx];
+    [self setupTimer:dic];
     
     NSLog(@"currentIdx : %ld, start_time : %f, end_time : %f", (long)self.currentIdx, self.currentStartTime, self.currentEndTime);
     CGFloat delay_time = 0;
@@ -497,9 +497,9 @@
     [self loadData];
 }
 
-- (void)setupTimer:(NSInteger)idx
+- (void)setupTimer:(NSDictionary *)dic
 {
-    self.timer = [NSTimer timerWithTimeInterval:0.001 target:self selector:@selector(tick:) userInfo:@(idx).stringValue repeats:YES];
+    self.timer = [NSTimer timerWithTimeInterval:0.001 target:self selector:@selector(tick:) userInfo:dic repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
@@ -511,7 +511,7 @@
 //    일시정지 9
 //    중지 16
     
-//    NSString *idxStr = [timer userInfo];
+    NSDictionary *dic = [timer userInfo];
 //
 //    if([idxStr intValue] != self.currentIdx)
 //    {
@@ -531,6 +531,16 @@
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [self.audioPlayer resume];
                     [self.audioPlayer seekToTime:self.currentStartTime];
+                    
+                    NSString *URLString = @"http://lang.nicejames.com/api/Lang/AddUserLog";
+                    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+                    [manager POST:URLString
+                       parameters:@{@"p_idx":dic[@"p_idx"]}
+                         progress:nil
+                          success:^(NSURLSessionTask *task, id responseObject) {
+                          } failure:^(NSURLSessionTask *operation, NSError *error) {
+                              NSLog(@"Error: %@", error);
+                          }];
                 });
             }
             else

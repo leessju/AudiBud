@@ -103,6 +103,14 @@
     static NSString *CellIdentifier = @"FileItemTableViewCell";
     FileItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     cell.delegate = self;
+    
+    NSDictionary *d = [SQLITE fileDataByFileIdx:[self.data[indexPath.row][@"f_idx"] intValue]];
+    NSString *download_yn = @"N";
+    
+    if(d)
+        download_yn = d[@"download_yn"];
+    
+    cell.download_yn = download_yn;
     [cell setData:self.data[indexPath.row]];
 
     return cell;

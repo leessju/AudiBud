@@ -13,9 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTxt1;
 @property (weak, nonatomic) IBOutlet UILabel *lblTxt2;
-@property (weak, nonatomic) IBOutlet UIView *vBack;
-@property (weak, nonatomic) IBOutlet UILabel *lblC;
-
+@property (strong, nonatomic) UILabel *lblC;
 
 @end
 
@@ -28,6 +26,14 @@
     [self.lblTxt1 sizeToWidth:SCREEN_WIDTH - 20];
     [self.lblTxt2 sizeToWidth:SCREEN_WIDTH - 20];
     
+    self.lblC = [[UILabel alloc] init];
+    [self.lblC setFont:[UIFont systemFontOfSize:12.0f]];
+    self.lblC.textColor = [UIColor redColor];
+    self.lblC.frame = CGRectMake(SCREEN_WIDTH - 25, 70, 40, 30);
+    self.lblC.backgroundColor= [UIColor clearColor];
+    self.lblC.userInteractionEnabled = NO;
+    //self.lblC.text= @"TEST";
+    [self.contentView addSubview:self.lblC];
 }
 
 - (void)setData:(NSDictionary *)dicData
@@ -91,8 +97,8 @@
             {
                 if(p_idx == [d[@"p_idx"] intValue])
                 {
-                    NSLog(@"_______ p_idx %d, c : %d", p_idx, [d[@"c"] intValue]);
-                    //self.lblC.text = d[@"c"];
+                    //NSLog(@"_______ p_idx %d, c : %d", p_idx, [d[@"c"] intValue]);
+                    self.lblC.text = @([d[@"c"] intValue]).stringValue;
                     break;
                 }
             }

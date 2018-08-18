@@ -18,6 +18,8 @@
 @interface FileItemTableViewCell : UITableViewCell
 
 - (void)setData:(NSDictionary *)dicData;
+
 @property (assign, nonatomic) id<FileItemTableViewCellDelegate> delegate;
+@property (strong, nonatomic) NSString *download_yn;
 
 @end

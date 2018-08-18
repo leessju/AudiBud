@@ -29,6 +29,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.btnDownload moveToX:SCREEN_WIDTH - 60];
     [self.btnView sizeToWidth:SCREEN_WIDTH - 60];
+    self.btnDownload.hidden = NO;
     [self.vBack sizeToWidth:SCREEN_WIDTH];
     
     self.vBack.backgroundColor = [UIColor colorWithHexString:@"#fcf6f4"];
@@ -38,26 +39,20 @@
 {
     self.dicData = dicData;
     
+    self.btnDownload.hidden = NO;
+    [self.btnDownload moveToX:SCREEN_WIDTH - 60];
+    [self.btnView sizeToWidth:SCREEN_WIDTH - 60];
+    self.vBack.backgroundColor = [UIColor colorWithHexString:@"#fcf6f4"];
+    
     if (dicData)
     {
-        NSDictionary *d = [SQLITE fileDataByFileIdx:[dicData[@"f_idx"] intValue]];
-        
-        if(d)
+        if([self.download_yn isEqualToString:@"Y"])
         {
-            if([d[@"download_yn"] isEqualToString:@"Y"])
-            {
-                self.btnDownload.hidden = YES;
-                [self.btnView sizeToWidth:SCREEN_WIDTH];
-                self.vBack.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
-            }
-            else
-            {
-                [self.btnDownload moveToX:SCREEN_WIDTH - 60];
-                [self.btnView sizeToWidth:SCREEN_WIDTH - 60];
-                self.vBack.backgroundColor = [UIColor colorWithHexString:@"#fcf6f4"];
-            }
+            self.btnDownload.hidden = YES;
+            [self.btnView sizeToWidth:SCREEN_WIDTH];
+            self.vBack.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
         }
-        
+
         self.lblTitle.text = dicData[@"f_name"];
     }
 }
