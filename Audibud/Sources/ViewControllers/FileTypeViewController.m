@@ -54,14 +54,7 @@
        parameters:nil
          progress:nil
           success:^(NSURLSessionTask *task, id responseObject) {
-              self.data = responseObject[@"response_data"];
-              NSLog(@"JSON: %@", self.data);
-              
-              for (NSDictionary *dic in self.data)
-              {
-                  [SQLITE addFileData:dic];
-              }
-              
+              self.data = responseObject[@"response_data"];              
               [self.tableView reloadData];
               
           } failure:^(NSURLSessionTask *operation, NSError *error) {

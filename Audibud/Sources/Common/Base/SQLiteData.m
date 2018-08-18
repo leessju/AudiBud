@@ -126,7 +126,7 @@ static SQLiteData *obj = nil;
         [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
         
-        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_file_data (f_idx, f_a, download_yn, download_date) VALUES (?,?,?,?)", dic[@"f_idx"], dic[@"f_a"], @"N", dateString ];
+        BOOL isOK = [db executeUpdate:@"INSERT INTO tbl_file_data (f_idx, f_type_idx, f_a, download_yn, download_date) VALUES (?,?,?,?,?)", dic[@"f_idx"], dic[@"f_type_idx"], dic[@"f_a"], @"N", dateString];
         
         [db close];
         return isOK;

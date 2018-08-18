@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTxt1;
 @property (weak, nonatomic) IBOutlet UILabel *lblTxt2;
 @property (weak, nonatomic) IBOutlet UIView *vBack;
+@property (weak, nonatomic) IBOutlet UILabel *lblC;
+
 
 @end
 
@@ -32,6 +34,7 @@
 {
     if (dicData)
     {
+        NSUInteger p_idx  = [dicData[@"p_idx"] intValue];
         self.lblTxt1.text = dicData[@"txt_kor"];
         self.lblTxt2.text = dicData[@"txt_eng"];
         
@@ -82,6 +85,18 @@
             [self.lblTxt2 sizeToHeight:38];
         }
         
+        if(self.viewArray)
+        {
+            for (NSDictionary *d in self.viewArray)
+            {
+                if(p_idx == [d[@"p_idx"] intValue])
+                {
+                    NSLog(@"_______ p_idx %d, c : %d", p_idx, [d[@"c"] intValue]);
+                    //self.lblC.text = d[@"c"];
+                    break;
+                }
+            }
+        }
     }
 }
 

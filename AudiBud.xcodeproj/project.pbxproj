@@ -75,6 +75,93 @@
 		A78DB6A8212791B10077B8A9 /* FileTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78DB6A6212791B00077B8A9 /* FileTypeViewController.xib */; };
 		A78DB6AC212792490077B8A9 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DB6AA212792490077B8A9 /* BasicTableViewCell.m */; };
 		A78DB6AD212792490077B8A9 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78DB6AB212792490077B8A9 /* BasicTableViewCell.xib */; };
+		A7D79ABD21280A6B00E28452 /* S1E12 The One with the Computer 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6621280A5C00E28452 /* S1E12 The One with the Computer 2.mp3 */; };
+		A7D79ABE21280A6B00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6721280A5C00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 */; };
+		A7D79ABF21280A6B00E28452 /* S2E5 The One with the Dog 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6821280A5C00E28452 /* S2E5 The One with the Dog 1.mp3 */; };
+		A7D79AC021280A6B00E28452 /* S2E8 Manny's Birthday 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6921280A5C00E28452 /* S2E8 Manny's Birthday 2.mp3 */; };
+		A7D79AC121280A6B00E28452 /* S1E1 The Morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6A21280A5C00E28452 /* S1E1 The Morning.mp3 */; };
+		A7D79AC221280A6B00E28452 /* S1E10 Dunphy's Christmas 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6B21280A5C00E28452 /* S1E10 Dunphy's Christmas 1.mp3 */; };
+		A7D79AC321280A6B00E28452 /* S2E6 The One with Halloween Costumes Mitchell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6C21280A5D00E28452 /* S2E6 The One with Halloween Costumes Mitchell.mp3 */; };
+		A7D79AC421280A6B00E28452 /* S3E2 Adopting a New Baby 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6D21280A5D00E28452 /* S3E2 Adopting a New Baby 2.mp3 */; };
+		A7D79AC521280A6B00E28452 /* S3E1 Dylan Proposes 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6E21280A5D00E28452 /* S3E1 Dylan Proposes 2.mp3 */; };
+		A7D79AC621280A6B00E28452 /* S4E1 Gloria Got Pregnant 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6F21280A5D00E28452 /* S4E1 Gloria Got Pregnant 3.mp3 */; };
+		A7D79AC721280A6B00E28452 /* S4E2 Jay with Parenting Class 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7021280A5D00E28452 /* S4E2 Jay with Parenting Class 1.mp3 */; };
+		A7D79AC821280A6B00E28452 /* S5E6 New Nanny 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7121280A5D00E28452 /* S5E6 New Nanny 2.mp3 */; };
+		A7D79AC921280A6B00E28452 /* S2E22 Lady Gaga Concert 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7221280A5E00E28452 /* S2E22 Lady Gaga Concert 1.mp3 */; };
+		A7D79ACA21280A6B00E28452 /* S2E13 The One with Sex 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7321280A5E00E28452 /* S2E13 The One with Sex 2.mp3 */; };
+		A7D79ACB21280A6B00E28452 /* S1E4 The Incident at Wedding 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7421280A5E00E28452 /* S1E4 The Incident at Wedding 1.mp3 */; };
+		A7D79ACC21280A6B00E28452 /* S1E16 Haley the Two Strikes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7521280A5E00E28452 /* S1E16 Haley the Two Strikes.mp3 */; };
+		A7D79ACD21280A6B00E28452 /* S1E12 The One with the Computer 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7621280A5E00E28452 /* S1E12 The One with the Computer 1.mp3 */; };
+		A7D79ACE21280A6B00E28452 /* S1E3 The One with Airplane 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7721280A5F00E28452 /* S1E3 The One with Airplane 1.mp3 */; };
+		A7D79ACF21280A6B00E28452 /* S2E14 The One with Broderick 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7821280A5F00E28452 /* S2E14 The One with Broderick 2.mp3 */; };
+		A7D79AD021280A6B00E28452 /* S4E2 Lilly's First Day at School 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7921280A5F00E28452 /* S4E2 Lilly's First Day at School 1.mp3 */; };
+		A7D79AD121280A6B00E28452 /* S3E06 Manny's Secret.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7A21280A5F00E28452 /* S3E06 Manny's Secret.mp3 */; };
+		A7D79AD221280A6B00E28452 /* S4E6 Yard Sale 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7B21280A5F00E28452 /* S4E6 Yard Sale 1.mp3 */; };
+		A7D79AD321280A6B00E28452 /* S2E3 The One With Earthquake 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7C21280A5F00E28452 /* S2E3 The One With Earthquake 1.mp3 */; };
+		A7D79AD421280A6B00E28452 /* S3E1 Dylan Proposes 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7D21280A6000E28452 /* S3E1 Dylan Proposes 1.mp3 */; };
+		A7D79AD521280A6B00E28452 /* S2E21 Happy Mother's Day 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7E21280A6000E28452 /* S2E21 Happy Mother's Day 4.mp3 */; };
+		A7D79AD621280A6B00E28452 /* S2E17 The One with a Sweater.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A7F21280A6000E28452 /* S2E17 The One with a Sweater.mp3 */; };
+		A7D79AD721280A6B00E28452 /* S2E8 Manny's Birthday 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8021280A6000E28452 /* S2E8 Manny's Birthday 1.mp3 */; };
+		A7D79AD821280A6B00E28452 /* S2E12 Mitchell's Baby 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8121280A6100E28452 /* S2E12 Mitchell's Baby 1.mp3 */; };
+		A7D79AD921280A6B00E28452 /* S3E2 The One with Attic 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8221280A6100E28452 /* S3E2 The One with Attic 2.mp3 */; };
+		A7D79ADA21280A6B00E28452 /* S1E2 The One With a Bike 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8321280A6100E28452 /* S1E2 The One With a Bike 2.mp3 */; };
+		A7D79ADB21280A6B00E28452 /* S1E21 A Dog from Grandpa 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8421280A6200E28452 /* S1E21 A Dog from Grandpa 1.mp3 */; };
+		A7D79ADC21280A6B00E28452 /* S2E4 Cams Bike Shorts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8521280A6200E28452 /* S2E4 Cams Bike Shorts.mp3 */; };
+		A7D79ADD21280A6B00E28452 /* S2E11 Learning How to Bike 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8621280A6200E28452 /* S2E11 Learning How to Bike 2.mp3 */; };
+		A7D79ADE21280A6B00E28452 /* S2E12 The One with the Hoffmans.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8721280A6200E28452 /* S2E12 The One with the Hoffmans.mp3 */; };
+		A7D79ADF21280A6B00E28452 /* S1E7 Manny the Zorro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8821280A6200E28452 /* S1E7 Manny the Zorro.mp3 */; };
+		A7D79AE021280A6B00E28452 /* S2E21 Happy Mother's Day 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8921280A6300E28452 /* S2E21 Happy Mother's Day 3.mp3 */; };
+		A7D79AE121280A6B00E28452 /* S3E2 The One with Attic 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8A21280A6300E28452 /* S3E2 The One with Attic 1.mp3 */; };
+		A7D79AE221280A6B00E28452 /* S1E19 The Baby Monitor 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8B21280A6300E28452 /* S1E19 The Baby Monitor 1.mp3 */; };
+		A7D79AE321280A6B00E28452 /* S2E5 No More Electronics 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8C21280A6300E28452 /* S2E5 No More Electronics 1.mp3 */; };
+		A7D79AE421280A6B00E28452 /* S2E21 Happy Mother's Day 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8D21280A6300E28452 /* S2E21 Happy Mother's Day 2.mp3 */; };
+		A7D79AE521280A6B00E28452 /* S3E13 Lilly Says Bad Word.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8E21280A6400E28452 /* S3E13 Lilly Says Bad Word.mp3 */; };
+		A7D79AE621280A6B00E28452 /* S2E18 Mr. Kleezak, Next Door 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A8F21280A6400E28452 /* S2E18 Mr. Kleezak, Next Door 1.mp3 */; };
+		A7D79AE721280A6B00E28452 /* S3E20 Next Door Neighbor Died.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9021280A6400E28452 /* S3E20 Next Door Neighbor Died.mp3 */; };
+		A7D79AE821280A6B00E28452 /* S5E6 New Nanny.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9121280A6400E28452 /* S5E6 New Nanny.mp3 */; };
+		A7D79AE921280A6B00E28452 /* S1E19 The Baby Monitor 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9221280A6400E28452 /* S1E19 The Baby Monitor 2.mp3 */; };
+		A7D79AEA21280A6B00E28452 /* S4E2 Jay with Parenting Class 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9321280A6400E28452 /* S4E2 Jay with Parenting Class 2.mp3 */; };
+		A7D79AEB21280A6B00E28452 /* S2E18 Mr. Kleezak, Next Door 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9421280A6500E28452 /* S2E18 Mr. Kleezak, Next Door 2.mp3 */; };
+		A7D79AEC21280A6B00E28452 /* S3E9  The Dent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9521280A6500E28452 /* S3E9  The Dent.mp3 */; };
+		A7D79AED21280A6B00E28452 /* S2E2 Alex Got a Boy 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9621280A6500E28452 /* S2E2 Alex Got a Boy 1.mp3 */; };
+		A7D79AEE21280A6B00E28452 /* S1E8 Jays Night 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9721280A6500E28452 /* S1E8 Jays Night 2.mp3 */; };
+		A7D79AEF21280A6B00E28452 /* S1E2 The One With a Bike 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9821280A6500E28452 /* S1E2 The One With a Bike 1.mp3 */; };
+		A7D79AF021280A6B00E28452 /* S1E5 Gloria Got in a Fight 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9921280A6500E28452 /* S1E5 Gloria Got in a Fight 2.mp3 */; };
+		A7D79AF121280A6B00E28452 /* S1E24 Family Portrait.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9A21280A6500E28452 /* S1E24 Family Portrait.mp3 */; };
+		A7D79AF221280A6B00E28452 /* S1E3 Alex Shopping 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9B21280A6600E28452 /* S1E3 Alex Shopping 2.mp3 */; };
+		A7D79AF321280A6B00E28452 /* S2E13 The One with Sex 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9C21280A6600E28452 /* S2E13 The One with Sex 3.mp3 */; };
+		A7D79AF421280A6B00E28452 /* S1E11 The One with Fireman 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9D21280A6600E28452 /* S1E11 The One with Fireman 1.mp3 */; };
+		A7D79AF521280A6B00E28452 /* S2E18 Haley Babysits Lilly 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9E21280A6600E28452 /* S2E18 Haley Babysits Lilly 1.mp3 */; };
+		A7D79AF621280A6B00E28452 /* S3E13 Stella, the Dog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A9F21280A6600E28452 /* S3E13 Stella, the Dog.mp3 */; };
+		A7D79AF721280A6B00E28452 /* S2E11 Learning How to Bike 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA021280A6700E28452 /* S2E11 Learning How to Bike 1.mp3 */; };
+		A7D79AF821280A6B00E28452 /* S4E1 Gloria Got Pregnant 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA121280A6700E28452 /* S4E1 Gloria Got Pregnant 1.mp3 */; };
+		A7D79AF921280A6B00E28452 /* S2E22 Lady Gaga Concert 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA221280A6700E28452 /* S2E22 Lady Gaga Concert 2.mp3 */; };
+		A7D79AFA21280A6B00E28452 /* S3E17 Leap Day 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA321280A6700E28452 /* S3E17 Leap Day 2.mp3 */; };
+		A7D79AFB21280A6B00E28452 /* S3E2 Adopting a New Baby 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA421280A6700E28452 /* S3E2 Adopting a New Baby 1.mp3 */; };
+		A7D79AFC21280A6B00E28452 /* S1E3 Alex Shopping 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA521280A6700E28452 /* S1E3 Alex Shopping 1.mp3 */; };
+		A7D79AFD21280A6B00E28452 /* S1E4 The Incident at Wedding 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA621280A6700E28452 /* S1E4 The Incident at Wedding 2.mp3 */; };
+		A7D79AFE21280A6B00E28452 /* S5E13 Haley's Future 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA721280A6800E28452 /* S5E13 Haley's Future 1.mp3 */; };
+		A7D79AFF21280A6B00E28452 /* S2E21 Happy Mother's Day 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA821280A6800E28452 /* S2E21 Happy Mother's Day 1.mp3 */; };
+		A7D79B0021280A6B00E28452 /* S2E10 School Dance Outfit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AA921280A6800E28452 /* S2E10 School Dance Outfit.mp3 */; };
+		A7D79B0121280A6B00E28452 /* S2E3 The One With Earthquake 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AAA21280A6800E28452 /* S2E3 The One With Earthquake 2.mp3 */; };
+		A7D79B0221280A6B00E28452 /* S1E3 The One with Airplane 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AAB21280A6800E28452 /* S1E3 The One with Airplane 2.mp3 */; };
+		A7D79B0321280A6B00E28452 /* S2E12 Mitchell's Baby 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AAC21280A6800E28452 /* S2E12 Mitchell's Baby 2.mp3 */; };
+		A7D79B0421280A6B00E28452 /* S3E22 The One with Disneyland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AAD21280A6800E28452 /* S3E22 The One with Disneyland.mp3 */; };
+		A7D79B0521280A6B00E28452 /* S1E5 Gloria Got in a Fight 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AAE21280A6900E28452 /* S1E5 Gloria Got in a Fight 1.mp3 */; };
+		A7D79B0621280A6B00E28452 /* S2E5 The One with the Dog 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AAF21280A6900E28452 /* S2E5 The One with the Dog 2.mp3 */; };
+		A7D79B0721280A6B00E28452 /* S4E2 Lilly's First day at School 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB021280A6900E28452 /* S4E2 Lilly's First day at School 2.mp3 */; };
+		A7D79B0821280A6B00E28452 /* S4E2 Lilly's First day at School 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB121280A6900E28452 /* S4E2 Lilly's First day at School 3.mp3 */; };
+		A7D79B0921280A6B00E28452 /* S1E8 Jays Night 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB221280A6900E28452 /* S1E8 Jays Night 1.mp3 */; };
+		A7D79B0A21280A6B00E28452 /* S1E10 Dunphy's Christmas 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB321280A6900E28452 /* S1E10 Dunphy's Christmas 2.mp3 */; };
+		A7D79B0B21280A6B00E28452 /* S2E21 Happy Mother's Day 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB421280A6900E28452 /* S2E21 Happy Mother's Day 5.mp3 */; };
+		A7D79B0C21280A6B00E28452 /* S2E13 The One with Sex 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB521280A6A00E28452 /* S2E13 The One with Sex 1.mp3 */; };
+		A7D79B0D21280A6B00E28452 /* S3E17 Leap Day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB621280A6A00E28452 /* S3E17 Leap Day.mp3 */; };
+		A7D79B0E21280A6B00E28452 /* S3E24 The Prom 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB721280A6A00E28452 /* S3E24 The Prom 1.mp3 */; };
+		A7D79B0F21280A6B00E28452 /* S2E2 Alex Got a Boy 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB821280A6A00E28452 /* S2E2 Alex Got a Boy 2.mp3 */; };
+		A7D79B1021280A6B00E28452 /* S4E1 Gloria Got Pregnant 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79AB921280A6A00E28452 /* S4E1 Gloria Got Pregnant 2.mp3 */; };
+		A7D79B1121280A6B00E28452 /* S4E2 Haley Becomes University Student.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79ABA21280A6A00E28452 /* S4E2 Haley Becomes University Student.mp3 */; };
+		A7D79B1221280A6B00E28452 /* S2E21 Happy Mother's Day 6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79ABB21280A6A00E28452 /* S2E21 Happy Mother's Day 6.mp3 */; };
+		A7D79B1321280A6B00E28452 /* S2E14 The One with Broderick 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79ABC21280A6B00E28452 /* S2E14 The One with Broderick 1.mp3 */; };
 		A7EEC3352123B3E700C654F3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7EEC3342123B3E700C654F3 /* Info.plist */; };
 		CE3969CAB1EEDC191BB22A13 /* libPods-A1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B55D665291320B2BD4EAA7D /* libPods-A1.a */; };
 /* End PBXBuildFile section */
@@ -181,6 +268,93 @@
 		A78DB6A9212792480077B8A9 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTableViewCell.h; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.h; sourceTree = "<group>"; };
 		A78DB6AA212792490077B8A9 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableViewCell.m; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.m; sourceTree = "<group>"; };
 		A78DB6AB212792490077B8A9 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicTableViewCell.xib; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.xib; sourceTree = "<group>"; };
+		A7D79A6621280A5C00E28452 /* S1E12 The One with the Computer 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E12 The One with the Computer 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E12 The One with the Computer 2.mp3"; sourceTree = "<group>"; };
+		A7D79A6721280A5C00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E18 Haley Babysits Lilly 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E18 Haley Babysits Lilly 2.mp3"; sourceTree = "<group>"; };
+		A7D79A6821280A5C00E28452 /* S2E5 The One with the Dog 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E5 The One with the Dog 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E5 The One with the Dog 1.mp3"; sourceTree = "<group>"; };
+		A7D79A6921280A5C00E28452 /* S2E8 Manny's Birthday 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E8 Manny's Birthday 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E8 Manny's Birthday 2.mp3"; sourceTree = "<group>"; };
+		A7D79A6A21280A5C00E28452 /* S1E1 The Morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E1 The Morning.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E1 The Morning.mp3"; sourceTree = "<group>"; };
+		A7D79A6B21280A5C00E28452 /* S1E10 Dunphy's Christmas 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E10 Dunphy's Christmas 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E10 Dunphy's Christmas 1.mp3"; sourceTree = "<group>"; };
+		A7D79A6C21280A5D00E28452 /* S2E6 The One with Halloween Costumes Mitchell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E6 The One with Halloween Costumes Mitchell.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E6 The One with Halloween Costumes Mitchell.mp3"; sourceTree = "<group>"; };
+		A7D79A6D21280A5D00E28452 /* S3E2 Adopting a New Baby 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E2 Adopting a New Baby 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E2 Adopting a New Baby 2.mp3"; sourceTree = "<group>"; };
+		A7D79A6E21280A5D00E28452 /* S3E1 Dylan Proposes 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E1 Dylan Proposes 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E1 Dylan Proposes 2.mp3"; sourceTree = "<group>"; };
+		A7D79A6F21280A5D00E28452 /* S4E1 Gloria Got Pregnant 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E1 Gloria Got Pregnant 3.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E1 Gloria Got Pregnant 3.mp3"; sourceTree = "<group>"; };
+		A7D79A7021280A5D00E28452 /* S4E2 Jay with Parenting Class 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E2 Jay with Parenting Class 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E2 Jay with Parenting Class 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7121280A5D00E28452 /* S5E6 New Nanny 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S5E6 New Nanny 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S5E6 New Nanny 2.mp3"; sourceTree = "<group>"; };
+		A7D79A7221280A5E00E28452 /* S2E22 Lady Gaga Concert 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E22 Lady Gaga Concert 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E22 Lady Gaga Concert 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7321280A5E00E28452 /* S2E13 The One with Sex 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E13 The One with Sex 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E13 The One with Sex 2.mp3"; sourceTree = "<group>"; };
+		A7D79A7421280A5E00E28452 /* S1E4 The Incident at Wedding 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E4 The Incident at Wedding 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E4 The Incident at Wedding 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7521280A5E00E28452 /* S1E16 Haley the Two Strikes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E16 Haley the Two Strikes.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E16 Haley the Two Strikes.mp3"; sourceTree = "<group>"; };
+		A7D79A7621280A5E00E28452 /* S1E12 The One with the Computer 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E12 The One with the Computer 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E12 The One with the Computer 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7721280A5F00E28452 /* S1E3 The One with Airplane 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E3 The One with Airplane 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E3 The One with Airplane 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7821280A5F00E28452 /* S2E14 The One with Broderick 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E14 The One with Broderick 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E14 The One with Broderick 2.mp3"; sourceTree = "<group>"; };
+		A7D79A7921280A5F00E28452 /* S4E2 Lilly's First Day at School 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E2 Lilly's First Day at School 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E2 Lilly's First Day at School 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7A21280A5F00E28452 /* S3E06 Manny's Secret.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E06 Manny's Secret.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E06 Manny's Secret.mp3"; sourceTree = "<group>"; };
+		A7D79A7B21280A5F00E28452 /* S4E6 Yard Sale 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E6 Yard Sale 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E6 Yard Sale 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7C21280A5F00E28452 /* S2E3 The One With Earthquake 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E3 The One With Earthquake 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E3 The One With Earthquake 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7D21280A6000E28452 /* S3E1 Dylan Proposes 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E1 Dylan Proposes 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E1 Dylan Proposes 1.mp3"; sourceTree = "<group>"; };
+		A7D79A7E21280A6000E28452 /* S2E21 Happy Mother's Day 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E21 Happy Mother's Day 4.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E21 Happy Mother's Day 4.mp3"; sourceTree = "<group>"; };
+		A7D79A7F21280A6000E28452 /* S2E17 The One with a Sweater.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E17 The One with a Sweater.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E17 The One with a Sweater.mp3"; sourceTree = "<group>"; };
+		A7D79A8021280A6000E28452 /* S2E8 Manny's Birthday 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E8 Manny's Birthday 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E8 Manny's Birthday 1.mp3"; sourceTree = "<group>"; };
+		A7D79A8121280A6100E28452 /* S2E12 Mitchell's Baby 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E12 Mitchell's Baby 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E12 Mitchell's Baby 1.mp3"; sourceTree = "<group>"; };
+		A7D79A8221280A6100E28452 /* S3E2 The One with Attic 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E2 The One with Attic 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E2 The One with Attic 2.mp3"; sourceTree = "<group>"; };
+		A7D79A8321280A6100E28452 /* S1E2 The One With a Bike 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E2 The One With a Bike 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E2 The One With a Bike 2.mp3"; sourceTree = "<group>"; };
+		A7D79A8421280A6200E28452 /* S1E21 A Dog from Grandpa 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E21 A Dog from Grandpa 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E21 A Dog from Grandpa 1.mp3"; sourceTree = "<group>"; };
+		A7D79A8521280A6200E28452 /* S2E4 Cams Bike Shorts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E4 Cams Bike Shorts.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E4 Cams Bike Shorts.mp3"; sourceTree = "<group>"; };
+		A7D79A8621280A6200E28452 /* S2E11 Learning How to Bike 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E11 Learning How to Bike 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E11 Learning How to Bike 2.mp3"; sourceTree = "<group>"; };
+		A7D79A8721280A6200E28452 /* S2E12 The One with the Hoffmans.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E12 The One with the Hoffmans.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E12 The One with the Hoffmans.mp3"; sourceTree = "<group>"; };
+		A7D79A8821280A6200E28452 /* S1E7 Manny the Zorro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E7 Manny the Zorro.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E7 Manny the Zorro.mp3"; sourceTree = "<group>"; };
+		A7D79A8921280A6300E28452 /* S2E21 Happy Mother's Day 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E21 Happy Mother's Day 3.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E21 Happy Mother's Day 3.mp3"; sourceTree = "<group>"; };
+		A7D79A8A21280A6300E28452 /* S3E2 The One with Attic 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E2 The One with Attic 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E2 The One with Attic 1.mp3"; sourceTree = "<group>"; };
+		A7D79A8B21280A6300E28452 /* S1E19 The Baby Monitor 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E19 The Baby Monitor 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E19 The Baby Monitor 1.mp3"; sourceTree = "<group>"; };
+		A7D79A8C21280A6300E28452 /* S2E5 No More Electronics 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E5 No More Electronics 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E5 No More Electronics 1.mp3"; sourceTree = "<group>"; };
+		A7D79A8D21280A6300E28452 /* S2E21 Happy Mother's Day 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E21 Happy Mother's Day 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E21 Happy Mother's Day 2.mp3"; sourceTree = "<group>"; };
+		A7D79A8E21280A6400E28452 /* S3E13 Lilly Says Bad Word.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E13 Lilly Says Bad Word.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E13 Lilly Says Bad Word.mp3"; sourceTree = "<group>"; };
+		A7D79A8F21280A6400E28452 /* S2E18 Mr. Kleezak, Next Door 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E18 Mr. Kleezak, Next Door 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E18 Mr. Kleezak, Next Door 1.mp3"; sourceTree = "<group>"; };
+		A7D79A9021280A6400E28452 /* S3E20 Next Door Neighbor Died.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E20 Next Door Neighbor Died.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E20 Next Door Neighbor Died.mp3"; sourceTree = "<group>"; };
+		A7D79A9121280A6400E28452 /* S5E6 New Nanny.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S5E6 New Nanny.mp3"; path = "../../../AudiBud/Audibud/Resource/S5E6 New Nanny.mp3"; sourceTree = "<group>"; };
+		A7D79A9221280A6400E28452 /* S1E19 The Baby Monitor 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E19 The Baby Monitor 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E19 The Baby Monitor 2.mp3"; sourceTree = "<group>"; };
+		A7D79A9321280A6400E28452 /* S4E2 Jay with Parenting Class 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E2 Jay with Parenting Class 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E2 Jay with Parenting Class 2.mp3"; sourceTree = "<group>"; };
+		A7D79A9421280A6500E28452 /* S2E18 Mr. Kleezak, Next Door 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E18 Mr. Kleezak, Next Door 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E18 Mr. Kleezak, Next Door 2.mp3"; sourceTree = "<group>"; };
+		A7D79A9521280A6500E28452 /* S3E9  The Dent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E9  The Dent.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E9  The Dent.mp3"; sourceTree = "<group>"; };
+		A7D79A9621280A6500E28452 /* S2E2 Alex Got a Boy 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E2 Alex Got a Boy 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E2 Alex Got a Boy 1.mp3"; sourceTree = "<group>"; };
+		A7D79A9721280A6500E28452 /* S1E8 Jays Night 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E8 Jays Night 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E8 Jays Night 2.mp3"; sourceTree = "<group>"; };
+		A7D79A9821280A6500E28452 /* S1E2 The One With a Bike 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E2 The One With a Bike 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E2 The One With a Bike 1.mp3"; sourceTree = "<group>"; };
+		A7D79A9921280A6500E28452 /* S1E5 Gloria Got in a Fight 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E5 Gloria Got in a Fight 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E5 Gloria Got in a Fight 2.mp3"; sourceTree = "<group>"; };
+		A7D79A9A21280A6500E28452 /* S1E24 Family Portrait.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E24 Family Portrait.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E24 Family Portrait.mp3"; sourceTree = "<group>"; };
+		A7D79A9B21280A6600E28452 /* S1E3 Alex Shopping 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E3 Alex Shopping 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E3 Alex Shopping 2.mp3"; sourceTree = "<group>"; };
+		A7D79A9C21280A6600E28452 /* S2E13 The One with Sex 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E13 The One with Sex 3.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E13 The One with Sex 3.mp3"; sourceTree = "<group>"; };
+		A7D79A9D21280A6600E28452 /* S1E11 The One with Fireman 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E11 The One with Fireman 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E11 The One with Fireman 1.mp3"; sourceTree = "<group>"; };
+		A7D79A9E21280A6600E28452 /* S2E18 Haley Babysits Lilly 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E18 Haley Babysits Lilly 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E18 Haley Babysits Lilly 1.mp3"; sourceTree = "<group>"; };
+		A7D79A9F21280A6600E28452 /* S3E13 Stella, the Dog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E13 Stella, the Dog.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E13 Stella, the Dog.mp3"; sourceTree = "<group>"; };
+		A7D79AA021280A6700E28452 /* S2E11 Learning How to Bike 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E11 Learning How to Bike 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E11 Learning How to Bike 1.mp3"; sourceTree = "<group>"; };
+		A7D79AA121280A6700E28452 /* S4E1 Gloria Got Pregnant 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E1 Gloria Got Pregnant 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E1 Gloria Got Pregnant 1.mp3"; sourceTree = "<group>"; };
+		A7D79AA221280A6700E28452 /* S2E22 Lady Gaga Concert 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E22 Lady Gaga Concert 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E22 Lady Gaga Concert 2.mp3"; sourceTree = "<group>"; };
+		A7D79AA321280A6700E28452 /* S3E17 Leap Day 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E17 Leap Day 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E17 Leap Day 2.mp3"; sourceTree = "<group>"; };
+		A7D79AA421280A6700E28452 /* S3E2 Adopting a New Baby 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E2 Adopting a New Baby 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E2 Adopting a New Baby 1.mp3"; sourceTree = "<group>"; };
+		A7D79AA521280A6700E28452 /* S1E3 Alex Shopping 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E3 Alex Shopping 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E3 Alex Shopping 1.mp3"; sourceTree = "<group>"; };
+		A7D79AA621280A6700E28452 /* S1E4 The Incident at Wedding 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E4 The Incident at Wedding 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E4 The Incident at Wedding 2.mp3"; sourceTree = "<group>"; };
+		A7D79AA721280A6800E28452 /* S5E13 Haley's Future 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S5E13 Haley's Future 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S5E13 Haley's Future 1.mp3"; sourceTree = "<group>"; };
+		A7D79AA821280A6800E28452 /* S2E21 Happy Mother's Day 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E21 Happy Mother's Day 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E21 Happy Mother's Day 1.mp3"; sourceTree = "<group>"; };
+		A7D79AA921280A6800E28452 /* S2E10 School Dance Outfit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E10 School Dance Outfit.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E10 School Dance Outfit.mp3"; sourceTree = "<group>"; };
+		A7D79AAA21280A6800E28452 /* S2E3 The One With Earthquake 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E3 The One With Earthquake 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E3 The One With Earthquake 2.mp3"; sourceTree = "<group>"; };
+		A7D79AAB21280A6800E28452 /* S1E3 The One with Airplane 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E3 The One with Airplane 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E3 The One with Airplane 2.mp3"; sourceTree = "<group>"; };
+		A7D79AAC21280A6800E28452 /* S2E12 Mitchell's Baby 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E12 Mitchell's Baby 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E12 Mitchell's Baby 2.mp3"; sourceTree = "<group>"; };
+		A7D79AAD21280A6800E28452 /* S3E22 The One with Disneyland.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E22 The One with Disneyland.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E22 The One with Disneyland.mp3"; sourceTree = "<group>"; };
+		A7D79AAE21280A6900E28452 /* S1E5 Gloria Got in a Fight 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E5 Gloria Got in a Fight 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E5 Gloria Got in a Fight 1.mp3"; sourceTree = "<group>"; };
+		A7D79AAF21280A6900E28452 /* S2E5 The One with the Dog 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E5 The One with the Dog 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E5 The One with the Dog 2.mp3"; sourceTree = "<group>"; };
+		A7D79AB021280A6900E28452 /* S4E2 Lilly's First day at School 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E2 Lilly's First day at School 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E2 Lilly's First day at School 2.mp3"; sourceTree = "<group>"; };
+		A7D79AB121280A6900E28452 /* S4E2 Lilly's First day at School 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E2 Lilly's First day at School 3.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E2 Lilly's First day at School 3.mp3"; sourceTree = "<group>"; };
+		A7D79AB221280A6900E28452 /* S1E8 Jays Night 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E8 Jays Night 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E8 Jays Night 1.mp3"; sourceTree = "<group>"; };
+		A7D79AB321280A6900E28452 /* S1E10 Dunphy's Christmas 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E10 Dunphy's Christmas 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E10 Dunphy's Christmas 2.mp3"; sourceTree = "<group>"; };
+		A7D79AB421280A6900E28452 /* S2E21 Happy Mother's Day 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E21 Happy Mother's Day 5.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E21 Happy Mother's Day 5.mp3"; sourceTree = "<group>"; };
+		A7D79AB521280A6A00E28452 /* S2E13 The One with Sex 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E13 The One with Sex 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E13 The One with Sex 1.mp3"; sourceTree = "<group>"; };
+		A7D79AB621280A6A00E28452 /* S3E17 Leap Day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E17 Leap Day.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E17 Leap Day.mp3"; sourceTree = "<group>"; };
+		A7D79AB721280A6A00E28452 /* S3E24 The Prom 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S3E24 The Prom 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S3E24 The Prom 1.mp3"; sourceTree = "<group>"; };
+		A7D79AB821280A6A00E28452 /* S2E2 Alex Got a Boy 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E2 Alex Got a Boy 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E2 Alex Got a Boy 2.mp3"; sourceTree = "<group>"; };
+		A7D79AB921280A6A00E28452 /* S4E1 Gloria Got Pregnant 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E1 Gloria Got Pregnant 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E1 Gloria Got Pregnant 2.mp3"; sourceTree = "<group>"; };
+		A7D79ABA21280A6A00E28452 /* S4E2 Haley Becomes University Student.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S4E2 Haley Becomes University Student.mp3"; path = "../../../AudiBud/Audibud/Resource/S4E2 Haley Becomes University Student.mp3"; sourceTree = "<group>"; };
+		A7D79ABB21280A6A00E28452 /* S2E21 Happy Mother's Day 6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E21 Happy Mother's Day 6.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E21 Happy Mother's Day 6.mp3"; sourceTree = "<group>"; };
+		A7D79ABC21280A6B00E28452 /* S2E14 The One with Broderick 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E14 The One with Broderick 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E14 The One with Broderick 1.mp3"; sourceTree = "<group>"; };
 		A7EEC3342123B3E700C654F3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +434,93 @@
 				A7553BFB21239B3800A8CDB6 /* Unit_31_40.mp3 */,
 				A7553BF921239B3800A8CDB6 /* Unit_41_50.mp3 */,
 				A7553BFA21239B3800A8CDB6 /* Unit_51_55.mp3 */,
+				A7D79A6A21280A5C00E28452 /* S1E1 The Morning.mp3 */,
+				A7D79A9821280A6500E28452 /* S1E2 The One With a Bike 1.mp3 */,
+				A7D79A8321280A6100E28452 /* S1E2 The One With a Bike 2.mp3 */,
+				A7D79AA521280A6700E28452 /* S1E3 Alex Shopping 1.mp3 */,
+				A7D79A9B21280A6600E28452 /* S1E3 Alex Shopping 2.mp3 */,
+				A7D79A7721280A5F00E28452 /* S1E3 The One with Airplane 1.mp3 */,
+				A7D79AAB21280A6800E28452 /* S1E3 The One with Airplane 2.mp3 */,
+				A7D79A7421280A5E00E28452 /* S1E4 The Incident at Wedding 1.mp3 */,
+				A7D79AA621280A6700E28452 /* S1E4 The Incident at Wedding 2.mp3 */,
+				A7D79AAE21280A6900E28452 /* S1E5 Gloria Got in a Fight 1.mp3 */,
+				A7D79A9921280A6500E28452 /* S1E5 Gloria Got in a Fight 2.mp3 */,
+				A7D79A8821280A6200E28452 /* S1E7 Manny the Zorro.mp3 */,
+				A7D79AB221280A6900E28452 /* S1E8 Jays Night 1.mp3 */,
+				A7D79A9721280A6500E28452 /* S1E8 Jays Night 2.mp3 */,
+				A7D79A6B21280A5C00E28452 /* S1E10 Dunphy's Christmas 1.mp3 */,
+				A7D79AB321280A6900E28452 /* S1E10 Dunphy's Christmas 2.mp3 */,
+				A7D79A9D21280A6600E28452 /* S1E11 The One with Fireman 1.mp3 */,
+				A7D79A7621280A5E00E28452 /* S1E12 The One with the Computer 1.mp3 */,
+				A7D79A6621280A5C00E28452 /* S1E12 The One with the Computer 2.mp3 */,
+				A7D79A7521280A5E00E28452 /* S1E16 Haley the Two Strikes.mp3 */,
+				A7D79A8B21280A6300E28452 /* S1E19 The Baby Monitor 1.mp3 */,
+				A7D79A9221280A6400E28452 /* S1E19 The Baby Monitor 2.mp3 */,
+				A7D79A8421280A6200E28452 /* S1E21 A Dog from Grandpa 1.mp3 */,
+				A7D79A9A21280A6500E28452 /* S1E24 Family Portrait.mp3 */,
+				A7D79A9621280A6500E28452 /* S2E2 Alex Got a Boy 1.mp3 */,
+				A7D79AB821280A6A00E28452 /* S2E2 Alex Got a Boy 2.mp3 */,
+				A7D79A7C21280A5F00E28452 /* S2E3 The One With Earthquake 1.mp3 */,
+				A7D79AAA21280A6800E28452 /* S2E3 The One With Earthquake 2.mp3 */,
+				A7D79A8521280A6200E28452 /* S2E4 Cams Bike Shorts.mp3 */,
+				A7D79A8C21280A6300E28452 /* S2E5 No More Electronics 1.mp3 */,
+				A7D79A6821280A5C00E28452 /* S2E5 The One with the Dog 1.mp3 */,
+				A7D79AAF21280A6900E28452 /* S2E5 The One with the Dog 2.mp3 */,
+				A7D79A6C21280A5D00E28452 /* S2E6 The One with Halloween Costumes Mitchell.mp3 */,
+				A7D79A8021280A6000E28452 /* S2E8 Manny's Birthday 1.mp3 */,
+				A7D79A6921280A5C00E28452 /* S2E8 Manny's Birthday 2.mp3 */,
+				A7D79AA921280A6800E28452 /* S2E10 School Dance Outfit.mp3 */,
+				A7D79AA021280A6700E28452 /* S2E11 Learning How to Bike 1.mp3 */,
+				A7D79A8621280A6200E28452 /* S2E11 Learning How to Bike 2.mp3 */,
+				A7D79A8121280A6100E28452 /* S2E12 Mitchell's Baby 1.mp3 */,
+				A7D79AAC21280A6800E28452 /* S2E12 Mitchell's Baby 2.mp3 */,
+				A7D79A8721280A6200E28452 /* S2E12 The One with the Hoffmans.mp3 */,
+				A7D79AB521280A6A00E28452 /* S2E13 The One with Sex 1.mp3 */,
+				A7D79A7321280A5E00E28452 /* S2E13 The One with Sex 2.mp3 */,
+				A7D79A9C21280A6600E28452 /* S2E13 The One with Sex 3.mp3 */,
+				A7D79ABC21280A6B00E28452 /* S2E14 The One with Broderick 1.mp3 */,
+				A7D79A7821280A5F00E28452 /* S2E14 The One with Broderick 2.mp3 */,
+				A7D79A7F21280A6000E28452 /* S2E17 The One with a Sweater.mp3 */,
+				A7D79A9E21280A6600E28452 /* S2E18 Haley Babysits Lilly 1.mp3 */,
+				A7D79A6721280A5C00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 */,
+				A7D79A8F21280A6400E28452 /* S2E18 Mr. Kleezak, Next Door 1.mp3 */,
+				A7D79A9421280A6500E28452 /* S2E18 Mr. Kleezak, Next Door 2.mp3 */,
+				A7D79AA821280A6800E28452 /* S2E21 Happy Mother's Day 1.mp3 */,
+				A7D79A8D21280A6300E28452 /* S2E21 Happy Mother's Day 2.mp3 */,
+				A7D79A8921280A6300E28452 /* S2E21 Happy Mother's Day 3.mp3 */,
+				A7D79A7E21280A6000E28452 /* S2E21 Happy Mother's Day 4.mp3 */,
+				A7D79AB421280A6900E28452 /* S2E21 Happy Mother's Day 5.mp3 */,
+				A7D79ABB21280A6A00E28452 /* S2E21 Happy Mother's Day 6.mp3 */,
+				A7D79A7221280A5E00E28452 /* S2E22 Lady Gaga Concert 1.mp3 */,
+				A7D79AA221280A6700E28452 /* S2E22 Lady Gaga Concert 2.mp3 */,
+				A7D79A7D21280A6000E28452 /* S3E1 Dylan Proposes 1.mp3 */,
+				A7D79A6E21280A5D00E28452 /* S3E1 Dylan Proposes 2.mp3 */,
+				A7D79AA421280A6700E28452 /* S3E2 Adopting a New Baby 1.mp3 */,
+				A7D79A6D21280A5D00E28452 /* S3E2 Adopting a New Baby 2.mp3 */,
+				A7D79A8A21280A6300E28452 /* S3E2 The One with Attic 1.mp3 */,
+				A7D79A8221280A6100E28452 /* S3E2 The One with Attic 2.mp3 */,
+				A7D79A7A21280A5F00E28452 /* S3E06 Manny's Secret.mp3 */,
+				A7D79A9521280A6500E28452 /* S3E9  The Dent.mp3 */,
+				A7D79A8E21280A6400E28452 /* S3E13 Lilly Says Bad Word.mp3 */,
+				A7D79A9F21280A6600E28452 /* S3E13 Stella, the Dog.mp3 */,
+				A7D79AA321280A6700E28452 /* S3E17 Leap Day 2.mp3 */,
+				A7D79AB621280A6A00E28452 /* S3E17 Leap Day.mp3 */,
+				A7D79A9021280A6400E28452 /* S3E20 Next Door Neighbor Died.mp3 */,
+				A7D79AAD21280A6800E28452 /* S3E22 The One with Disneyland.mp3 */,
+				A7D79AB721280A6A00E28452 /* S3E24 The Prom 1.mp3 */,
+				A7D79AA121280A6700E28452 /* S4E1 Gloria Got Pregnant 1.mp3 */,
+				A7D79AB921280A6A00E28452 /* S4E1 Gloria Got Pregnant 2.mp3 */,
+				A7D79A6F21280A5D00E28452 /* S4E1 Gloria Got Pregnant 3.mp3 */,
+				A7D79ABA21280A6A00E28452 /* S4E2 Haley Becomes University Student.mp3 */,
+				A7D79A7021280A5D00E28452 /* S4E2 Jay with Parenting Class 1.mp3 */,
+				A7D79A9321280A6400E28452 /* S4E2 Jay with Parenting Class 2.mp3 */,
+				A7D79A7921280A5F00E28452 /* S4E2 Lilly's First Day at School 1.mp3 */,
+				A7D79AB021280A6900E28452 /* S4E2 Lilly's First day at School 2.mp3 */,
+				A7D79AB121280A6900E28452 /* S4E2 Lilly's First day at School 3.mp3 */,
+				A7D79A7B21280A5F00E28452 /* S4E6 Yard Sale 1.mp3 */,
+				A7D79A7121280A5D00E28452 /* S5E6 New Nanny 2.mp3 */,
+				A7D79A9121280A6400E28452 /* S5E6 New Nanny.mp3 */,
+				A7D79AA721280A6800E28452 /* S5E13 Haley's Future 1.mp3 */,
 				A712E09B212304E00028240A /* Assets.xcassets */,
 				A712E09D212304E00028240A /* LaunchScreen.storyboard */,
 				A713D74221245B2D00227445 /* Main.storyboard */,
@@ -498,47 +759,134 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D79ABD21280A6B00E28452 /* S1E12 The One with the Computer 2.mp3 in Resources */,
+				A7D79B0E21280A6B00E28452 /* S3E24 The Prom 1.mp3 in Resources */,
+				A7D79AF021280A6B00E28452 /* S1E5 Gloria Got in a Fight 2.mp3 in Resources */,
 				A7553C572123A94F00A8CDB6 /* tab_btn5_nor@2x.png in Resources */,
 				A7553C402123A6FB00A8CDB6 /* btn_tap3.png in Resources */,
+				A7D79AF521280A6B00E28452 /* S2E18 Haley Babysits Lilly 1.mp3 in Resources */,
+				A7D79AC221280A6B00E28452 /* S1E10 Dunphy's Christmas 1.mp3 in Resources */,
+				A7D79AE421280A6B00E28452 /* S2E21 Happy Mother's Day 2.mp3 in Resources */,
+				A7D79B0D21280A6B00E28452 /* S3E17 Leap Day.mp3 in Resources */,
+				A7D79ACC21280A6B00E28452 /* S1E16 Haley the Two Strikes.mp3 in Resources */,
+				A7D79ADA21280A6B00E28452 /* S1E2 The One With a Bike 2.mp3 in Resources */,
+				A7D79AFB21280A6B00E28452 /* S3E2 Adopting a New Baby 1.mp3 in Resources */,
 				A7553C5B2123A94F00A8CDB6 /* tab_btn2_pre@2x.png in Resources */,
+				A7D79B0821280A6B00E28452 /* S4E2 Lilly's First day at School 3.mp3 in Resources */,
 				A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */,
+				A7D79B0021280A6B00E28452 /* S2E10 School Dance Outfit.mp3 in Resources */,
+				A7D79AF321280A6B00E28452 /* S2E13 The One with Sex 3.mp3 in Resources */,
+				A7D79AFD21280A6B00E28452 /* S1E4 The Incident at Wedding 2.mp3 in Resources */,
+				A7D79B0A21280A6B00E28452 /* S1E10 Dunphy's Christmas 2.mp3 in Resources */,
+				A7D79AE721280A6B00E28452 /* S3E20 Next Door Neighbor Died.mp3 in Resources */,
 				A78DB6A8212791B10077B8A9 /* FileTypeViewController.xib in Resources */,
+				A7D79AC621280A6B00E28452 /* S4E1 Gloria Got Pregnant 3.mp3 in Resources */,
 				A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */,
+				A7D79AE121280A6B00E28452 /* S3E2 The One with Attic 1.mp3 in Resources */,
+				A7D79AD121280A6B00E28452 /* S3E06 Manny's Secret.mp3 in Resources */,
+				A7D79AC121280A6B00E28452 /* S1E1 The Morning.mp3 in Resources */,
+				A7D79AF121280A6B00E28452 /* S1E24 Family Portrait.mp3 in Resources */,
+				A7D79B0421280A6B00E28452 /* S3E22 The One with Disneyland.mp3 in Resources */,
+				A7D79B0621280A6B00E28452 /* S2E5 The One with the Dog 2.mp3 in Resources */,
+				A7D79AE921280A6B00E28452 /* S1E19 The Baby Monitor 2.mp3 in Resources */,
 				A7553BFF21239B3800A8CDB6 /* Unit_31_40.mp3 in Resources */,
+				A7D79AE621280A6B00E28452 /* S2E18 Mr. Kleezak, Next Door 1.mp3 in Resources */,
 				A7553C452123A6FB00A8CDB6 /* btn_tap1_s.png in Resources */,
+				A7D79B0B21280A6B00E28452 /* S2E21 Happy Mother's Day 5.mp3 in Resources */,
+				A7D79AD521280A6B00E28452 /* S2E21 Happy Mother's Day 4.mp3 in Resources */,
 				A7553C582123A94F00A8CDB6 /* tab_btn5_pre@2x.png in Resources */,
+				A7D79B0F21280A6B00E28452 /* S2E2 Alex Got a Boy 2.mp3 in Resources */,
 				A7553C542123A94F00A8CDB6 /* tab_btn3_nor@2x.png in Resources */,
+				A7D79AEE21280A6B00E28452 /* S1E8 Jays Night 2.mp3 in Resources */,
+				A7D79B0121280A6B00E28452 /* S2E3 The One With Earthquake 2.mp3 in Resources */,
+				A7D79AC821280A6B00E28452 /* S5E6 New Nanny 2.mp3 in Resources */,
+				A7D79B1221280A6B00E28452 /* S2E21 Happy Mother's Day 6.mp3 in Resources */,
 				A7EEC3352123B3E700C654F3 /* Info.plist in Resources */,
+				A7D79B0321280A6B00E28452 /* S2E12 Mitchell's Baby 2.mp3 in Resources */,
+				A7D79AFC21280A6B00E28452 /* S1E3 Alex Shopping 1.mp3 in Resources */,
 				A712E09C212304E00028240A /* Assets.xcassets in Resources */,
+				A7D79AFA21280A6B00E28452 /* S3E17 Leap Day 2.mp3 in Resources */,
 				A713D73C2123B70700227445 /* T3ViewController.xib in Resources */,
+				A7D79AE321280A6B00E28452 /* S2E5 No More Electronics 1.mp3 in Resources */,
+				A7D79ACA21280A6B00E28452 /* S2E13 The One with Sex 2.mp3 in Resources */,
+				A7D79B1121280A6B00E28452 /* S4E2 Haley Becomes University Student.mp3 in Resources */,
+				A7D79AE221280A6B00E28452 /* S1E19 The Baby Monitor 1.mp3 in Resources */,
+				A7D79AC521280A6B00E28452 /* S3E1 Dylan Proposes 2.mp3 in Resources */,
+				A7D79AD621280A6B00E28452 /* S2E17 The One with a Sweater.mp3 in Resources */,
 				A7553C472123A6FB00A8CDB6 /* btn_tap5_s.png in Resources */,
 				A7553C5A2123A94F00A8CDB6 /* tab_btn4_nor@2x.png in Resources */,
+				A7D79AC321280A6B00E28452 /* S2E6 The One with Halloween Costumes Mitchell.mp3 in Resources */,
 				A7553BFD21239B3800A8CDB6 /* Unit_41_50.mp3 in Resources */,
+				A7D79AD821280A6B00E28452 /* S2E12 Mitchell's Baby 1.mp3 in Resources */,
+				A7D79B0921280A6B00E28452 /* S1E8 Jays Night 1.mp3 in Resources */,
+				A7D79B0C21280A6B00E28452 /* S2E13 The One with Sex 1.mp3 in Resources */,
+				A7D79ACD21280A6B00E28452 /* S1E12 The One with the Computer 1.mp3 in Resources */,
+				A7D79AE521280A6B00E28452 /* S3E13 Lilly Says Bad Word.mp3 in Resources */,
 				A7553C422123A6FB00A8CDB6 /* btn_tap2_s.png in Resources */,
 				A7553C0021239B3800A8CDB6 /* Unit_21_30.mp3 in Resources */,
 				A7553C3A2123A6FB00A8CDB6 /* btn_tap5.png in Resources */,
 				A7553C592123A94F00A8CDB6 /* tab_btn1_pre@2x.png in Resources */,
 				A713D7412123B90100227445 /* FileItemTableViewCell.xib in Resources */,
+				A7D79B1321280A6B00E28452 /* S2E14 The One with Broderick 1.mp3 in Resources */,
 				A7553C532123A94F00A8CDB6 /* tab_btn3_pre@2x.png in Resources */,
 				A713D74421245B2D00227445 /* Main.storyboard in Resources */,
+				A7D79ACF21280A6B00E28452 /* S2E14 The One with Broderick 2.mp3 in Resources */,
+				A7D79AC921280A6B00E28452 /* S2E22 Lady Gaga Concert 1.mp3 in Resources */,
+				A7D79AD221280A6B00E28452 /* S4E6 Yard Sale 1.mp3 in Resources */,
 				A7553C552123A94F00A8CDB6 /* tab_btn1_nor@2x.png in Resources */,
 				A7553C112123A20500A8CDB6 /* T2ViewController.xib in Resources */,
+				A7D79AF421280A6B00E28452 /* S1E11 The One with Fireman 1.mp3 in Resources */,
+				A7D79ADE21280A6B00E28452 /* S2E12 The One with the Hoffmans.mp3 in Resources */,
 				A7553C3B2123A6FB00A8CDB6 /* btn_tap4.png in Resources */,
 				A713D7572124855A00227445 /* title_btn_back@2x.png in Resources */,
 				A7553C5C2123A94F00A8CDB6 /* tab_btn4_pre@2x.png in Resources */,
 				A7553C1B2123A23300A8CDB6 /* T4ViewController.xib in Resources */,
+				A7D79AEB21280A6B00E28452 /* S2E18 Mr. Kleezak, Next Door 2.mp3 in Resources */,
 				A7553C3F2123A6FB00A8CDB6 /* btn_tap1.png in Resources */,
 				A7553C412123A6FB00A8CDB6 /* btn_tap2.png in Resources */,
 				A78DB6AD212792490077B8A9 /* BasicTableViewCell.xib in Resources */,
+				A7D79ABE21280A6B00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 in Resources */,
+				A7D79B1021280A6B00E28452 /* S4E1 Gloria Got Pregnant 2.mp3 in Resources */,
 				A7553C462123A6FB00A8CDB6 /* btn_tap3_s.png in Resources */,
+				A7D79ABF21280A6B00E28452 /* S2E5 The One with the Dog 1.mp3 in Resources */,
+				A7D79AE821280A6B00E28452 /* S5E6 New Nanny.mp3 in Resources */,
+				A7D79AF721280A6B00E28452 /* S2E11 Learning How to Bike 1.mp3 in Resources */,
+				A7D79AFF21280A6B00E28452 /* S2E21 Happy Mother's Day 1.mp3 in Resources */,
+				A7D79ACB21280A6B00E28452 /* S1E4 The Incident at Wedding 1.mp3 in Resources */,
+				A7D79AD721280A6B00E28452 /* S2E8 Manny's Birthday 1.mp3 in Resources */,
+				A7D79B0721280A6B00E28452 /* S4E2 Lilly's First day at School 2.mp3 in Resources */,
+				A7D79ADC21280A6B00E28452 /* S2E4 Cams Bike Shorts.mp3 in Resources */,
+				A7D79AD021280A6B00E28452 /* S4E2 Lilly's First Day at School 1.mp3 in Resources */,
 				A7553C442123A6FB00A8CDB6 /* btn_tap4_s.png in Resources */,
+				A7D79AC721280A6B00E28452 /* S4E2 Jay with Parenting Class 1.mp3 in Resources */,
+				A7D79AEF21280A6B00E28452 /* S1E2 The One With a Bike 1.mp3 in Resources */,
+				A7D79AD421280A6B00E28452 /* S3E1 Dylan Proposes 1.mp3 in Resources */,
+				A7D79B0221280A6B00E28452 /* S1E3 The One with Airplane 2.mp3 in Resources */,
+				A7D79ADD21280A6B00E28452 /* S2E11 Learning How to Bike 2.mp3 in Resources */,
 				A7553C202123A24300A8CDB6 /* T5ViewController.xib in Resources */,
+				A7D79AF921280A6B00E28452 /* S2E22 Lady Gaga Concert 2.mp3 in Resources */,
+				A7D79AE021280A6B00E28452 /* S2E21 Happy Mother's Day 3.mp3 in Resources */,
 				A713D74721246BB600227445 /* down@2x.png in Resources */,
 				A713D75521247F1000227445 /* PracticeItemTableViewCell.xib in Resources */,
+				A7D79AD321280A6B00E28452 /* S2E3 The One With Earthquake 1.mp3 in Resources */,
+				A7D79AED21280A6B00E28452 /* S2E2 Alex Got a Boy 1.mp3 in Resources */,
+				A7D79AEA21280A6B00E28452 /* S4E2 Jay with Parenting Class 2.mp3 in Resources */,
+				A7D79AEC21280A6B00E28452 /* S3E9  The Dent.mp3 in Resources */,
 				A713D75021247A7C00227445 /* ClassicPracticeViewController.xib in Resources */,
+				A7D79AC021280A6B00E28452 /* S2E8 Manny's Birthday 2.mp3 in Resources */,
+				A7D79AF221280A6B00E28452 /* S1E3 Alex Shopping 2.mp3 in Resources */,
+				A7D79AD921280A6B00E28452 /* S3E2 The One with Attic 2.mp3 in Resources */,
 				A7553BFE21239B3800A8CDB6 /* Unit_51_55.mp3 in Resources */,
+				A7D79ADF21280A6B00E28452 /* S1E7 Manny the Zorro.mp3 in Resources */,
+				A7D79AF821280A6B00E28452 /* S4E1 Gloria Got Pregnant 1.mp3 in Resources */,
+				A7D79ACE21280A6B00E28452 /* S1E3 The One with Airplane 1.mp3 in Resources */,
 				A7553C562123A94F00A8CDB6 /* tab_btn2_nor@2x.png in Resources */,
+				A7D79ADB21280A6B00E28452 /* S1E21 A Dog from Grandpa 1.mp3 in Resources */,
+				A7D79AF621280A6B00E28452 /* S3E13 Stella, the Dog.mp3 in Resources */,
 				A7553C0C2123A1A800A8CDB6 /* T1ViewController.xib in Resources */,
+				A7D79AC421280A6B00E28452 /* S3E2 Adopting a New Baby 2.mp3 in Resources */,
+				A7D79B0521280A6B00E28452 /* S1E5 Gloria Got in a Fight 1.mp3 in Resources */,
+				A7D79AFE21280A6B00E28452 /* S5E13 Haley's Future 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,15 +1104,18 @@
 			baseConfigurationReference = 891A13C0D423E4C0BE7CADBB /* Pods-A1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 82P8339342;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LEE SUNG WOOK (Z4945N3F65)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9692B2E728;
 				INFOPLIST_FILE = AudiBud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.AudiBud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.audibud;
 				PRODUCT_NAME = AudiBud;
+				PROVISIONING_PROFILE = "ab9a72f6-8359-4aa4-9e0b-c0b884e30c1f";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -774,15 +1125,18 @@
 			baseConfigurationReference = 29A34AA149D3CFE177C32412 /* Pods-A1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 82P8339342;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LEE SUNG WOOK (Z4945N3F65)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9692B2E728;
 				INFOPLIST_FILE = AudiBud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.AudiBud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicejames.audibud;
 				PRODUCT_NAME = AudiBud;
+				PROVISIONING_PROFILE = "ab9a72f6-8359-4aa4-9e0b-c0b884e30c1f";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

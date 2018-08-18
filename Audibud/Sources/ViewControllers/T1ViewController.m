@@ -11,7 +11,7 @@
 #import "FileItemTableViewCell.h"
 #import "ClassicPracticeViewController.h"
 
-@interface T1ViewController () <UITableViewDelegate, UITableViewDataSource, FileItemTableViewCellDelegate>
+@interface T1ViewController () <UITableViewDelegate, UITableViewDataSource, FileItemTableViewCellDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *data;
@@ -29,10 +29,13 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
     self.data  = [[NSMutableArray alloc] init];
 
@@ -53,6 +56,11 @@
     [self loadData];
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return [otherGestureRecognizer isKindOfClass:[UIScreenEdgePanGestureRecognizer class]];
+}
+
 - (void)loadData
 {
     NSString *URLString = [NSString stringWithFormat:@"http://lang.nicejames.com/api/Lang/GetFileItems?f_type_idx=%lu", (unsigned long)self.f_type_idx];
@@ -65,10 +73,10 @@
               self.data = responseObject[@"response_data"];
               NSLog(@"JSON: %@", self.data);
               
-              for (NSDictionary *dic in self.data)
-              {
-                  [SQLITE addFileData:dic];
-              }
+//              for (NSDictionary *dic in self.data)
+//              {
+//                  [SQLITE addFileData:dic];
+//              }
               
               [self.tableView reloadData];
               
@@ -100,7 +108,7 @@
     return cell;
 }
 
-- (void)didDownload:(NSUInteger)f_idx
+- (void)didDownload:(NSUInteger)f_idx with:(NSDictionary *)dic
 {
     NSDictionary *d = [SQLITE fileDataByFileIdx:f_idx];
     
@@ -108,12 +116,12 @@
         if([d[@"download_yn"] isEqualToString:@"Y"])
             return;
     
+    [SQLITE addFileData:dic];
+    
     [SVProgressHUD show];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     // time-consuming task
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        
         
             NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetPractice";
 
@@ -122,8 +130,6 @@
                parameters:@{@"f_idx":@(f_idx).stringValue}
                  progress:nil
                   success:^(NSURLSessionTask *task, id responseObject) {
-                      
-                      
                       
                       [SVProgressHUD showProgress:0];
 
@@ -134,7 +140,8 @@
                           [SQLITE addPractice:dic];
                           i++;
                           
-                          [SVProgressHUD showProgress: (float)i / (float)[responseObject[@"response_data_count"] intValue] * 100.0f ];
+                          //[SVProgressHUD showProgress: (float)i / (float)[responseObject[@"response_data_count"] intValue] * 100.0f ];
+                          [SVProgressHUD showProgress: (float)i / (float)[responseObject[@"response_data_count"] intValue] ];
                       }
                       
                       [SQLITE updateFileDataAtDownloadYN:f_idx];

@@ -33,14 +33,15 @@
     [[SQLiteData sharedSQLiteData] checkAndCreateDatabase];
 //    [[SQLiteData sharedSQLiteData] dropAndcreateTable];
     
-    [GCache setString:@"" forKey:@"_version_"];
+    //[GCache setString:@"" forKey:@"_version_"];
     if([[GCache stringForKey:@"_version_"] isEqualToString:@""])
     {
         NSLog(@"************** cache init ************");
         GCSet(@"_version_", @"2018");
         GCSet(@"language_type_idx", @"0");
-        GCSet(@"repeat_count", @"2");
+        GCSet(@"repeat_count", @"3");
         GCSet(@"random_yn", @"0");
+        GCSet(@"gap_sec", @"1.0");
     }
     
     NSError *error;

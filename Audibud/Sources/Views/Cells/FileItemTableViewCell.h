@@ -10,7 +10,7 @@
 
 @protocol FileItemTableViewCellDelegate <NSObject>
 
-- (void)didDownload:(NSUInteger)f_idx;
+- (void)didDownload:(NSUInteger)f_idx with:(NSDictionary *)dic;
 - (void)didView:(NSUInteger)f_idx;
 
 @end

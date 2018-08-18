@@ -74,7 +74,7 @@
 {
     if(self.delegate)
     {
-        [self.delegate didDownload:[self.dicData[@"f_idx"] intValue]];
+        [self.delegate didDownload:[self.dicData[@"f_idx"] intValue] with:self.dicData];
     }
 }
 
