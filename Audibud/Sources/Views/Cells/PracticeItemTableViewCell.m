@@ -43,6 +43,7 @@
         NSUInteger p_idx  = [dicData[@"p_idx"] intValue];
         self.lblTxt1.text = dicData[@"txt_kor"];
         self.lblTxt2.text = dicData[@"txt_eng"];
+        self.lblC.text = @"";
         
         if(self.curindex == self.index)
         {
