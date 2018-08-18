@@ -9,6 +9,9 @@
 #import "ClassicPracticeViewController.h"
 #import "DefinedHeader.h"
 #import "PracticeItemTableViewCell.h"
+#import <MediaPlayer/MediaPlayer.h>
+
+//https://developer.apple.com/documentation/avfoundation/avqueueplayer
 
 @interface ClassicPracticeViewController () <UITableViewDelegate, UITableViewDataSource, STKAudioPlayerDelegate>
 
@@ -109,7 +112,117 @@
     
     [self loadData];
     [self initPlayer];
+    
+    MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
+    commandCenter.playCommand.enabled = YES;
+    [commandCenter.playCommand addTarget:self action:@selector(playSounds)];
+    
+    commandCenter.stopCommand.enabled = YES;
+    [commandCenter.stopCommand addTarget:self action:@selector(stopSounds)];
+    
+    commandCenter.pauseCommand.enabled = YES;
+    [commandCenter.pauseCommand addTarget:self action:@selector(pauseSounds)];
+    
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+
+        NSMutableDictionary *songInfo   = [NSMutableDictionary dictionary];
+        MPMediaItemArtwork *artworkImage = [[MPMediaItemArtwork alloc] initWithBoundsSize:CGSizeMake(600, 600)
+                                                                           requestHandler:^UIImage * _Nonnull(CGSize size) {
+                                                                               UIImage *lockScreenArtworkApp = [UIImage imageNamed:@"lockScreenLogo"];
+                                                                               return [self resizeImageWithImage:lockScreenArtworkApp scaledToSize:size];
+                                                                           }];
+        
+        [songInfo setValue:artworkImage forKey:MPMediaItemPropertyArtwork];
+        [songInfo setValue:@"" forKey:MPMediaItemPropertyTitle];
+        [songInfo setValue:@"" forKey:MPMediaItemPropertyArtwork];
+        [songInfo setValue:@"" forKey:MPMediaItemPropertyArtist];
+        [songInfo setValue:[NSNumber numberWithInt:1.0] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+        [songInfo setValue:[NSNumber numberWithInt:1.0] forKey:MPMediaItemPropertyPlaybackDuration];
+        [songInfo setValue:[NSNumber numberWithInt:1.0] forKey:MPNowPlayingInfoPropertyPlaybackRate];
+        [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = songInfo;
+    });
+    
+//    http://lukagabric.com/ios-audio-player-with-lock-screen-controls/
+//    https://stackoverflow.com/questions/17103148/avoid-headset-plugout-stops-avaudioplayer-in-ios
+//    https://stackoverflow.com/questions/45247098/locked-screen-audio-controls-ios
+//    https://stackoverflow.com/questions/29271417/mpremotecommandcenter-does-nothing-with-mpmusicplayercontroller
+//    https://stackoverflow.com/questions/45247098/locked-screen-audio-controls-ios
+//    https://stackoverflow.com/questions/29271417/mpremotecommandcenter-does-nothing-with-mpmusicplayercontroller
+//    https://stackoverflow.com/questions/20591156/is-there-a-public-way-to-force-mpnowplayinginfocenter-to-show-podcast-controls/24818340#24818340
+//    https://developer.apple.com/documentation/avfoundation/media_assets_playback_and_editing/creating_a_basic_video_player_ios_and_tvos/controlling_background_audio?language=objc
+    
+    
+//    @property (nonatomic, readonly) MPRemoteCommand *pauseCommand;
+//    @property (nonatomic, readonly) MPRemoteCommand *playCommand;
+//    @property (nonatomic, readonly) MPRemoteCommand *stopCommand;
+//    @property (nonatomic, readonly) MPRemoteCommand *togglePlayPauseCommand;
+//    @property (nonatomic, readonly) MPRemoteCommand *enableLanguageOptionCommand MP_API(ios(9.0), macos(10.12.2));
+//    @property (nonatomic, readonly) MPRemoteCommand *disableLanguageOptionCommand MP_API(ios(9.0), macos(10.12.2));
+//    @property (nonatomic, readonly) MPChangePlaybackRateCommand *changePlaybackRateCommand;
+//    @property (nonatomic, readonly) MPChangeRepeatModeCommand *changeRepeatModeCommand;
+//    @property (nonatomic, readonly) MPChangeShuffleModeCommand *changeShuffleModeCommand;
+//
+//    // Previous/Next Track Commands
+//    @property (nonatomic, readonly) MPRemoteCommand *nextTrackCommand;
+//    @property (nonatomic, readonly) MPRemoteCommand *previousTrackCommand;
+//
+//    // Skip Interval Commands
+//    @property (nonatomic, readonly) MPSkipIntervalCommand *skipForwardCommand;
+//    @property (nonatomic, readonly) MPSkipIntervalCommand *skipBackwardCommand;
+//
+//    // Seek Commands
+//    @property (nonatomic, readonly) MPRemoteCommand *seekForwardCommand;
+//    @property (nonatomic, readonly) MPRemoteCommand *seekBackwardCommand;
+//    @property (nonatomic, readonly) MPChangePlaybackPositionCommand *changePlaybackPositionCommand MP_API(ios(9.1), macos(10.12.2));
+//
+//    // Rating Command
+//    @property (nonatomic, readonly) MPRatingCommand *ratingCommand;
+//
+//    // Feedback Commands
+//    // These are generalized to three distinct actions. Your application can provide
+//    // additional context about these actions with the localizedTitle property in
+//    // MPFeedbackCommand.
+//    @property (nonatomic, readonly) MPFeedbackCommand *likeCommand;
+//    @property (nonatomic, readonly) MPFeedbackCommand *dislikeCommand;
+//    @property (nonatomic, readonly) MPFeedbackCommand *bookmarkCommand;
+//
+//    + (MPRemoteCommandCenter *)sharedCommandCenter;
+
+    
 }
+
+- (UIImage *)resizeImageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    //UIGraphicsBeginImageContext(newSize);
+    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
+    // Pass 1.0 to force exact pixel size.
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+
+- (void)playSounds
+{
+    NSLog(@"playSounds");
+}
+
+- (void)stopSounds
+{
+    NSLog(@"stopSounds");
+}
+
+- (void)pauseSounds
+{
+    NSLog(@"pauseSounds");
+}
+
+
+
 
 - (void)initPlayer
 {
@@ -199,8 +312,6 @@
         self.data = [SQLITE practiceFileIdx:self.f_idx withRandomYN:@"Y"];
         
     [self.tableView reloadData];
-    
-    NSLog(@"self.currentIdx : %d", self.currentIdx);
     
     if(self.currentIdx > 0)
     {
