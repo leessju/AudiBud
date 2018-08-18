@@ -39,6 +39,15 @@
     self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - APP_DEL.tab_height);
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
+    UIBarButtonItem *spacer1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    spacer1.width = 10.0f;
+    
+    UIButton *btnLeft = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 26, 26)];
+    [btnLeft setImage:[UIImage imageNamed:@"title_btn_back.png"] forState:UIControlStateNormal];
+    [btnLeft addTarget:self action:@selector(leftMenuPressed:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *itemLeft  = [[UIBarButtonItem alloc] initWithCustomView:btnLeft];
+    self.navigationItem.leftBarButtonItems = @[spacer1, itemLeft];
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"FileItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"FileItemTableViewCell"];
     
     [self loadData];
@@ -46,7 +55,7 @@
 
 - (void)loadData
 {
-    NSString *URLString = @"http://lang.nicejames.com/api/Lang/GetFileItems";
+    NSString *URLString = [NSString stringWithFormat:@"http://lang.nicejames.com/api/Lang/GetFileItems?f_type_idx=%lu", (unsigned long)self.f_type_idx];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager POST:URLString
@@ -67,13 +76,13 @@
               NSLog(@"Error: %@", error);
           }];
     
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    [arr addObject:@"1"];
-    [arr addObject:@"2"];
-    [arr addObject:@"3"];
-    
-    [GCache setString:@"_______________" forKey:@"a"];
-    NSLog(@"______________cache : %@", [GCache stringForKey:@"a"]);
+//    NSMutableArray *arr = [[NSMutableArray alloc] init];
+//    [arr addObject:@"1"];
+//    [arr addObject:@"2"];
+//    [arr addObject:@"3"];
+//    
+//    [GCache setString:@"_______________" forKey:@"a"];
+//    NSLog(@"______________cache : %@", [GCache stringForKey:@"a"]);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -162,6 +171,12 @@
         }
     }
 }
+
+- (void)leftMenuPressed:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

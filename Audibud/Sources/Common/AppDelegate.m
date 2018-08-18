@@ -14,6 +14,7 @@
 #import "TabBarController.h"
 #import <AVFoundation/AVFoundation.h>
 
+#import "FileTypeViewController.h"
 #import "T1ViewController.h"
 #import "T2ViewController.h"
 #import "T3ViewController.h"
@@ -55,8 +56,12 @@
     else
         self.tab_height = 49;
     
-    T1ViewController *v1Controller  = [[T1ViewController alloc] initWithNibName:@"T1ViewController" bundle:nil];
-    v1Controller.title = @"Learning Items List";
+//    T1ViewController *v1Controller  = [[T1ViewController alloc] initWithNibName:@"T1ViewController" bundle:nil];
+//    v1Controller.title = @"Learning Items List";
+//    self.t1navigationController     = [[UINavigationController alloc] initWithRootViewController:v1Controller];
+    
+    FileTypeViewController *v1Controller  = [[FileTypeViewController alloc] initWithNibName:@"FileTypeViewController" bundle:nil];
+    v1Controller.title = @"Select Type";
     self.t1navigationController     = [[UINavigationController alloc] initWithRootViewController:v1Controller];
     T2ViewController *v2Controller  = [[T2ViewController alloc] initWithNibName:@"T2ViewController" bundle:nil];
     v2Controller.title = @"T2";

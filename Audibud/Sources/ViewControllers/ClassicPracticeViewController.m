@@ -49,6 +49,12 @@
     [super viewDidAppear:animated];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.audioPlayer = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -194,9 +200,14 @@
         
     [self.tableView reloadData];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
-    });
+    NSLog(@"self.currentIdx : %d", self.currentIdx);
+    
+    if(self.currentIdx > 0)
+    {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+        });
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -414,7 +425,21 @@
     {
         [self.timer invalidate];
         self.timer = nil;
-        [self.audioPlayer stop];
+        
+        if(self.audioPlayer.state == STKAudioPlayerStateReady ||
+           self.audioPlayer.state == STKAudioPlayerStateDisposed ||
+           self.audioPlayer.state == STKAudioPlayerStateError ||
+           self.audioPlayer.state == STKAudioPlayerStateStopped ||
+           self.audioPlayer.state == STKAudioPlayerStatePaused)
+        {
+        
+        }
+        else
+        {
+            [self.audioPlayer stop];
+        }
+        
+        self.audioPlayer = nil;
     }
     
     [self.navigationController popViewControllerAnimated:YES];

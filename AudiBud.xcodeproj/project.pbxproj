@@ -71,6 +71,10 @@
 		A7553C5A2123A94F00A8CDB6 /* tab_btn4_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C502123A94F00A8CDB6 /* tab_btn4_nor@2x.png */; };
 		A7553C5B2123A94F00A8CDB6 /* tab_btn2_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C512123A94F00A8CDB6 /* tab_btn2_pre@2x.png */; };
 		A7553C5C2123A94F00A8CDB6 /* tab_btn4_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7553C522123A94F00A8CDB6 /* tab_btn4_pre@2x.png */; };
+		A78DB6A7212791B10077B8A9 /* FileTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DB6A4212791B00077B8A9 /* FileTypeViewController.m */; };
+		A78DB6A8212791B10077B8A9 /* FileTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78DB6A6212791B00077B8A9 /* FileTypeViewController.xib */; };
+		A78DB6AC212792490077B8A9 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DB6AA212792490077B8A9 /* BasicTableViewCell.m */; };
+		A78DB6AD212792490077B8A9 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78DB6AB212792490077B8A9 /* BasicTableViewCell.xib */; };
 		A7EEC3352123B3E700C654F3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7EEC3342123B3E700C654F3 /* Info.plist */; };
 		CE3969CAB1EEDC191BB22A13 /* libPods-A1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B55D665291320B2BD4EAA7D /* libPods-A1.a */; };
 /* End PBXBuildFile section */
@@ -171,6 +175,12 @@
 		A7553C502123A94F00A8CDB6 /* tab_btn4_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn4_nor@2x.png"; sourceTree = "<group>"; };
 		A7553C512123A94F00A8CDB6 /* tab_btn2_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn2_pre@2x.png"; sourceTree = "<group>"; };
 		A7553C522123A94F00A8CDB6 /* tab_btn4_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_btn4_pre@2x.png"; sourceTree = "<group>"; };
+		A78DB6A4212791B00077B8A9 /* FileTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileTypeViewController.m; path = ../../../../AudiBud/Audibud/Sources/ViewControllers/FileTypeViewController.m; sourceTree = "<group>"; };
+		A78DB6A5212791B00077B8A9 /* FileTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileTypeViewController.h; path = ../../../../AudiBud/Audibud/Sources/ViewControllers/FileTypeViewController.h; sourceTree = "<group>"; };
+		A78DB6A6212791B00077B8A9 /* FileTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FileTypeViewController.xib; path = ../../../../AudiBud/Audibud/Sources/ViewControllers/FileTypeViewController.xib; sourceTree = "<group>"; };
+		A78DB6A9212792480077B8A9 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTableViewCell.h; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.h; sourceTree = "<group>"; };
+		A78DB6AA212792490077B8A9 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableViewCell.m; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.m; sourceTree = "<group>"; };
+		A78DB6AB212792490077B8A9 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicTableViewCell.xib; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.xib; sourceTree = "<group>"; };
 		A7EEC3342123B3E700C654F3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -322,6 +332,9 @@
 		A7553BD1212398A400A8CDB6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A78DB6A5212791B00077B8A9 /* FileTypeViewController.h */,
+				A78DB6A4212791B00077B8A9 /* FileTypeViewController.m */,
+				A78DB6A6212791B00077B8A9 /* FileTypeViewController.xib */,
 				A7553C082123A1A800A8CDB6 /* T1ViewController.h */,
 				A7553C092123A1A800A8CDB6 /* T1ViewController.m */,
 				A7553C0A2123A1A800A8CDB6 /* T1ViewController.xib */,
@@ -356,6 +369,9 @@
 		A7553C262123A38F00A8CDB6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A78DB6A9212792480077B8A9 /* BasicTableViewCell.h */,
+				A78DB6AA212792490077B8A9 /* BasicTableViewCell.m */,
+				A78DB6AB212792490077B8A9 /* BasicTableViewCell.xib */,
 				A713D73D2123B90100227445 /* FileItemTableViewCell.h */,
 				A713D73E2123B90100227445 /* FileItemTableViewCell.m */,
 				A713D73F2123B90100227445 /* FileItemTableViewCell.xib */,
@@ -486,6 +502,7 @@
 				A7553C402123A6FB00A8CDB6 /* btn_tap3.png in Resources */,
 				A7553C5B2123A94F00A8CDB6 /* tab_btn2_pre@2x.png in Resources */,
 				A7553BA321238CE700A8CDB6 /* db.sqlite in Resources */,
+				A78DB6A8212791B10077B8A9 /* FileTypeViewController.xib in Resources */,
 				A712E09F212304E00028240A /* LaunchScreen.storyboard in Resources */,
 				A7553BFF21239B3800A8CDB6 /* Unit_31_40.mp3 in Resources */,
 				A7553C452123A6FB00A8CDB6 /* btn_tap1_s.png in Resources */,
@@ -512,6 +529,7 @@
 				A7553C1B2123A23300A8CDB6 /* T4ViewController.xib in Resources */,
 				A7553C3F2123A6FB00A8CDB6 /* btn_tap1.png in Resources */,
 				A7553C412123A6FB00A8CDB6 /* btn_tap2.png in Resources */,
+				A78DB6AD212792490077B8A9 /* BasicTableViewCell.xib in Resources */,
 				A7553C462123A6FB00A8CDB6 /* btn_tap3_s.png in Resources */,
 				A7553C442123A6FB00A8CDB6 /* btn_tap4_s.png in Resources */,
 				A7553C202123A24300A8CDB6 /* T5ViewController.xib in Resources */,
@@ -574,6 +592,7 @@
 				A7553BDD2123990F00A8CDB6 /* SQLiteData.m in Sources */,
 				A7553C102123A20500A8CDB6 /* T2ViewController.m in Sources */,
 				A713D74A21246D7600227445 /* UIView+Move.m in Sources */,
+				A78DB6AC212792490077B8A9 /* BasicTableViewCell.m in Sources */,
 				A7553BF32123991E00A8CDB6 /* STKLocalFileDataSource.m in Sources */,
 				A7553BD0212398A000A8CDB6 /* main.m in Sources */,
 				A7553BF42123991E00A8CDB6 /* STKHTTPDataSource.m in Sources */,
@@ -586,6 +605,7 @@
 				A713D75421247F1000227445 /* PracticeItemTableViewCell.m in Sources */,
 				A713D74F21247A7C00227445 /* ClassicPracticeViewController.m in Sources */,
 				A7553C1A2123A23300A8CDB6 /* T4ViewController.m in Sources */,
+				A78DB6A7212791B10077B8A9 /* FileTypeViewController.m in Sources */,
 				A7553BF52123991E00A8CDB6 /* STKCoreFoundationDataSource.m in Sources */,
 				A7553BF02123991E00A8CDB6 /* STKQueueEntry.m in Sources */,
 				A7553C432123A6FB00A8CDB6 /* TabBarView.m in Sources */,

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface T1ViewController : UIViewController
-@property (assign, nonatomic) NSUInteger f_type_idx;
+@interface FileTypeViewController : UIViewController
+
 @end
