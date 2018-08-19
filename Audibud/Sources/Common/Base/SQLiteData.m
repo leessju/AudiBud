@@ -222,6 +222,17 @@ static SQLiteData *obj = nil;
     return nil;
 }
 
+- (NSMutableArray *)fileDataByFileTypeIdx:(NSUInteger)f_type_idx
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
+    [db open];
+    NSMutableArray *data = [[db executeQuery:@"SELECT * FROM tbl_file_data WHERE f_type_idx = ? AND download_yn = 'Y'", @(f_type_idx).stringValue ] data];
+    [db close];
+    
+    return data;
+}
+
+
 - (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx
 {
     return [self practiceFileIdx:f_idx withRandomYN:@"N"];

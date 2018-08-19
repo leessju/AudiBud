@@ -25,6 +25,7 @@
 - (BOOL)addUesrLog:(NSDictionary *)dic;
 - (NSMutableArray *)fileData;
 - (NSDictionary *)fileDataByFileIdx:(NSUInteger)f_idx;
+- (NSMutableArray *)fileDataByFileTypeIdx:(NSUInteger)f_type_idx;
 - (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx;
 - (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx withRandomYN:(NSString *)random_yn;
 - (NSMutableArray *)userLog;

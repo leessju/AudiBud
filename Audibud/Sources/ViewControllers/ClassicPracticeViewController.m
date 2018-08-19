@@ -118,11 +118,11 @@
     
     self.audio_file_name = fileInfo[@"f_a"];
     
-    NSString *a = [NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx];
-    if(GCIsNull(a))
-        GCSet(a, @"-1");
+    NSString *currentIdxKey = [NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx];
+    if(GCIsNull(currentIdxKey))
+        GCSet(currentIdxKey, @"-1");
     
-    self.currentIdx = [[GCache stringForKey:[NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx]] intValue];
+    self.currentIdx = [[GCache stringForKey:currentIdxKey] intValue];
     
     [self viewCount];
     [self loadData];
@@ -158,6 +158,7 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
@@ -560,67 +561,123 @@
                 }
                 else
                 {
+//                    // 처음 부터 다시 시작
+//                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                        self.currentIdx = 0;
+//                        [self play:self.currentIdx];
+//                    });
+                    
+                    NSString *tempKey = [NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx];
+                    GCSet(tempKey, @"0");
+                    
                     // 다음 파일 검색
                     NSDictionary *fileD = [SQLITE fileDataByFileIdx:self.f_idx];
-                    
+
                     if(fileD)
                     {
                         NSUInteger f_type_idx = [fileD[@"f_type_idx"] intValue];
-
-                        NSString *URLString = [NSString stringWithFormat:@"http://lang.nicejames.com/api/Lang/GetFileItems?f_type_idx=%lu", (unsigned long)f_type_idx];
+                        NSMutableArray *files = [SQLITE fileDataByFileTypeIdx:f_type_idx];
                         
-                        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-                        [manager POST:URLString
-                           parameters:nil
-                             progress:nil
-                              success:^(NSURLSessionTask *task, id responseObject) {
-                                  NSMutableArray *files = responseObject[@"response_data"];
-                                  NSLog(@"JSON: %@", files);
-                                  
-                                  for (int i = 0; i < [files count]; i++)
-                                  {
-                                      NSDictionary *filesD =  files[i];
-                                      
-                                      if([filesD[@"f_idx"] intValue] == self.f_idx)
-                                      {
-                                          NSDictionary *renewD = nil;
-                                          
-                                          if(i + 1 >= [files count] - 1)
-                                          {
-                                              renewD = files[0];
-                                          }
-                                          else
-                                          {
-                                              renewD = files[i + 1];
-                                          }
-                                          
-                                          self.f_idx = [renewD[@"f_idx"] intValue];
-                                          [self loadData];
+                        NSLog(@"files : %@", files);
 
-                                          if([self.data count] > 0)
-                                          {
-                                              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                                                  self.currentIdx = 0;
-                                                  [self play:self.currentIdx];
-                                              });
-                                          }
-                                          else
-                                          {
-                                              self.currentIdx = -1;
-                                          }
-                                      }
-                                  }
-                                  
-                                  [self.tableView reloadData];
-                                  
-                              } failure:^(NSURLSessionTask *operation, NSError *error) {
-                                  NSLog(@"Error: %@", error);
-                              }];
+                        for (int i = 0; i < [files count]; i++)
+                        {
+                            NSDictionary *filesD = files[i];
+
+                            if([filesD[@"f_idx"] intValue] == self.f_idx)
+                            {
+                                NSDictionary *renewD = nil;
+
+                                if(i + 1 >= [files count] - 1)
+                                {
+                                    renewD = files[0];
+                                }
+                                else
+                                {
+                                    renewD = files[i + 1];
+                                }
+
+                                self.f_idx = [renewD[@"f_idx"] intValue];
+                                
+                                NSDictionary *fileInfo = [SQLITE fileDataByFileIdx:self.f_idx];
+                                self.audio_file_name = fileInfo[@"f_a"];
+                                
+                                NSString *currentIdxKey = [NSString stringWithFormat:@"f_idx_%lu_currentIdx", (unsigned long)self.f_idx];
+                                if(GCIsNull(currentIdxKey))
+                                    GCSet(currentIdxKey, @"0");
+                                
+                                self.currentIdx = [[GCache stringForKey:currentIdxKey] intValue];
+                                
+                                [self viewCount];
+                                [self loadData];
+                                [self initPlayer];
+                                [self.tableView reloadData];
+
+                                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                    [self play:self.currentIdx];
+                                });
+                                
+                                break;
+                            }
+                        }
+
                         
                     }
                     
-                    
 
+//                        NSString *URLString = [NSString stringWithFormat:@"http://lang.nicejames.com/api/Lang/GetFileItems?f_type_idx=%lu", (unsigned long)f_type_idx];
+                    
+//                        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//                        [manager POST:URLString
+//                           parameters:nil
+//                             progress:nil
+//                              success:^(NSURLSessionTask *task, id responseObject) {
+//                                  NSMutableArray *files = responseObject[@"response_data"];
+//                                  NSLog(@"JSON: %@", files);
+//
+//                                  for (int i = 0; i < [files count]; i++)
+//                                  {
+//                                      NSDictionary *filesD =  files[i];
+//
+//                                      if([filesD[@"f_idx"] intValue] == self.f_idx)
+//                                      {
+//                                          NSDictionary *renewD = nil;
+//
+//                                          if(i + 1 >= [files count] - 1)
+//                                          {
+//                                              renewD = files[0];
+//                                          }
+//                                          else
+//                                          {
+//                                              renewD = files[i + 1];
+//                                          }
+//
+//                                          self.f_idx = [renewD[@"f_idx"] intValue];
+//                                          [self loadData];
+//
+//                                          if([self.data count] > 0)
+//                                          {
+//                                              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                                                  self.currentIdx = 0;
+//                                                  [self play:self.currentIdx];
+//                                              });
+//                                          }
+//                                          else
+//                                          {
+//                                              self.currentIdx = -1;
+//                                          }
+//                                      }
+//                                  }
+//
+//                                  [self.tableView reloadData];
+//
+//                              } failure:^(NSURLSessionTask *operation, NSError *error) {
+//                                  NSLog(@"Error: %@", error);
+//                              }];
+                        
+//                    }
+                  
+//                }
                     
                 }
             }
