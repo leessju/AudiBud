@@ -270,6 +270,19 @@ static SQLiteData *obj = nil;
     return data;
 }
 
+- (NSDictionary *)latestInfo
+{
+    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];
+    [db open];
+    NSMutableArray *data = [[db executeQuery:@"SELECT F.f_idx, F.f_type_idx, F.f_a, P.txt_kor, P.txt_eng, P.p_idx, U.view_date FROM tbl_file_data F JOIN tbl_practice P ON F.f_idx = P.f_idx JOIN tbl_user_log U ON P.p_idx = U.p_idx ORDER BY U.view_date DESC limit 1;"] data];
+    [db close];
+    
+    if(data.count > 0)
+        return data[0];
+    
+    return nil;
+}
+
 //- (NSMutableArray *)testData
 //{
 //    FMDatabase *db = [FMDatabase databaseWithPath:[self databasePath]];

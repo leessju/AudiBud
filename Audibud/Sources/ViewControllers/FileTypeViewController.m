@@ -16,6 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *data;
+@property (strong, nonatomic) NSDictionary *dicLatest;
+@property (weak, nonatomic) IBOutlet UIButton *btnLatest;
 
 @end
 
@@ -41,6 +43,21 @@
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
     [self.tableView registerNib:[UINib nibWithNibName:@"BasicTableViewCell" bundle:nil] forCellReuseIdentifier:@"BasicTableViewCell"];
+    
+    
+    [self.btnLatest sizeToWidth:SCREEN_WIDTH - 60 height:40];
+    [self.btnLatest moveToY:SCREEN_HEIGHT - APP_DEL.tab_height - 40 - 20];
+    
+    self.dicLatest = [SQLITE latestInfo];
+    
+    if(self.dicLatest)
+    {
+        [self.btnLatest setTitle:[NSString stringWithFormat:@"최근 %@", self.dicLatest[@"view_date"]] forState:UIControlStateNormal];
+    }
+    else
+    {
+        self.btnLatest.hidden = YES;
+    }
     
     [self loadData];
 }
@@ -82,6 +99,13 @@
     viewController.title = @"Learning Items List";
     viewController.f_type_idx = [self.data[indexPath.row][@"code_value"] intValue];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+- (IBAction)onTouch_btnLatest:(id)sender {
+    T1ViewController *viewController = [[T1ViewController alloc] initWithNibName:@"T1ViewController" bundle:nil];
+    viewController.title = @"Learning Items List";
+    viewController.f_type_idx = [self.dicLatest[@"f_type_idx"] intValue];
+    viewController.dicLatest = self.dicLatest;
+    [self.navigationController pushViewController:viewController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

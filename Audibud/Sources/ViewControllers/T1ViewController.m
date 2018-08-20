@@ -24,6 +24,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    if (self.dicLatest)
+    {
+        ClassicPracticeViewController *viewController = [[ClassicPracticeViewController alloc] initWithNibName:@"ClassicPracticeViewController" bundle:nil];
+        viewController.f_idx = [self.dicLatest[@"f_idx"] intValue];
+        viewController.title = @"Course";
+        [self.navigationController pushViewController:viewController animated:YES];
+        self.dicLatest = nil;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

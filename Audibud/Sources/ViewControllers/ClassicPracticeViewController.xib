@@ -42,7 +42,9 @@
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pAa-sa-ohd">
                             <rect key="frame" x="82" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="&lt;&lt;"/>
+                            <state key="normal" title="&lt;&lt;">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
                             <connections>
                                 <action selector="onTouch_btnBack:" destination="-1" eventType="touchUpInside" id="dcw-RL-S5Y"/>
                             </connections>
@@ -51,7 +53,9 @@
                             <rect key="frame" x="155" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <state key="normal" title="►"/>
+                            <state key="normal" title="►">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
                             <connections>
                                 <action selector="onTouch_btnPlay:" destination="-1" eventType="touchUpInside" id="t1i-yz-7LD"/>
                             </connections>
@@ -59,7 +63,9 @@
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bxE-iR-S3k">
                             <rect key="frame" x="233" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="&gt;&gt;"/>
+                            <state key="normal" title="&gt;&gt;">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
                             <connections>
                                 <action selector="onTouch_btnNext:" destination="-1" eventType="touchUpInside" id="CCu-Fb-czO"/>
                             </connections>
@@ -67,7 +73,9 @@
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q6s-CT-nSO">
                             <rect key="frame" x="315" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="한/영"/>
+                            <state key="normal" title="한/영">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
                             <connections>
                                 <action selector="onTouch_btnLangChange:" destination="-1" eventType="touchUpInside" id="Mmj-cq-ahO"/>
                             </connections>
@@ -75,7 +83,9 @@
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JIE-AF-LbE">
                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="&lt;-&gt;"/>
+                            <state key="normal" title="&lt;-&gt;">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
                             <connections>
                                 <action selector="onTouch_btnSwitch:" destination="-1" eventType="touchUpInside" id="PZh-8t-9tT"/>
                             </connections>

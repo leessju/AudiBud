@@ -10,4 +10,5 @@
 
 @interface T1ViewController : UIViewController
 @property (assign, nonatomic) NSUInteger f_type_idx;
+@property (assign, nonatomic) NSDictionary *dicLatest;
 @end

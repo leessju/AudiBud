@@ -29,6 +29,7 @@
 - (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx;
 - (NSMutableArray *)practiceFileIdx:(NSUInteger)f_idx withRandomYN:(NSString *)random_yn;
 - (NSMutableArray *)userLog;
+- (NSDictionary *)latestInfo;
 
 //- (NSMutableArray *)searchData;
 //- (NSMutableArray *)testData;
