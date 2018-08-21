@@ -128,6 +128,17 @@
     [self loadData];
     [self initPlayer];
     
+    if(self.data.count > 0)
+    {
+        if(self.currentIdx < 0)
+            self.currentIdx = 0;
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self play:self.currentIdx];
+            [self uiSetting];
+        });
+    }
+    
     MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
     commandCenter.playCommand.enabled = YES;
     [commandCenter.playCommand addTarget:self action:@selector(playAndResume)];

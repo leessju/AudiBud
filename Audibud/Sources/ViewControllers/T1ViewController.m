@@ -119,6 +119,7 @@
     if(d)
         download_yn = d[@"download_yn"];
     
+    cell.indexRow = indexPath.row;
     cell.download_yn = download_yn;
     [cell setData:self.data[indexPath.row]];
 
@@ -178,7 +179,7 @@
     });
 }
 
-- (void)didView:(NSUInteger)f_idx
+- (void)didView:(NSUInteger)f_idx with:(NSUInteger)indexRow
 {
     NSLog(@"view : f_idx : %lu", (unsigned long)f_idx);
     //NSLog(@"practice : %@", [SQLITE practiceFileIdx:f_idx] );
@@ -192,6 +193,10 @@
             viewController.f_idx = f_idx;
             viewController.title = @"Course";
             [self.navigationController pushViewController:viewController animated:YES];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:indexRow inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+            });
         }
     }
 }

@@ -63,7 +63,8 @@
 {
     if(self.delegate)
     {
-        [self.delegate didView:[self.dicData[@"f_idx"] intValue]];
+        [self.delegate didView:[self.dicData[@"f_idx"] intValue] with:self.indexRow];
+        self.vBack.backgroundColor = [UIColor colorWithHexString:@"#f6f6f6"];
     }
 }
 

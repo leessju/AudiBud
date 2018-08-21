@@ -11,7 +11,7 @@
 @protocol FileItemTableViewCellDelegate <NSObject>
 
 - (void)didDownload:(NSUInteger)f_idx with:(NSDictionary *)dic;
-- (void)didView:(NSUInteger)f_idx;
+- (void)didView:(NSUInteger)f_idx with:(NSUInteger)indexRow;
 
 @end
 
@@ -21,5 +21,6 @@
 
 @property (assign, nonatomic) id<FileItemTableViewCellDelegate> delegate;
 @property (strong, nonatomic) NSString *download_yn;
+@property (assign, nonatomic) NSUInteger indexRow;
 
 @end
