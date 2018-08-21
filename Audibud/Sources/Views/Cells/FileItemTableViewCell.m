@@ -30,6 +30,7 @@
     [self.btnDownload moveToX:SCREEN_WIDTH - 60];
     [self.btnView sizeToWidth:SCREEN_WIDTH - 60];
     self.btnDownload.hidden = NO;
+    [self.lblTitle sizeToWidth:SCREEN_WIDTH - 70];
     [self.vBack sizeToWidth:SCREEN_WIDTH];
     
     self.vBack.backgroundColor = [UIColor colorWithHexString:@"#fcf6f4"];
@@ -51,6 +52,7 @@
             self.btnDownload.hidden = YES;
             [self.btnView sizeToWidth:SCREEN_WIDTH];
             self.vBack.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+            [self.lblTitle sizeToWidth:SCREEN_WIDTH - 10];
         }
 
         self.lblTitle.text = dicData[@"f_name"];
