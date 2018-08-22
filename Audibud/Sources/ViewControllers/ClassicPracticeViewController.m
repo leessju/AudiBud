@@ -262,14 +262,13 @@
     dispatch_async(queue, ^{
         
         NSMutableDictionary *songInfo   = [NSMutableDictionary dictionary];
-//        MPMediaItemArtwork *artworkImage = [[MPMediaItemArtwork alloc] initWithBoundsSize:CGSizeMake(600, 600)
-//                                                                           requestHandler:^UIImage * _Nonnull(CGSize size) {
-//                                                                               UIImage *lockScreenArtworkApp = [UIImage imageNamed:@"down"];
-//                                                                               return [self resizeImageWithImage:lockScreenArtworkApp scaledToSize:size];
-//                                                                           }];
+        MPMediaItemArtwork *artworkImage = [[MPMediaItemArtwork alloc] initWithBoundsSize:CGSizeMake(600, 600)
+                                                                           requestHandler:^UIImage * _Nonnull(CGSize size) {
+                                                                               UIImage *lockScreenArtworkApp = [UIImage imageNamed:@"tree"];
+                                                                               return [self resizeImageWithImage:lockScreenArtworkApp scaledToSize:size];
+                                                                           }];
         
-//        [songInfo setValue:artworkImage forKey:MPMediaItemPropertyArtwork];
-//        [songInfo setValue:artworkImage forKey:MPMediaItemPropertyArtwork];
+        [songInfo setValue:artworkImage forKey:MPMediaItemPropertyArtwork];
         
 //        if(self.language_type_idx == 0)
 //        {
