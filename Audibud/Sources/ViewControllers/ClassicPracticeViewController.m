@@ -290,10 +290,8 @@
 //        }
         
         
-        
-        
-//        [songInfo setValue:[NSNumber numberWithInt:self.audioPlayer.duration] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
-//        [songInfo setValue:[NSNumber numberWithInt:self.audioPlayer.duration] forKey:MPMediaItemPropertyPlaybackDuration];
+        [songInfo setValue:[NSNumber numberWithFloat:self.currentStartTime] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+        [songInfo setValue:[NSNumber numberWithInt:self.audioPlayer.duration] forKey:MPMediaItemPropertyPlaybackDuration];
         [songInfo setValue:[NSNumber numberWithInt:1.0] forKey:MPNowPlayingInfoPropertyPlaybackRate];
         [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = songInfo;
     });
@@ -335,8 +333,8 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"==================> jump");
-        [self.blankPlayer pause];
         [self.audioPlayer seekToTime:self.currentStartTime];
+        [self.blankPlayer pause];
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
         [SQLITE addUesrLog:@{@"p_idx":dic[@"p_idx"]}];
         
@@ -598,8 +596,8 @@
                 {
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         self.currentIdx++;
-                        [self.blankPlayer pause];
                         [self play:self.currentIdx];
+                        [self.blankPlayer pause];
                     });
                 }
                 else
@@ -651,6 +649,8 @@
                                 
                                 self.currentIdx = [[GCache stringForKey:currentIdxKey] intValue];
                                 
+                                [self.blankPlayer resume];
+                                [self.blankPlayer seekToTime:0];
                                 [self viewCount];
                                 [self loadData];
                                 [self initPlayer];
@@ -658,6 +658,7 @@
 
                                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                                     [self play:self.currentIdx];
+                                    [self.blankPlayer pause];
                                 });
                                 
                                 break;
