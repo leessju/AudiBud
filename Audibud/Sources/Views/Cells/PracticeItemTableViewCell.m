@@ -23,8 +23,8 @@
     [super awakeFromNib];
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    [self.lblTxt1 sizeToWidth:SCREEN_WIDTH - 20];
-    [self.lblTxt2 sizeToWidth:SCREEN_WIDTH - 20];
+    [self.lblTxt1 sizeToWidth:SCREEN_WIDTH - 30];
+    [self.lblTxt2 sizeToWidth:SCREEN_WIDTH - 30];
     
     self.lblC = [[UILabel alloc] init];
     [self.lblC setFont:[UIFont systemFontOfSize:12.0f]];
@@ -47,7 +47,7 @@
         
         if(self.curindex == self.index)
         {
-            self.backgroundColor = [UIColor colorWithHexString:@"#DADADA"];
+            self.backgroundColor = [UIColor colorWithHexString:@"#f7f1db"];
         }
         else
         {

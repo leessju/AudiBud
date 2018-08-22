@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnBack;
 @property (weak, nonatomic) IBOutlet UIButton *btnNext;
 @property (weak, nonatomic) IBOutlet UIButton *btnSwitch;
+@property (weak, nonatomic) IBOutlet UIProgressView *pvPosition;
 
 
 @property (strong, nonatomic) NSMutableArray *data;
@@ -71,7 +72,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     
+    self.pvPosition.progressTintColor = [UIColor redColor];
+    self.pvPosition.trackTintColor = [UIColor whiteColor];
+    [self.pvPosition sizeToWidth:SCREEN_WIDTH];
+    [self.pvPosition moveToX:0 y:64];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
     self.data  = [[NSMutableArray alloc] init];
@@ -290,14 +296,17 @@
 //        }
         
         
-        [songInfo setValue:[NSNumber numberWithFloat:self.currentStartTime] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
-        [songInfo setValue:[NSNumber numberWithInt:self.audioPlayer.duration] forKey:MPMediaItemPropertyPlaybackDuration];
+        if(self.audioPlayer.duration > 0)
+        {
+            [songInfo setValue:[NSNumber numberWithFloat:self.audioPlayer.duration] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+            [songInfo setValue:[NSNumber numberWithFloat:self.currentStartTime] forKey:MPMediaItemPropertyPlaybackDuration];
+        }
+        
         [songInfo setValue:[NSNumber numberWithInt:1.0] forKey:MPNowPlayingInfoPropertyPlaybackRate];
         [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = songInfo;
     });
     
     [self setupTimer:dic];
-    
     
     //    세팅전 0
     //    재생시작 5
@@ -331,12 +340,18 @@
         }
     }
     
+    //NSLog(@"self.currentStartTime : %f duration : %f", self.currentStartTime, self.audioPlayer.duration);
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"==================> jump");
-        [self.audioPlayer seekToTime:self.currentStartTime];
-        [self.blankPlayer pause];
-        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
-        [SQLITE addUesrLog:@{@"p_idx":dic[@"p_idx"]}];
+        
+        if(self.audioPlayer.duration == 0)
+        {
+            self.pvPosition.progress = 0;
+        }
+        else {
+            self.pvPosition.progress = self.currentStartTime / self.audioPlayer.duration;
+        }
         
         NSString *URLString = @"http://lang.nicejames.com/api/Lang/AddUserLog";
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -347,6 +362,11 @@
               } failure:^(NSURLSessionTask *operation, NSError *error) {
                   NSLog(@"Error: %@", error);
               }];
+        
+        [self.audioPlayer seekToTime:self.currentStartTime];
+        [self.blankPlayer pause];
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+        [SQLITE addUesrLog:@{@"p_idx":dic[@"p_idx"]}];
     });
 }
 
@@ -566,10 +586,6 @@
                 [self.audioPlayer pause];
                 
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self.audioPlayer resume];
-                    [self.blankPlayer pause];
-                    [self.audioPlayer seekToTime:self.currentStartTime];
-                    
                     NSString *URLString = @"http://lang.nicejames.com/api/Lang/AddUserLog";
                     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
                     [manager POST:URLString
@@ -579,6 +595,10 @@
                           } failure:^(NSURLSessionTask *operation, NSError *error) {
                               NSLog(@"Error: %@", error);
                           }];
+                    
+                    [self.audioPlayer resume];
+                    [self.blankPlayer pause];
+                    [self.audioPlayer seekToTime:self.currentStartTime];
                 });
             }
             else
@@ -667,62 +687,6 @@
 
                         
                     }
-                    
-
-//                        NSString *URLString = [NSString stringWithFormat:@"http://lang.nicejames.com/api/Lang/GetFileItems?f_type_idx=%lu", (unsigned long)f_type_idx];
-                    
-//                        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//                        [manager POST:URLString
-//                           parameters:nil
-//                             progress:nil
-//                              success:^(NSURLSessionTask *task, id responseObject) {
-//                                  NSMutableArray *files = responseObject[@"response_data"];
-//                                  NSLog(@"JSON: %@", files);
-//
-//                                  for (int i = 0; i < [files count]; i++)
-//                                  {
-//                                      NSDictionary *filesD =  files[i];
-//
-//                                      if([filesD[@"f_idx"] intValue] == self.f_idx)
-//                                      {
-//                                          NSDictionary *renewD = nil;
-//
-//                                          if(i + 1 >= [files count] - 1)
-//                                          {
-//                                              renewD = files[0];
-//                                          }
-//                                          else
-//                                          {
-//                                              renewD = files[i + 1];
-//                                          }
-//
-//                                          self.f_idx = [renewD[@"f_idx"] intValue];
-//                                          [self loadData];
-//
-//                                          if([self.data count] > 0)
-//                                          {
-//                                              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                                                  self.currentIdx = 0;
-//                                                  [self play:self.currentIdx];
-//                                              });
-//                                          }
-//                                          else
-//                                          {
-//                                              self.currentIdx = -1;
-//                                          }
-//                                      }
-//                                  }
-//
-//                                  [self.tableView reloadData];
-//
-//                              } failure:^(NSURLSessionTask *operation, NSError *error) {
-//                                  NSLog(@"Error: %@", error);
-//                              }];
-                        
-//                    }
-                  
-//                }
-                    
                 }
             }
         }
@@ -765,9 +729,11 @@
     else
     {
         [self.audioPlayer stop];
+        [self.blankPlayer stop];
     }
     
     self.audioPlayer = nil;
+    self.blankPlayer = nil;
 }
 
 - (void)leftMenuPressed:(UIButton *)sender

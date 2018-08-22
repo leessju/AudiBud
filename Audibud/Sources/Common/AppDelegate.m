@@ -65,16 +65,16 @@
     v1Controller.title = @"Select Type";
     self.t1navigationController     = [[UINavigationController alloc] initWithRootViewController:v1Controller];
     T2ViewController *v2Controller  = [[T2ViewController alloc] initWithNibName:@"T2ViewController" bundle:nil];
-    v2Controller.title = @"T2";
+    v2Controller.title = @"Latest Views";
     self.t2navigationController     = [[UINavigationController alloc] initWithRootViewController:v2Controller];
     T3ViewController *v3Controller  = [[T3ViewController alloc] initWithNibName:@"T3ViewController" bundle:nil];
-    v3Controller.title = @"T3";
+    v3Controller.title = @"Vocabulary";
     self.t3navigationController     = [[UINavigationController alloc] initWithRootViewController:v3Controller];
     T4ViewController *v4Controller  = [[T4ViewController alloc] initWithNibName:@"T4ViewController" bundle:nil];
-    v4Controller.title = @"T4";
+    v4Controller.title = @"My Trand";
     self.t4navigationController     = [[UINavigationController alloc] initWithRootViewController:v4Controller];
     T5ViewController *v5Controller  = [[T5ViewController alloc] initWithNibName:@"T5ViewController" bundle:nil];
-    v5Controller.title = @"T5";
+    v5Controller.title = @"Setting";
     self.t5navigationController     = [[UINavigationController alloc] initWithRootViewController:v5Controller];
     
     self.tabBarController = [[TabBarController alloc] init];

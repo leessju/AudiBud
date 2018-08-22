@@ -76,6 +76,7 @@
 		A78DB6AC212792490077B8A9 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DB6AA212792490077B8A9 /* BasicTableViewCell.m */; };
 		A78DB6AD212792490077B8A9 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78DB6AB212792490077B8A9 /* BasicTableViewCell.xib */; };
 		A7954AEF212D87360095FBE5 /* blank.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7954AEE212D87350095FBE5 /* blank.mp3 */; };
+		A79BDC0E212DA0A9001FA971 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79BDC0D212DA0A8001FA971 /* splash@2x.png */; };
 		A7D79ABD21280A6B00E28452 /* S1E12 The One with the Computer 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6621280A5C00E28452 /* S1E12 The One with the Computer 2.mp3 */; };
 		A7D79ABE21280A6B00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6721280A5C00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 */; };
 		A7D79ABF21280A6B00E28452 /* S2E5 The One with the Dog 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D79A6821280A5C00E28452 /* S2E5 The One with the Dog 1.mp3 */; };
@@ -270,6 +271,7 @@
 		A78DB6AA212792490077B8A9 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableViewCell.m; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.m; sourceTree = "<group>"; };
 		A78DB6AB212792490077B8A9 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicTableViewCell.xib; path = ../../../../../AudiBud/Audibud/Sources/Views/Cells/BasicTableViewCell.xib; sourceTree = "<group>"; };
 		A7954AEE212D87350095FBE5 /* blank.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blank.mp3; sourceTree = "<group>"; };
+		A79BDC0D212DA0A8001FA971 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		A7D79A6621280A5C00E28452 /* S1E12 The One with the Computer 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S1E12 The One with the Computer 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S1E12 The One with the Computer 2.mp3"; sourceTree = "<group>"; };
 		A7D79A6721280A5C00E28452 /* S2E18 Haley Babysits Lilly 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E18 Haley Babysits Lilly 2.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E18 Haley Babysits Lilly 2.mp3"; sourceTree = "<group>"; };
 		A7D79A6821280A5C00E28452 /* S2E5 The One with the Dog 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "S2E5 The One with the Dog 1.mp3"; path = "../../../AudiBud/Audibud/Resource/S2E5 The One with the Dog 1.mp3"; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 		A713D74521246BA700227445 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A79BDC0D212DA0A8001FA971 /* splash@2x.png */,
 				A713D7562124855A00227445 /* title_btn_back@2x.png */,
 				A713D74621246BB600227445 /* down@2x.png */,
 			);
@@ -867,6 +870,7 @@
 				A7D79AD421280A6B00E28452 /* S3E1 Dylan Proposes 1.mp3 in Resources */,
 				A7D79B0221280A6B00E28452 /* S1E3 The One with Airplane 2.mp3 in Resources */,
 				A7D79ADD21280A6B00E28452 /* S2E11 Learning How to Bike 2.mp3 in Resources */,
+				A79BDC0E212DA0A9001FA971 /* splash@2x.png in Resources */,
 				A7553C202123A24300A8CDB6 /* T5ViewController.xib in Resources */,
 				A7D79AF921280A6B00E28452 /* S2E22 Lady Gaga Concert 2.mp3 in Resources */,
 				A7D79AE021280A6B00E28452 /* S2E21 Happy Mother's Day 3.mp3 in Resources */,

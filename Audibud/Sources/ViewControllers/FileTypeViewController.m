@@ -37,6 +37,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.btnLatest.layer.cornerRadius = 8;
+    self.btnLatest.clipsToBounds = YES;
+    self.btnLatest.layer.borderWidth = 0.5;
+    self.btnLatest.layer.borderColor = [UIColor grayColor].CGColor;
+    self.btnLatest.backgroundColor = [UIColor colorWithHexString:@"#f7f1db"];
+    
     self.data  = [[NSMutableArray alloc] init];
 
     self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - APP_DEL.tab_height);

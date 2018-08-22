@@ -22,13 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
-    self.audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){ .flushQueueOnSeek = YES, .enableVolumeMixer = NO, .equalizerBandFrequencies = {50, 100, 200, 400, 800, 1600, 2600, 16000} }];
-    self.audioPlayer.meteringEnabled = YES;
-    self.audioPlayer.volume = 0.1;
-    self.audioPlayer.delegate = self;
-    
-    //[self setupTimer];
+//
+//    self.audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){ .flushQueueOnSeek = YES, .enableVolumeMixer = NO, .equalizerBandFrequencies = {50, 100, 200, 400, 800, 1600, 2600, 16000} }];
+//    self.audioPlayer.meteringEnabled = YES;
+//    self.audioPlayer.volume = 0.1;
+//    self.audioPlayer.delegate = self;
+//
+//    //[self setupTimer];
 }
 
 - (IBAction)play:(UIButton *)sender
