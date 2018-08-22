@@ -27,8 +27,10 @@
 @property (strong, nonatomic) NSMutableArray *data;
 @property (strong, nonatomic) NSMutableArray *dataC;
 @property (strong, nonatomic) STKAudioPlayer *audioPlayer;
+@property (strong, nonatomic) STKAudioPlayer *blankPlayer;
 @property (strong, nonatomic) NSString *audio_file_name;
 @property (strong, nonatomic) NSURL *url;
+@property (strong, nonatomic) NSURL *urlBlank;
 @property (strong, nonatomic) NSTimer *timer;
 
 @property (assign, nonatomic) NSInteger currentIdx;
@@ -215,6 +217,14 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:fName ofType:fExt];
     self.url = [NSURL fileURLWithPath:path];
+    
+    
+    self.blankPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){ .flushQueueOnSeek = YES, .enableVolumeMixer = NO, .equalizerBandFrequencies = {50, 100, 200, 400, 800, 1600, 2600, 16000} }];
+    self.blankPlayer.meteringEnabled    = YES;
+    self.blankPlayer.volume             = 1.0;
+    self.blankPlayer.delegate           = self;
+    
+    self.urlBlank = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"blank" ofType:@"mp3"]];
 }
 
 - (void)play:(NSUInteger)idx
@@ -290,6 +300,15 @@
     
     [self setupTimer:dic];
     
+    
+    //    세팅전 0
+    //    재생시작 5
+    //    재생중 3
+    //    일시정지 9
+    //    중지 16
+
+    [self.blankPlayer playURL:self.urlBlank];
+    
     NSLog(@"currentIdx : %ld, start_time : %f, end_time : %f", (long)self.currentIdx, self.currentStartTime, self.currentEndTime);
     CGFloat delay_time = 0;
     if (self.audioPlayer.state == 0 ||
@@ -299,8 +318,12 @@
         if(self.audioPlayer.state == 9)
         {
             NSLog(@"==================> resume");
-            delay_time = 0.001;
+//            delay_time = 0.001;
+//            [self.audioPlayer resume];
+            
+            delay_time = 0;
             [self.audioPlayer resume];
+            
         }
         else
         {
@@ -312,6 +335,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSLog(@"==================> jump");
+        [self.blankPlayer pause];
         [self.audioPlayer seekToTime:self.currentStartTime];
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIdx inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
         [SQLITE addUesrLog:@{@"p_idx":dic[@"p_idx"]}];
@@ -411,6 +435,7 @@
     {
         NSLog(@"pause");
         [self.audioPlayer pause];
+        [self.blankPlayer pause];
     }
     else if (self.audioPlayer.state == 9)
     {
@@ -538,10 +563,13 @@
             self.repeat_buffer++;
             if(self.repeat_buffer < self.repeat_count)
             {
+                [self.blankPlayer resume];
+                [self.blankPlayer seekToTime:0];
                 [self.audioPlayer pause];
                 
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [self.audioPlayer resume];
+                    [self.blankPlayer pause];
                     [self.audioPlayer seekToTime:self.currentStartTime];
                     
                     NSString *URLString = @"http://lang.nicejames.com/api/Lang/AddUserLog";
@@ -560,13 +588,17 @@
                 [timer invalidate];
                 timer = nil;
                 
+                [self.blankPlayer resume];
+                [self.blankPlayer seekToTime:0];
                 [self.audioPlayer pause];
+                
                 self.repeat_buffer = 0;
                 
                 if(self.currentIdx < self.data.count - 1)
                 {
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.gap_sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         self.currentIdx++;
+                        [self.blankPlayer pause];
                         [self play:self.currentIdx];
                     });
                 }
